@@ -76,8 +76,11 @@ def TestPostRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope,
 
 
 def TestGetRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, fanhuitesthope):
+    if hdata == '':
+        hr = requests.get(hurl, headers=headers)
+    else:
+        hr = requests.get(hurl, params=hdata, headers=headers)
 
-    hr = requests.get(hurl, params=hdata, headers=headers)
     hjson = json.loads(hr.text)  # 获取并处理返回的json数据
 
     herror = "error"

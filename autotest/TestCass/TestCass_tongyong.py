@@ -9,13 +9,14 @@ import xlrd
 from PublicTools.TestRequest import TestPostRequest
 from PublicTools.TestRequest import TestGetRequest
 from PublicTools.GetTestDataPath import GetTestDataPath
-
+from PublicTools.globalpy import GLOBAL_token
 
 Testdata = xlrd.open_workbook(GetTestDataPath())  # 读取测试数据
 table = Testdata.sheets()[0]  # 选择excle表中的sheet
 hurl = table.cell(7, 1).value  # 从测试数据中读取url
 htoken = table.cell(8, 1).value
 hcontent_type = table.cell(6, 1).value
+access_token = GLOBAL_token
 
 
 def test_get_banbengengxin():
@@ -25,8 +26,7 @@ def test_get_banbengengxin():
             "platform": table.cell(i, 0).value,
         }
         headers = {
-            'content-type': hcontent_type,
-            'token': htoken
+            'content-type': hcontent_type
         }
         htestcassid = "1-1-" + str(i + 1)
         htestcassname = "【通用】版本更新检查 V1 " + htestcassid
@@ -41,13 +41,19 @@ def test_get_banbengengxin():
 def test_get_huodongzige():
     for i in range(13, 15):
         table = Testdata.sheets()[1]  # 选择excle表中的sheet
-        hdata = {
-            "access_token": table.cell(i, 0).value,
-            "code": table.cell(i, 1).value
-        }
+        if i == 13:
+            hdata = {
+                "access_token": access_token,
+                "code": table.cell(i, 1).value
+            }
+        else:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "code": table.cell(i, 1).value
+            }
+
         headers = {
-            'content-type': hcontent_type,
-            'token': htoken
+            'content-type': hcontent_type
         }
         htestcassid = "1-2-" + str(i + 1)
         htestcassname = "【通用】用户活动资格检查 V1 " + htestcassid
@@ -66,8 +72,7 @@ def test_get_jianchashoujihao():
             "mobile": table.cell(i, 0).value,
         }
         headers = {
-            'content-type': hcontent_type,
-            'token': htoken
+            'content-type': hcontent_type
         }
         htestcassid = "1-3-" + str(i + 1)
         htestcassname = "【通用模块】 检查手机号 " + htestcassid
@@ -77,3 +82,20 @@ def test_get_jianchashoujihao():
                        htestcassid, htestcassname, htesthope, fanhuitesthope)
 
 # test_get_jianchashoujihao()
+
+
+def test_get_peizhiwenjiangengxin():
+    for i in range(31, 32):
+        table = Testdata.sheets()[1]  # 选择excle表中的sheet
+        print(table)
+        hdata = ''
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "1-4-" + str(i + 1)
+        htestcassname = "【通用】配置文件更新 V1 " + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'common/configs', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+# test_get_peizhiwenjiangengxin()
