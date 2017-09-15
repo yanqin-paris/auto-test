@@ -9,6 +9,7 @@ from PublicTools.GetTestDataPath import GetTestConfigPath
 
 logger.info('正在初始化数据库[名称：TESTDB]对象')
 GLOBAL_testdb = MyDB(GetTestConfigPath() + 'dbconfig.conf', 'TESTDB')
+
 '''
 query = 'SELECT * FROM user_address WHERE id = %s or id = %s or id = %s'
 data = ('1', '2', '3')
