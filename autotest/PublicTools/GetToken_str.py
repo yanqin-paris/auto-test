@@ -12,6 +12,7 @@ import xlrd
 # import xlwt
 from xlutils.copy import copy
 from PublicTools.GetTestDataPath import GetTestDataPath
+from PublicTools.log import logger
 
 Testdata = xlrd.open_workbook(GetTestDataPath())  # 打开测试数据，路径需要自己配，相对路径似乎不行
 table = Testdata.sheets()[0]  # 选择sheet
@@ -32,21 +33,20 @@ def test_get_token():
     r = requests.post(
         hurl + 'user/password-login', data=json.dumps(hdata), headers=headers)
     hjson = json.loads(r.text)  # 获取并处理返回的json数据
-    print(hjson)
     herror = "error"
     if herror in hjson:
-        print("登陆失败，退出程序！")
+        logger.error("登陆失败，退出程序！")
         exit()
     else:
         hcode = str(hjson['status'])
-        print('请求返回状态为：' + hcode)
+        logger.info('请求返回状态为：' + hcode)
         if hcode == table.cell(9, 1).value:
             token = hjson['data']['access_token']  # 获取token
-            print('当前token为：' + token)
+            logger.info('当前token为：' + token)
             return token
         else:
-            print('登陆失败，程序退出')
+            logger.error("登陆失败，退出程序！")
             exit()
 
 
-# print(test_get_token())
+print(test_get_token())
