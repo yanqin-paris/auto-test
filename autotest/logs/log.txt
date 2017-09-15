@@ -1,2 +1,33 @@
 2017-09-15 11:28:32,956 GetToken_str.py[line: 43] INFO: 请求返回状态为：ok
 2017-09-15 11:28:32,964 GetToken_str.py[line: 46] INFO: 当前token为：5a4f1cfb4def54fd5c017028e15e17de
+2017-09-15 12:02:07,884 sendmail.py[line: 97] INFO: 生成测试报告成功
+2017-09-15 12:06:36,988 sendmail.py[line: 97] INFO: 生成测试报告成功
+2017-09-15 12:06:37,291 sendmail.py[line: 108] INFO: 正在发送测试报告邮件...
+2017-09-15 12:08:55,034 sendmail.py[line: 97] INFO: 生成测试报告成功
+2017-09-15 12:08:55,309 sendmail.py[line: 108] INFO: 正在发送测试报告邮件...
+2017-09-15 12:09:56,493 sendmail.py[line: 97] INFO: 生成测试报告成功
+2017-09-15 12:09:56,797 sendmail.py[line: 108] INFO: 正在发送测试报告邮件...
+2017-09-15 12:10:51,594 sendmail.py[line: 97] INFO: 生成测试报告成功
+2017-09-15 12:10:51,891 sendmail.py[line: 108] INFO: 正在发送测试报告邮件...
+2017-09-15 12:11:27,324 sendmail.py[line: 97] INFO: 生成测试报告成功
+2017-09-15 12:11:27,633 sendmail.py[line: 108] INFO: 正在发送测试报告邮件...
+2017-09-15 12:12:20,768 sendmail.py[line: 97] INFO: 生成测试报告成功
+2017-09-15 12:12:21,106 sendmail.py[line: 108] INFO: 正在发送测试报告邮件...
+2017-09-15 12:12:22,461 sendmail.py[line: 112] INFO: 发送邮件成功
+2017-09-15 15:08:55,726 mydb.py[line: 84] INFO: query：SELECT * FROM user_address WHERE id = %s  data：('1',)
+2017-09-15 15:43:45,806 globalpy.py[line: 10] INFO: 正在初始化数据库[名称：TESTDB]对象
+2017-09-15 15:45:42,215 mydb.py[line: 83] INFO: query：SELECT * FROM user_address WHERE id = %s  data：('1',)
+2017-09-15 15:45:55,210 globalpy.py[line: 10] INFO: 正在初始化数据库[名称：TESTDB]对象
+2017-09-15 15:46:22,520 globalpy.py[line: 10] INFO: 正在初始化数据库[名称：TESTDB]对象
+2017-09-15 15:47:23,107 globalpy.py[line: 10] INFO: 正在初始化数据库[名称：TESTDB]对象
+2017-09-15 15:47:23,184 mydb.py[line: 83] INFO: query：SELECT * FROM user_address WHERE id = %s  data：('1',)
+2017-09-15 15:47:54,652 globalpy.py[line: 10] INFO: 正在初始化数据库[名称：TESTDB]对象
+2017-09-15 15:47:54,763 mydb.py[line: 99] INFO: query：SELECT * FROM user_address WHERE id = %s  data：('1',)
+2017-09-15 15:48:21,319 globalpy.py[line: 10] INFO: 正在初始化数据库[名称：TESTDB]对象
+2017-09-15 15:48:21,404 mydb.py[line: 99] INFO: query：SELECT * FROM user_address WHERE id = %s  data：('1', '2', '3')
+2017-09-15 15:48:21,404 mydb.py[line: 109] ERROR: 执行数据库查询操作失败：not all arguments converted during string formatting
+2017-09-15 15:48:51,595 globalpy.py[line: 10] INFO: 正在初始化数据库[名称：TESTDB]对象
+2017-09-15 15:48:51,655 mydb.py[line: 99] INFO: query：SELECT * FROM user_address WHERE id = %s or id = %s or id = %s  data：('1', '2', '3')
+2017-09-15 15:51:07,567 globalpy.py[line: 10] INFO: 正在初始化数据库[名称：TESTDB]对象
+2017-09-15 15:51:07,643 mydb.py[line: 99] INFO: query：SELECT * FROM user_address WHERE id = %s or id = %s or id = %s  data：('1', '2', '3')
+2017-09-15 15:56:05,503 mydb.py[line: 83] INFO: query：SELECT * FROM user_address WHERE id = %s  data：('1',)

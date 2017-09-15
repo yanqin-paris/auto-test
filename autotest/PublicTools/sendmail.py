@@ -94,6 +94,8 @@ class MyMail:
     def quit(self):
         self.smtp.quit()
 
+
+'''
 logger.info('生成测试报告成功')
 
 mymail = MyMail('D:\\autotestapi\\autotest\\config\\mail.conf')
@@ -110,3 +112,5 @@ mymail.send_mail(mail_tiltle, mail_content, attachments)
 mymail.quit()
 
 logger.info('发送邮件成功')
+
+'''
