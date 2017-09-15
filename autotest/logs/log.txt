@@ -1,0 +1,2 @@
+2017-09-15 11:28:32,956 GetToken_str.py[line: 43] INFO: 请求返回状态为：ok
+2017-09-15 11:28:32,964 GetToken_str.py[line: 46] INFO: 当前token为：5a4f1cfb4def54fd5c017028e15e17de
