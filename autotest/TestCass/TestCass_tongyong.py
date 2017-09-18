@@ -98,3 +98,19 @@ def test_get_peizhiwenjiangengxin():
         TestGetRequest(hurl + 'common/configs', hdata, headers,
                        htestcassid, htestcassname, htesthope, fanhuitesthope)
 # test_get_peizhiwenjiangengxin()
+
+
+def test_get_pophuodong():
+    for i in range(40, 41):
+        table = Testdata.sheets()[1]  # 选择excle表中的sheet
+        hdata = ''
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "1-5-" + str(i + 1)
+        htestcassname = "【通用模块】POP活动V1 " + htestcassid
+        htesthope = table.cell(i, 0).value
+        fanhuitesthope = table.cell(i, 1).value
+        TestGetRequest(hurl + 'common/advertising', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+# test_get_pophuodong()
