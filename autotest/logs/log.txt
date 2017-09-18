@@ -203,3 +203,100 @@
 2017-09-15 18:16:39,751 GetToken_str.py[line: 45] INFO: 当前token为：8ba25846b8f97c46d67d2639d8fe2002
 2017-09-15 18:18:02,979 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
 2017-09-15 18:18:02,979 GetToken_str.py[line: 45] INFO: 当前token为：a14b2c677da23e5dda7fcb9bb7db2d0d
+2017-09-15 18:37:17,552 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-15 18:37:17,565 GetToken_str.py[line: 45] INFO: 当前token为：2b1a76834e87ea1ad31872b0450a6cc0
+2017-09-15 18:40:11,643 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-15 18:40:11,644 GetToken_str.py[line: 45] INFO: 当前token为：67b3a28c8914760f7dcc332b5cc5137b
+2017-09-15 18:44:18,586 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-15 18:44:18,587 GetToken_str.py[line: 45] INFO: 当前token为：4de6008096b55b63d1cf92dd7a227078
+2017-09-15 18:44:18,714 TestRequest.py[line: 140] INFO: 【通用】配置文件更新 V1 1-4-32
+2017-09-15 18:44:18,714 TestRequest.py[line: 141] INFO: 测试不通过
+2017-09-15 18:44:18,715 TestRequest.py[line: 142] INFO: 返回的消息为：{'status': 'ok', 'data': {'goddess_card_agreement': 'http://m0.test.msparis.com/card/rule/agreement?platform=app', 'dots_pay_origin_price': 1000, 'dots_pay_price': 600, 'login_slogan': '新用户注册即享2800元礼包'}}
+2017-09-15 18:44:55,919 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-15 18:44:55,920 GetToken_str.py[line: 45] INFO: 当前token为：1ccb1b6a6fa3dcc3253881f87cf2595c
+2017-09-15 18:44:56,068 TestRequest.py[line: 140] INFO: 【通用】配置文件更新 V1 1-4-32
+2017-09-15 18:44:56,068 TestRequest.py[line: 141] INFO: 测试不通过
+2017-09-15 18:44:56,069 TestRequest.py[line: 142] INFO: 返回的消息为：{'status': 'ok', 'data': {'goddess_card_agreement': 'http://m0.test.msparis.com/card/rule/agreement?platform=app', 'dots_pay_origin_price': 1000, 'dots_pay_price': 600, 'login_slogan': '新用户注册即享2800元礼包'}}
+2017-09-15 18:45:17,347 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-15 18:45:17,348 GetToken_str.py[line: 45] INFO: 当前token为：0babd2da3203ad4d61441bd2d16f29ec
+2017-09-18 09:05:55,191 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 09:05:55,200 GetToken_str.py[line: 45] INFO: 当前token为：5a702f776e266115e7d6e25b02e6a9fe
+2017-09-18 09:05:55,388 TestRequest.py[line: 140] INFO: 【通用】配置文件更新 V1 1-4-32
+2017-09-18 09:05:55,389 TestRequest.py[line: 141] INFO: 测试不通过
+2017-09-18 09:05:55,389 TestRequest.py[line: 142] INFO: 返回的消息为：{'status': 'ok', 'data': {'goddess_card_agreement': 'http://m0.test.msparis.com/card/rule/agreement?platform=app', 'dots_pay_origin_price': 1000, 'dots_pay_price': 600, 'login_slogan': '新用户注册即享2800元礼包'}}
+2017-09-18 09:08:47,524 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 09:08:47,524 GetToken_str.py[line: 45] INFO: 当前token为：baa43c12341c52c7aab81572568edcf7
+2017-09-18 09:08:47,727 TestRequest.py[line: 127] INFO: 【通用】配置文件更新 V1 1-4-32
+2017-09-18 09:08:47,728 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-18 09:08:47,728 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'goddess_card_agreement': 'http://m0.test.msparis.com/card/rule/agreement?platform=app', 'dots_pay_origin_price': 1000, 'dots_pay_price': 600, 'login_slogan': '新用户注册即享2800元礼包'}}
+2017-09-18 09:27:24,403 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 09:27:24,403 GetToken_str.py[line: 45] INFO: 当前token为：157527c0ba0581046d9fec16b608621a
+2017-09-18 09:27:26,046 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-18 09:27:26,047 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'nickname': '135****9577', 'head_portrait': 'http://static-t.msparis.com/image/users/neutral.png', 'points': 2638, 'is_active': 1, 'is_sign': 0, 'upgrade_need_intergral': 362, 'level_icon': 'http://static-t.msparis.com/uploads/user/f/2/f27dc932b9cb63341dff2bf943ee07e7.png', 'member_privilege': [{'id': 17, 'name': '美妆惊喜', 'icon': ''}, {'id': 16, 'name': '客服优先', 'icon': ''}, {'id': 15, 'name': '生日礼遇', 'icon': ''}, {'id': 18, 'name': '敬请期待', 'icon': ''}], 'welfare_activities_url': '', 'integral_rules_url': 'http://m0.test.msparis.com/card/rule/point?platform=app'}}
+2017-09-18 09:27:26,350 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-18 09:27:26,351 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-18 09:27:26,759 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-18 09:27:26,760 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-09-18 09:47:30,970 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 09:47:30,971 GetToken_str.py[line: 45] INFO: 当前token为：d8cc36521531d0f8c7229798e7115352
+2017-09-18 09:47:31,497 TestRequest.py[line: 60] INFO: 【用户模块】 修改密码 V1 2-5-40
+2017-09-18 09:47:31,498 TestRequest.py[line: 61] INFO: 测试通过
+2017-09-18 09:47:31,498 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok'}
+2017-09-18 09:47:31,924 TestRequest.py[line: 32] INFO: 【用户模块】 修改密码 V1 2-5-41
+2017-09-18 09:47:31,924 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-18 09:47:31,925 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11043', 'message': '原始密码有误，请重新输入'}}
+2017-09-18 09:47:32,302 TestRequest.py[line: 32] INFO: 【用户模块】 修改密码 V1 2-5-42
+2017-09-18 09:47:32,302 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-18 09:47:32,303 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11042', 'message': '密码必须是8-20位字母或数字!'}}
+2017-09-18 09:47:32,725 TestRequest.py[line: 32] INFO: 【用户模块】 修改密码 V1 2-5-43
+2017-09-18 09:47:32,726 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-18 09:47:32,726 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-18 09:47:33,562 TestRequest.py[line: 32] INFO: 【用户模块】 修改密码 V1 2-5-44
+2017-09-18 09:47:33,562 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-18 09:47:33,563 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-09-18 09:57:48,159 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 09:57:48,170 GetToken_str.py[line: 45] INFO: 当前token为：5945988ed41f607b85b9112db2e471a3
+2017-09-18 09:59:07,684 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 09:59:07,685 GetToken_str.py[line: 45] INFO: 当前token为：2933145cfbb3e52fc90b93f7f0449b3b
+2017-09-18 10:02:07,122 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 10:02:07,123 GetToken_str.py[line: 45] INFO: 当前token为：2e1a97c95ea89a6e5f55f3b00b70ea92
+2017-09-18 10:03:39,998 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 10:03:39,998 GetToken_str.py[line: 45] INFO: 当前token为：b97b61ddff25c9cfaa8a930ea1d5f00e
+2017-09-18 10:04:23,795 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 10:04:23,795 GetToken_str.py[line: 45] INFO: 当前token为：716159ad397e6b8cf298006f50ba9c00
+2017-09-18 10:04:23,933 TestRequest.py[line: 129] INFO: 测试通过
+2017-09-18 10:04:23,934 TestRequest.py[line: 130] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'name': '普通会员', 'highlight': 1, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}, {'name': '铜牌会员', 'highlight': 0, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}, {'name': '银牌会员', 'highlight': 0, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}, {'name': '金牌会员', 'highlight': 0, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}, {'name': '钻石会员', 'highlight': 0, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}, {'name': 'VIP会员', 'highlight': 0, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}], 'total': 6}}
+2017-09-18 10:04:24,028 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-18 10:04:24,028 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-18 10:16:40,696 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 10:16:40,697 GetToken_str.py[line: 45] INFO: 当前token为：b86e4dacfff369a5f58dbea0cdfd24b5
+2017-09-18 10:16:41,113 TestRequest.py[line: 61] INFO: 测试通过
+2017-09-18 10:16:41,113 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok'}
+2017-09-18 10:16:41,325 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-18 10:16:41,325 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-18 10:16:41,519 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-18 10:16:41,520 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-09-18 10:29:47,864 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 10:29:47,865 GetToken_str.py[line: 45] INFO: 当前token为：94ff40bd3b84ebe44bfd321b1cdf03f9
+2017-09-18 10:29:48,057 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-18 10:29:48,057 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'id': 128834, 'card_order_no': 'ZSM1504254957836', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验'}, {'id': 128816, 'card_order_no': 'ZSM1504254608139', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验'}, {'id': 128813, 'card_order_no': 'ZSM1504254592452', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验'}, {'id': 128807, 'card_order_no': 'ZSM1504254408200', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验'}, {'id': 128796, 'card_order_no': 'ZSM1504254177268', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验'}, {'id': 128795, 'card_order_no': 'ZSM1504254149621', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验'}, {'id': 128783, 'card_order_no': 'ZSM1504253999539', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验'}], 'total': 7}}
+2017-09-18 10:29:48,259 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-18 10:29:48,260 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-18 10:29:48,464 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-18 10:29:48,464 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-09-18 10:34:08,642 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 10:34:08,642 GetToken_str.py[line: 45] INFO: 当前token为：612f02d98dda5d4495c50f9c4be11875
+2017-09-18 10:34:08,767 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-18 10:34:08,767 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'id': 128834, 'card_order_no': 'ZSM1504254957836', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:35:57'}, {'id': 128835, 'card_order_no': 'ZSM1504254957669', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 4, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:35:57'}, {'id': 128816, 'card_order_no': 'ZSM1504254608139', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:30:08'}, {'id': 128813, 'card_order_no': 'ZSM1504254592452', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:29:53'}, {'id': 128807, 'card_order_no': 'ZSM1504254408200', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:26:48'}, {'id': 128796, 'card_order_no': 'ZSM1504254177268', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:22:57'}, {'id': 128795, 'card_order_no': 'ZSM1504254149621', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:22:29'}, {'id': 128783, 'card_order_no': 'ZSM1504253999539', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:19:59'}], 'total': 8}}
+2017-09-18 10:34:08,868 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-18 10:34:08,868 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-18 10:34:09,053 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-18 10:34:09,053 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-09-18 10:46:40,069 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-18 10:46:40,069 GetToken_str.py[line: 45] INFO: 当前token为：47eaa0082578d3ce8b7a46ec423344d9
+2017-09-18 10:46:40,198 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-18 10:46:40,198 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 128835, 'card_order_no': 'ZSM1504254957669', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 4, 'card_notice': '', 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '5天试穿体验', 'created_at': 1504254957, 'discount_price': 0, 'membership_discount_price': 0, 'deposit': 0, 'cancel_reason': '订单超时未付款', 'pay_method': None, 'order_status': '已发货'}}
+2017-09-18 10:46:40,385 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-18 10:46:40,385 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-18 10:46:40,590 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-18 10:46:40,591 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10004', 'message': '没有找到相应数据!'}}

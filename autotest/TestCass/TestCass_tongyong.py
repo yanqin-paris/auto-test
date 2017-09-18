@@ -87,15 +87,14 @@ def test_get_jianchashoujihao():
 def test_get_peizhiwenjiangengxin():
     for i in range(31, 32):
         table = Testdata.sheets()[1]  # 选择excle表中的sheet
-        print(table)
         hdata = ''
         headers = {
             'content-type': hcontent_type
         }
         htestcassid = "1-4-" + str(i + 1)
         htestcassname = "【通用】配置文件更新 V1 " + htestcassid
-        htesthope = table.cell(i, 1).value
-        fanhuitesthope = table.cell(i, 2).value
+        htesthope = table.cell(i, 0).value
+        fanhuitesthope = table.cell(i, 1).value
         TestGetRequest(hurl + 'common/configs', hdata, headers,
                        htestcassid, htestcassname, htesthope, fanhuitesthope)
 # test_get_peizhiwenjiangengxin()
