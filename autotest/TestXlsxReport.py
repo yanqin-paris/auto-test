@@ -75,7 +75,7 @@ def init(worksheet):
     define_format_H2.set_color("#ffffff")
     # Create a new Chart object.
 
-    worksheet.merge_range('A1:F1', '测试报告总概况', define_format_H1)
+    worksheet.merge_range('A1:F1', '接口自动化测试报告', define_format_H1)
     worksheet.merge_range('A2:F2', '测试概括', define_format_H2)
     worksheet.merge_range('A3:A6', '千颂网络', get_format_center(workbook))
     worksheet.insert_image('A1', GetTestData() + 'logo.png')
@@ -85,16 +85,16 @@ def init(worksheet):
     _write_center(worksheet, "B5", '脚本语言', workbook)
     _write_center(worksheet, "B6", '测试地址', workbook)
 
-    data = {"test_name": "女神派接口", "test_version": "v1.0.0",
-            "test_pl": "Python3", "test_net": "http://api0.test.msparis.com/"}
+    data = {"test_name": "女神派项目接口", "test_version": "v1.0.0",
+            "test_pl": "Python3", "test_net": "http://api.auto.msparis.com/"}
     _write_center(worksheet, "C3", data['test_name'], workbook)
     _write_center(worksheet, "C4", data['test_version'], workbook)
     _write_center(worksheet, "C5", data['test_pl'], workbook)
     _write_center(worksheet, "C6", data['test_net'], workbook)
 
-    _write_center(worksheet, "D3", "接口总数", workbook)
-    _write_center(worksheet, "D4", "通过总数", workbook)
-    _write_center(worksheet, "D5", "失败总数", workbook)
+    _write_center(worksheet, "D3", "测试用例总数", workbook)
+    _write_center(worksheet, "D4", "测试用例通过数", workbook)
+    _write_center(worksheet, "D5", "测试用例失败数", workbook)
     _write_center(worksheet, "D6", "测试日期", workbook)
 
     data1 = {"test_sum": len(TestReport),
@@ -106,7 +106,7 @@ def init(worksheet):
     _write_center(worksheet, "E5", data1['test_failed'], workbook)
     _write_center(worksheet, "E6", data1['test_date'], workbook)
 
-    _write_center(worksheet, "F3", "通过率", workbook)
+    _write_center(worksheet, "F3", "测试用例通过率", workbook)
 
     worksheet.merge_range('F4:F6', str(
         (round(hpassnum / len(TestReport), 2)) * 100) + '%', get_format_center(workbook))
@@ -186,11 +186,11 @@ workbook.close()
 
 try:
     logger.info('生成测试报告成功')
-    mymail = MyMail(GetTestConfigPath + 'mail.conf')
+    mymail = MyMail(GetTestConfigPath() + 'mail.conf')
     mymail.connect()
     mymail.login()
     mail_content = '接口自动化测试报告:\n' + "测试用例总数:" + \
-        str(len(TestReport)) + "\n通过用例总数：" + hpassnum + \
+        str(len(TestReport)) + "\n通过用例总数：" + str(hpassnum) + \
         "\n失败总数：" + str(len(TestReport) - hpassnum) + "\n通过率为：" + \
         str(round(hpassnum / len(TestReport), 2) * 100) + \
         '%\n' + "详细内容请看附件：" + "【" + (now + 'report.xlsx') + "】"
@@ -201,7 +201,7 @@ try:
     logger.info('正在发送测试报告邮件...')
     mymail.send_mail(mail_tiltle, mail_content, attachments)
 except Exception as e:
-    logger.info('邮件发送失败：' + e)
+    logger.info('邮件发送失败：' + str(e))
     mymail.quit()
 else:
     mymail.quit()
