@@ -845,3 +845,28 @@ def test_get_huoquyonghujibenxinxi():
         TestGetRequest(hurl + 'user/show', hdata, headers,
                        htestcassid, htestcassname, htesthope, fanhuitesthope)
 # test_get_huoquyonghujibenxinxi()
+
+
+def test_get_yaoqingyoujiang():
+    for i in range(304, 306):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 305:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-32-" + str(i + 1)
+        htestcassname = "用户模块​邀请有奖V1" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'user/inviter', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+# test_get_yaoqingyoujiang()

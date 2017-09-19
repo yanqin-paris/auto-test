@@ -1,139 +1,121 @@
-2017-09-19 09:32:56,375 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'id': 128834, 'card_order_no': 'ZSM1504254957836', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:35:57'}, {'id': 128835, 'card_order_no': 'ZSM1504254957669', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 4, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:35:57'}, {'id': 128816, 'card_order_no': 'ZSM1504254608139', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:30:08'}, {'id': 128813, 'card_order_no': 'ZSM1504254592452', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:29:53'}, {'id': 128807, 'card_order_no': 'ZSM1504254408200', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:26:48'}, {'id': 128796, 'card_order_no': 'ZSM1504254177268', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:22:57'}, {'id': 128795, 'card_order_no': 'ZSM1504254149621', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:22:29'}, {'id': 128783, 'card_order_no': 'ZSM1504253999539', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 6, 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': '2017-09-01 16:19:59'}], 'total': 8}}
-2017-09-19 09:32:56,500 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:56,501 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:56,624 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:56,624 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
-2017-09-19 09:32:56,762 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:32:56,763 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 128835, 'card_order_no': 'ZSM1504254957669', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 4, 'card_notice': '', 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '5天试穿体验', 'created_at': 1504254957, 'discount_price': 0, 'membership_discount_price': 0, 'deposit': 0, 'cancel_reason': '订单超时未付款', 'pay_method': None, 'order_status': '已发货'}}
-2017-09-19 09:32:56,888 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:56,888 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:57,026 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:57,026 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10004', 'message': '没有找到相应数据!'}}
-2017-09-19 09:32:57,124 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:32:57,124 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 128835, 'card_order_no': 'ZSM1504254957669', 'card_action_type': 'buy', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'status': 4, 'card_notice': '', 'total_sale': 990, 'is_pay': 0, 'card_id': 54, 'card_name': '[购买]5天试穿体验', 'created_at': 1504254957, 'discount_price': 0, 'membership_discount_price': 0, 'deposit': 0, 'gift_data': None, 'cancel_reason': '订单超时未付款', 'pay_method': None, 'remaining_time': 0}}
-2017-09-19 09:32:57,224 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:57,224 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:57,329 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:57,329 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10004', 'message': '没有找到相应数据!'}}
-2017-09-19 09:32:57,460 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:32:57,460 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'nickname': 'Jim', 'head_portrait': 'http://static-r.msparis.com/uploads/5/8/5817ba9ec2d183c2c91d4c9f3b22382d.jpeg', 'authentication_type': 0, 'orders': {'pending_num': 0, 'to_be_delivered_num': 0, 'to_be_received_num': 0, 'to_be_commented_num': 0}, 'level_name': '普通会员', 'level_icon': 'http://static-r.msparis.com/uploads/user/a/0/a0c6e00e036daf28d4acf528d1889f58.png', 'user_card': None, 'user_card_num': 0, 'wardrobe_num': 0, 'to_be_clothes': 0, 'favorite_product_num': 0, 'favorite_brand_num': 0, 'invoice_amount': 0, 'share_prizes_url': 'http://m.msparis.com/user/inviter?platform=app', 'new_information': 0, 'browsing_history_total': 0, 'coupon_number': 0}}
-2017-09-19 09:32:57,569 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:57,569 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:57,715 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:32:57,715 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'nickname': 'Jim', 'head_portrait': 'http://static-r.msparis.com/uploads/5/8/5817ba9ec2d183c2c91d4c9f3b22382d.jpeg', 'authentication_type': 0, 'created_at': '2017-08-15 22:37:08', 'level_name': '普通会员', 'level_icon': 'http://static-r.msparis.com/uploads/user/a/0/a0c6e00e036daf28d4acf528d1889f58.png', 'user_card': None, 'user_card_num': 0, 'favorite_product_num': 0, 'favorite_brand_num': 0, 'invoice_amount': 0, 'share_prizes_url': 'http://m.msparis.com/user/inviter?platform=app', 'new_information': 0, 'browsing_history_total': 19, 'coupon_number': 6, 'reservation_data': ''}}
-2017-09-19 09:32:57,821 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:57,822 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:58,027 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:32:58,027 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'orders': {'pending_num': 0, 'to_be_delivered_num': 0, 'to_be_received_num': 0, 'to_be_commented_num': 0, 'be_evaluated': 0}, 'wardrobe_num': 0, 'to_be_clothes': 0}}
-2017-09-19 09:32:58,130 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:58,131 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:58,252 TestRequest.py[line: 61] INFO: 测试通过
-2017-09-19 09:32:58,252 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok'}
-2017-09-19 09:32:58,358 TestRequest.py[line: 33] INFO: 测试通过
-2017-09-19 09:32:58,358 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:58,599 TestRequest.py[line: 127] INFO: 【用户模块】浏览记录 V1 2-15-122
-2017-09-19 09:32:58,600 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:32:58,600 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'date': 1504454400, 'rows': [{'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '宝石蓝雪纺挂脖吊带裙', 'rental_price': 17000, 'market_price': 180000, 'id': 2432, 'cover_image': 'http://static-r.msparis.com/media/catalog/product/c/k/ck027a-1_1.jpg', 'brand': 'CALVIN KLEIN', 'show_specifications': 'XS S M L XL', 'brows_date': 1504454400}]}, {'date': 1504195200, 'rows': [{'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '白色V领束腰连衣裙', 'rental_price': 24000, 'market_price': 61800, 'id': 10929, 'cover_image': 'http://static-r.msparis.com/uploads/products/8/5/85054c99b9ac9e4091e8aa9f73d22b70.jpg', 'brand': 'LAVISH ALICE', 'show_specifications': 'XS S M L XL', 'brows_date': 1504195200}, {'is_favorite': 0, 'dots': 1, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '浅云粉百褶针织连衣裙', 'rental_price': 13000, 'market_price': 39900, 'id': 2310, 'cover_image': 'http://static-r.msparis.com/media/catalog/product/t/b/tb2q_5topxxxxxqxfxxxxxxxxxx__859494695.jpg', 'brand': 'MSPARIS SELECT', 'show_specifications': '', 'brows_date': 1504195200}]}, {'date': 1504108800, 'rows': [{'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 2, 'rental_limit_days': '3', 'mode_id': 1, 'name': '藏青褶皱简约半裙', 'rental_price': 23000, 'market_price': 83900, 'id': 11282, 'cover_image': 'http://static-r.msparis.com/uploads/products/3/7/378573e9062b5f79dfd569779ef79f30.jpg', 'brand': 'MAMOUR', 'show_specifications': '', 'brows_date': 1504108800}]}, {'date': 1504022400, 'rows': [{'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 2, 'name': '飘逸印花礼服裙', 'rental_price': 18000, 'market_price': 130900, 'id': 11389, 'cover_image': 'http://static-r.msparis.com/uploads/products/e/5/e54f9bb2f51b4201ef674ca65d3323a0.JPG', 'brand': 'DONG DE XI', 'show_specifications': 'S M L XL', 'brows_date': 1504022400}, {'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '立体修身A字连衣裙', 'rental_price': 16000, 'market_price': 149900, 'id': 11381, 'cover_image': 'http://static-r.msparis.com/uploads/products/0/4/041e0787b8bb97861ffe0cd54987d132.JPG', 'brand': 'ZUURAI ', 'show_specifications': 'S M L XL', 'brows_date': 1504022400}]}, {'date': 1503676800, 'rows': [{'is_favorite': 0, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '黑色蕾丝拼接包臀连衣裙', 'rental_price': 15000, 'market_price': 18900, 'id': 11035, 'cover_image': 'http://static-r.msparis.com/uploads/products/1/a/1a0a64c30fccb4795beb56baa5d226cd.jpg', 'brand': 'MSPARIS SELECT', 'show_specifications': 'XS S M L XL', 'brows_date': 1503676800}, {'is_favorite': 0, 'dots': 3, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '粉色印花V领连衣裙', 'rental_price': 30000, 'market_price': 398000, 'id': 9672, 'cover_image': 'http://static-r.msparis.com/uploads/products/a/6/a6b38706b0213176872a829df1dc27b5.jpg', 'brand': 'DVF', 'show_specifications': 'M', 'brows_date': 1503676800}]}, {'date': 1503504000, 'rows': [{'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '蕾丝拼接百褶长裙', 'rental_price': 18000, 'market_price': 165900, 'id': 11215, 'cover_image': 'http://static-r.msparis.com/uploads/products/c/8/c80319411cdd030937e0921512756acf.JPG', 'brand': 'HAIPING XIE', 'show_specifications': 'S M L XL', 'brows_date': 1503504000}, {'is_favorite': 0, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '蓝色收腰简约套装', 'rental_price': 16000, 'market_price': 59900, 'id': 11174, 'cover_image': 'http://static-r.msparis.com/uploads/products/e/6/e6bc2ba5925632b72462bd20c3e132ad.jpg', 'brand': 'MSPARIS SELECT', 'show_specifications': 'M L XL', 'brows_date': 1503504000}]}], 'total': 19}}
-2017-09-19 09:32:58,695 TestRequest.py[line: 99] INFO: 【用户模块】浏览记录 V1 2-15-123
-2017-09-19 09:32:58,696 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:58,696 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:58,814 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:32:58,814 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'content': '暂无消息', 'type': 1, 'created_at': None, 'is_read': 1, 'is_has_news': 0}, {'content': '暂无消息', 'type': 3, 'created_at': None, 'is_read': 1, 'is_has_news': 0}]}}
-2017-09-19 09:32:58,927 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:58,927 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:59,057 TestRequest.py[line: 61] INFO: 测试通过
-2017-09-19 09:32:59,058 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok'}
-2017-09-19 09:32:59,166 TestRequest.py[line: 33] INFO: 测试通过
-2017-09-19 09:32:59,167 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:59,278 TestRequest.py[line: 33] INFO: 测试通过
-2017-09-19 09:32:59,279 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10012', 'message': '请输入有效手机号!'}}
-2017-09-19 09:32:59,402 TestRequest.py[line: 61] INFO: 测试通过
-2017-09-19 09:32:59,403 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok'}
-2017-09-19 09:32:59,505 TestRequest.py[line: 33] INFO: 测试通过
-2017-09-19 09:32:59,505 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:59,612 TestRequest.py[line: 33] INFO: 测试通过
-2017-09-19 09:32:59,612 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10012', 'message': '请输入有效手机号!'}}
-2017-09-19 09:32:59,747 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:32:59,747 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [], 'total': 0}}
-2017-09-19 09:32:59,852 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:59,852 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:32:59,960 TestRequest.py[line: 99] INFO: 【用户模块】用户押金认证金钱 V12-21-182
-2017-09-19 09:32:59,960 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:32:59,961 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11014', 'message': '您没有进行押金认证!'}}
-2017-09-19 09:33:00,067 TestRequest.py[line: 99] INFO: 【用户模块】用户押金认证金钱 V12-21-183
-2017-09-19 09:33:00,067 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:33:00,067 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:00,419 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:33:00,419 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'points': 40, 'rows': [{'remark': '分享', 'type': 1, 'bonus_points': 30, 'remain_points': 40, 'created_at': 1505784772}, {'remark': '连续签到1天', 'type': 1, 'bonus_points': 10, 'remain_points': 10, 'created_at': 1504520504}], 'total': 2}}
-2017-09-19 09:33:00,518 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:33:00,518 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:00,656 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:33:00,656 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'points': 40, 'is_sign': 0, 'consecutive_day': 0, 'user_signs': [1504454400]}}
-2017-09-19 09:33:00,758 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:33:00,758 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:00,943 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:33:00,943 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'name': '轻奢月卡100元优惠券', 'use_limit': 0, 'discount': 10000, 'type': 3, 'to_date': 1506528000, 'description': '', 'coupon_id': 22068, 'use_range': [2, 3], 'bind_card_type': 'VIP'}, {'name': '轻奢季卡300元优惠券', 'use_limit': 0, 'discount': 30000, 'type': 3, 'to_date': 1506528000, 'description': '', 'coupon_id': 22069, 'use_range': [2, 3], 'bind_card_type': 'VIP'}, {'name': '时尚年卡600元优惠券', 'use_limit': 0, 'discount': 60000, 'type': 3, 'to_date': 1507824000, 'description': '', 'coupon_id': 22070, 'use_range': [2, 3], 'bind_card_type': 'NORMAL'}, {'name': '轻奢年卡1200元优惠券', 'use_limit': 0, 'discount': 120000, 'type': 3, 'to_date': 1507824000, 'description': '', 'coupon_id': 22071, 'use_range': [2, 3], 'bind_card_type': 'VIP'}, {'name': '时尚月卡50元优惠券', 'use_limit': 0, 'discount': 5000, 'type': 3, 'to_date': 1506528000, 'description': '', 'coupon_id': 22066, 'use_range': [2, 3], 'bind_card_type': 'NORMAL'}, {'name': '时尚季卡150元优惠券', 'use_limit': 0, 'discount': 15000, 'type': 3, 'to_date': 1506528000, 'description': '', 'coupon_id': 22067, 'use_range': [2, 3], 'bind_card_type': 'NORMAL'}], 'total': 6}}
-2017-09-19 09:33:01,051 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:33:01,051 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:01,162 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:33:01,162 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'id': 57053, 'region_name': '上海', 'address_detail': '测试地址', 'contact_name': 'jim.zou', 'contact_mobile': '13584955886', 'region_code': '010', 'area_name': None}, {'id': 56055, 'region_name': '上海', 'address_detail': '测试地址', 'contact_name': 'jim.zou', 'contact_mobile': '13584955886', 'region_code': '010', 'area_name': None}], 'total': 2}}
-2017-09-19 09:33:01,261 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:33:01,261 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:01,373 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:33:01,374 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [], 'total': 0}}
-2017-09-19 09:33:01,480 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:33:01,480 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:01,594 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:33:01,594 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'real_name': '', 'id_number': ''}}
-2017-09-19 09:33:01,703 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:33:01,703 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:01,818 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:33:01,818 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [], 'total': 0}}
-2017-09-19 09:33:01,912 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:33:01,912 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:02,024 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:33:02,024 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'total': 1, 'rows': [{'id': 1, 'name': '清雅紫丁香真丝礼服', 'cover_image': 'http://static-r.msparis.com/media/catalog/product/a/m/am7_2.jpeg', 'market_price': 370000, 'rental_limit_days': '3', 'rental_price': 21900, 'limit_tag': '', 'enabled': 1, 'dots': 2, 'brand': 'AMSALE', 'is_favorite': 1, 'show_specifications': 'XS M', 'type_id': 2, 'mode_id': 2, 'wish_id': 1716054}]}}
-2017-09-19 09:33:02,130 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:33:02,131 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:02,270 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:33:02,270 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'coupon_number': 6, 'deposit': 0}}
-2017-09-19 09:33:02,375 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:33:02,375 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:02,517 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:33:02,518 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'head_portrait': 'http://static-r.msparis.com/uploads/5/8/5817ba9ec2d183c2c91d4c9f3b22382d.jpeg', 'nickname': 'Jim', 'gender': 'm', 'dob': 0, 'fit_height': 0, 'id': 189152, 'bucket': 'msparis-static', 'authentication_type': 0, 'is_active': 1, 'dob_editable': 1, 'user_size': [{'id': 7, 'name': 'XXXL', 'is_selected': 0}, {'id': 6, 'name': 'XXL', 'is_selected': 0}, {'id': 5, 'name': 'XL', 'is_selected': 0}, {'id': 4, 'name': 'L', 'is_selected': 0}, {'id': 3, 'name': 'M', 'is_selected': 0}, {'id': 2, 'name': 'S', 'is_selected': 0}, {'id': 1, 'name': 'XS', 'is_selected': 0}]}}
-2017-09-19 09:33:02,622 TestRequest.py[line: 100] INFO: 测试通过
-2017-09-19 09:33:02,622 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:02,622 TestAllCass.py[line: 64] INFO: 结束测试
-2017-09-19 09:33:02,622 TestAllCass.py[line: 68] INFO: 开始测试
-2017-09-19 09:33:02,622 TestAllCass.py[line: 70] INFO: 2017-09-19-09-33-02
-2017-09-19 09:33:02,727 TestRequest.py[line: 127] INFO: 【活动模块】 获取拼团活动详情 (m站)4-1-4
-2017-09-19 09:33:02,728 TestRequest.py[line: 128] INFO: 测试通过
-2017-09-19 09:33:02,728 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'title': '2人团 | 女神派 · 5天时尚共享体验', 'min_number_of_members': 2, 'single_buy_price': 2990, 'sale_price': 990, 'original_price': 7900, 'team_data': None}}
-2017-09-19 09:33:02,844 TestRequest.py[line: 140] INFO: 【活动模块】 获取拼团活动详情 (m站)4-1-5
-2017-09-19 09:33:02,845 TestRequest.py[line: 141] INFO: 测试不通过
-2017-09-19 09:33:02,845 TestRequest.py[line: 142] INFO: 返回的消息为：{'status': 'ok', 'data': {'title': '2人团 | 女神派 · 5天时尚共享体验', 'min_number_of_members': 2, 'single_buy_price': 2990, 'sale_price': 990, 'original_price': 7900, 'team_data': None}}
-2017-09-19 09:33:02,846 TestAllCass.py[line: 72] INFO: 结束测试
-2017-09-19 09:33:02,846 TestAllCass.py[line: 76] INFO: 开始测试
-2017-09-19 09:33:02,846 TestAllCass.py[line: 78] INFO: 2017-09-19-09-33-02
-2017-09-19 09:33:03,002 TestRequest.py[line: 60] INFO: 【订单模块】开团 （m站）3-2-14
-2017-09-19 09:33:03,003 TestRequest.py[line: 61] INFO: 测试通过
-2017-09-19 09:33:03,003 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 36091, 'order_theme': '时尚体验衣袋购卡', 'price': 990, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png'}}
-2017-09-19 09:33:03,133 TestRequest.py[line: 32] INFO: 【订单模块】开团 （m站）3-2-15
-2017-09-19 09:33:03,133 TestRequest.py[line: 33] INFO: 测试通过
-2017-09-19 09:33:03,134 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:03,255 TestRequest.py[line: 45] INFO: 【订单模块】参团 （m站）3-3-22
-2017-09-19 09:33:03,255 TestRequest.py[line: 46] INFO: 测试不通过
-2017-09-19 09:33:03,255 TestRequest.py[line: 47] INFO: 返回的消息为：{'status': 'error', 'error': {'code': '10004', 'message': '没有找到相应数据!'}}
-2017-09-19 09:33:03,376 TestRequest.py[line: 32] INFO: 【订单模块】参团 （m站）3-3-23
-2017-09-19 09:33:03,377 TestRequest.py[line: 33] INFO: 测试通过
-2017-09-19 09:33:03,377 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:03,521 TestRequest.py[line: 60] INFO: 【订单模块】拼团卡单次购买 V13-1-4
-2017-09-19 09:33:03,522 TestRequest.py[line: 61] INFO: 测试通过
-2017-09-19 09:33:03,522 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok', 'data': {'user_card_id': 0, 'order_id': 178687, 'order_no': 'SM1505784780416', 'is_pay': 0, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'order_theme': '时尚体验衣袋', 'total_sale': 2990}}
-2017-09-19 09:33:03,640 TestRequest.py[line: 32] INFO: 【订单模块】拼团卡单次购买 V13-1-5
-2017-09-19 09:33:03,640 TestRequest.py[line: 33] INFO: 测试通过
-2017-09-19 09:33:03,640 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-09-19 09:33:03,641 TestAllCass.py[line: 82] INFO: 结束测试
-2017-09-19 09:33:03,748 TestXlsxReport.py[line: 188] INFO: 生成测试报告成功
-2017-09-19 09:33:04,396 TestXlsxReport.py[line: 201] INFO: 正在发送测试报告邮件...
-2017-09-19 09:33:06,930 TestXlsxReport.py[line: 208] INFO: 发送邮件成功
+2017-09-19 15:29:00,041 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'total': 140, 'rows': [{'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '粉色印花甜美连衣裙', 'rental_price': 22000, 'spu': 'ZC188P', 'market_price': 90000, 'id': 12047, 'cover_image': 'http://static-r.msparis.com/uploads/products/1/5/15020959799524c25fef394028863882.jpg', 'brand': 'MSPARIS SELECT', 'show_specifications': 'M L'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '白色无袖钉扣上衣', 'rental_price': 22000, 'spu': 'FB046W', 'market_price': 64000, 'id': 12148, 'cover_image': 'http://static-r.msparis.com/uploads/products/7/5/75e399c2af7bcca75eb890c753502f19.jpg', 'brand': 'MSPARIS SELECT', 'show_specifications': 'XS S'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '蓝色拼接休闲连衣裙', 'rental_price': 16000, 'spu': 'ZC177A', 'market_price': 58000, 'id': 12015, 'cover_image': 'http://static-r.msparis.com/uploads/products/3/9/390cde2972fb752f606297d1ab962682.jpg', 'brand': 'MSPARIS SELECT', 'show_specifications': 'S M L'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '正红褶皱镂刻简约连衣裙', 'rental_price': 20000, 'spu': 'ZC186R', 'market_price': 90000, 'id': 12030, 'cover_image': 'http://static-r.msparis.com/uploads/products/e/9/e914aa0784c086c163dd3614f8de7b64.jpg', 'brand': 'MSPARIS SELECT', 'show_specifications': 'S M XL'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '粉色针织绣花甜美连衣裙', 'rental_price': 16000, 'spu': 'RU325P', 'market_price': 54800, 'id': 12206, 'cover_image': 'http://static-r.msparis.com/uploads/products/5/a/5a2cc2d1fafa7d1f63f56173e32a4e63.JPG', 'brand': 'MSPARIS SELECT', 'show_specifications': 'S M L XL'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '花色印花褶皱淑女连衣裙', 'rental_price': 18000, 'spu': 'YJ029M', 'market_price': 95900, 'id': 12200, 'cover_image': 'http://static-r.msparis.com/uploads/products/8/3/837e0615f4dfda09ff3f7f76838cbd74.JPG', 'brand': 'MSPARIS SELECT', 'show_specifications': 'S M'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 1, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '白色印花拼接休闲上衣', 'rental_price': 14000, 'spu': 'XX044W', 'market_price': 59900, 'id': 12194, 'cover_image': 'http://static-r.msparis.com/uploads/products/3/e/3ed82794e6e5e9fb9ccc73d958b0c1eb.JPG', 'brand': 'MSPARIS SELECT', 'show_specifications': 'M L'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '藏青拼色通勤两件套装', 'rental_price': 18000, 'spu': 'RU326A', 'market_price': 68900, 'id': 12209, 'cover_image': 'http://static-r.msparis.com/uploads/products/f/f/ff7b913c680289305aa0e79e50d7d94b.JPG', 'brand': 'MSPARIS SELECT', 'show_specifications': 'S M L XL'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 1, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '白色雪纺简约衬衫', 'rental_price': 14000, 'spu': 'XX045W', 'market_price': 59900, 'id': 12196, 'cover_image': 'http://static-r.msparis.com/uploads/products/3/8/38d35b6ac7735e538059c85a95cae09e.JPG', 'brand': 'MSPARIS SELECT', 'show_specifications': 'XS S M L'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '黑色镂空拼接淑女连衣裙', 'rental_price': 16000, 'spu': 'SG052B', 'market_price': 35800, 'id': 12184, 'cover_image': 'http://static-r.msparis.com/uploads/products/8/3/831f32c51c9f3f86490d045cb2335748.JPG', 'brand': 'MSPARIS SELECT', 'show_specifications': 'M L XL XXL'}]}}
+2017-09-19 15:29:00,284 TestRequest.py[line: 127] INFO: 商品获取新品商品列表 V16-10-97
+2017-09-19 15:29:00,284 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-19 15:29:00,286 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'total': 140, 'rows': [{'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '黑色不规则半裙', 'rental_price': 22000, 'spu': 'NA010B', 'market_price': 168000, 'id': 12054, 'cover_image': 'http://static-r.msparis.com/uploads/products/2/2/222fb6133150e9be46bfd9160b1032cc.jpg', 'brand': 'ANNBOO COLLECTION', 'show_specifications': 'M L'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '蓝色甜美不规则下摆半裙', 'rental_price': 21000, 'spu': 'NA009A', 'market_price': 99000, 'id': 12049, 'cover_image': 'http://static-r.msparis.com/uploads/products/4/6/46c3aaa5d5895a8b77b96204c4ea2732.jpg', 'brand': 'ANNBOO COLLECTION', 'show_specifications': 'S M L'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 1, 'is_favorite': 0, 'dots': 3, 'type_id': 2, 'limit_tag': '年卡专享', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': 'Hayley黑色连真丝体裤', 'rental_price': 26000, 'spu': 'RM023B', 'market_price': 328000, 'id': 12190, 'cover_image': 'http://static-r.msparis.com/uploads/products/3/f/3f5c05860496ca890c1748404f7bc741.jpg', 'brand': 'REBECCA MINKOFF', 'show_specifications': 'XS'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 1, 'is_favorite': 0, 'dots': 3, 'type_id': 2, 'limit_tag': '年卡专享', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': 'Claudia白色镂刻连衣裙', 'rental_price': 20000, 'spu': 'RM022W', 'market_price': 298000, 'id': 12185, 'cover_image': 'http://static-r.msparis.com/uploads/products/a/7/a730208652269eced0afa5f13325b272.jpeg', 'brand': 'REBECCA MINKOFF', 'show_specifications': 'XS'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '印花甜美连衣裙', 'rental_price': 15000, 'spu': 'TJ001M', 'market_price': 168000, 'id': 12183, 'cover_image': 'http://static-r.msparis.com/uploads/products/0/8/08d8e7fbb7eb6f44f6c278807531e644.JPG', 'brand': 'ROMEO&JULIET COUTURE', 'show_specifications': 'M L'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '花色提花连衣裙', 'rental_price': 15000, 'spu': 'AQ075M', 'market_price': 160000, 'id': 12203, 'cover_image': 'http://static-r.msparis.com/uploads/products/4/2/42bbd3d005d5578cbeac37bfd04bdfb6.JPG', 'brand': 'AQUA', 'show_specifications': 'M L'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '印花荷叶边上衣', 'rental_price': 13000, 'spu': 'NC015M', 'market_price': 78800, 'id': 12201, 'cover_image': 'http://static-r.msparis.com/uploads/products/a/7/a7e922e2e58402318d6c700b477c6cd7.JPG', 'brand': 'INC', 'show_specifications': 'M L'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 3, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '黑色交叉领连体裤', 'rental_price': 18000, 'spu': 'MK380B', 'market_price': 215000, 'id': 12187, 'cover_image': 'http://static-r.msparis.com/uploads/products/2/b/2b4c1afdc55989dcfb13624b80333a06.jpg', 'brand': 'MICHAEL KORS', 'show_specifications': 'XS'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 3, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '黑色蕾丝真丝上衣', 'rental_price': 20000, 'spu': 'AO151B', 'market_price': 228000, 'id': 12205, 'cover_image': 'http://static-r.msparis.com/uploads/products/b/b/bba03955eba401e66f451caf90fbfad9.JPG', 'brand': 'ALICE+OLIVIA', 'show_specifications': 'XS S'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 3, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': 'Sidney豹纹印花连衣裙', 'rental_price': 22000, 'spu': 'BC652M', 'market_price': 228000, 'id': 12210, 'cover_image': 'http://static-r.msparis.com/uploads/products/7/c/7ce273730794ae193f6b532c0eac67c7.png', 'brand': 'BCBG MAXAZRIA', 'show_specifications': 'M L'}]}}
+2017-09-19 15:29:00,377 TestRequest.py[line: 99] INFO: 商品获取新品商品列表 V16-10-98
+2017-09-19 15:29:00,377 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 15:29:00,377 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'type不在有效范围'}}
+2017-09-19 15:43:46,677 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-19 15:43:46,678 GetToken_str.py[line: 45] INFO: 当前token为：1b7172415e0b32c1a2123eaa5df2417f
+2017-09-19 15:43:46,899 TestRequest.py[line: 127] INFO: 商品获取马上穿或24小时发货商品列表 V3.36-11-109
+2017-09-19 15:43:46,900 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-19 15:43:46,900 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'total': 1, 'rows': [{'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 3, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '简约百搭真丝长裤', 'rental_price': 18000, 'spu': 'NE008B', 'market_price': 215000, 'id': 11703, 'cover_image': 'http://static-r.msparis.com/uploads/products/b/4/b49b9d6b047e6b5a31e24a639c7cfce5.JPG', 'brand': 'REINEREN', 'show_specifications': 'XS S M'}]}}
+2017-09-19 15:43:47,096 TestRequest.py[line: 127] INFO: 商品获取马上穿或24小时发货商品列表 V3.36-11-110
+2017-09-19 15:43:47,096 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-19 15:43:47,096 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'total': 4, 'rows': [{'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '黑色镂空上衣', 'rental_price': 36000, 'spu': 'YO007B', 'market_price': 158000, 'id': 11049, 'cover_image': 'http://static-r.msparis.com/uploads/products/5/8/5859ac4c9baa1310d7b599f69da1354a.jpg', 'brand': 'CHICCO MAO', 'show_specifications': 'S M L'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 3, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '简约百搭真丝长裤', 'rental_price': 18000, 'spu': 'NE008B', 'market_price': 215000, 'id': 11703, 'cover_image': 'http://static-r.msparis.com/uploads/products/b/4/b49b9d6b047e6b5a31e24a639c7cfce5.JPG', 'brand': 'REINEREN', 'show_specifications': 'XS S M'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '黑色时尚气质拼接连衣裙', 'rental_price': 16000, 'spu': 'CD032M', 'market_price': 29900, 'id': 10321, 'cover_image': 'http://static-r.msparis.com/uploads/products/6/0/6014a9a046ce9713147292d68ecab6cf.jpg', 'brand': 'MSPARIS SELECT', 'show_specifications': 'S M'}, {'limit_one_per_package': 0, 'limit_only_year_card_user': 0, 'is_favorite': 0, 'dots': 1, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '黑色露腰修身连体裤', 'rental_price': 16000, 'spu': 'HO088B', 'market_price': 22900, 'id': 8769, 'cover_image': 'http://static-r.msparis.com/uploads/products/9/e/9e44c6b6e469c4b0d92ea61524e15658.jpg', 'brand': 'MSPARIS SELECT', 'show_specifications': 'S M XXL'}]}}
+2017-09-19 16:54:30,385 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-19 16:54:30,391 GetToken_str.py[line: 45] INFO: 当前token为：1227bcd9e1cec529df27daef9b333f82
+2017-09-19 16:54:30,668 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-19 16:54:30,668 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'time': 13242448800, 'is_be_booked': 0}, {'time': 13242450600, 'is_be_booked': 0}, {'time': 13242452400, 'is_be_booked': 0}, {'time': 13242454200, 'is_be_booked': 0}, {'time': 13242456000, 'is_be_booked': 0}, {'time': 13242457800, 'is_be_booked': 0}, {'time': 13242459600, 'is_be_booked': 0}, {'time': 13242461400, 'is_be_booked': 0}, {'time': 13242463200, 'is_be_booked': 0}, {'time': 13242465000, 'is_be_booked': 0}, {'time': 13242466800, 'is_be_booked': 0}, {'time': 13242468600, 'is_be_booked': 0}, {'time': 13242470400, 'is_be_booked': 0}, {'time': 13242472200, 'is_be_booked': 0}, {'time': 13242474000, 'is_be_booked': 0}, {'time': 13242475800, 'is_be_booked': 0}, {'time': 13242477600, 'is_be_booked': 0}, {'time': 13242479400, 'is_be_booked': 0}, {'time': 13242481200, 'is_be_booked': 0}, {'time': 13242483000, 'is_be_booked': 0}, {'time': 13242484800, 'is_be_booked': 0}, {'time': 13242486600, 'is_be_booked': 0}]}}
+2017-09-19 16:54:30,775 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 16:54:30,776 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'date不在有效范围'}}
+2017-09-19 16:54:30,878 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 16:54:30,880 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'type不在有效范围'}}
+2017-09-19 16:54:30,980 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 16:54:30,980 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'store_id不在有效范围'}}
+2017-09-19 16:54:31,081 TestRequest.py[line: 113] INFO: 测试不通过
+2017-09-19 16:54:31,081 TestRequest.py[line: 114] INFO: 返回的消息为：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-19 16:55:55,991 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-19 16:55:55,996 GetToken_str.py[line: 45] INFO: 当前token为：732914f8d0d27a51fa6eb2c2158567de
+2017-09-19 16:55:56,281 TestRequest.py[line: 127] INFO: 预约模块获取预约时间V17-1-4
+2017-09-19 16:55:56,281 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-19 16:55:56,281 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'time': 13242448800, 'is_be_booked': 0}, {'time': 13242450600, 'is_be_booked': 0}, {'time': 13242452400, 'is_be_booked': 0}, {'time': 13242454200, 'is_be_booked': 0}, {'time': 13242456000, 'is_be_booked': 0}, {'time': 13242457800, 'is_be_booked': 0}, {'time': 13242459600, 'is_be_booked': 0}, {'time': 13242461400, 'is_be_booked': 0}, {'time': 13242463200, 'is_be_booked': 0}, {'time': 13242465000, 'is_be_booked': 0}, {'time': 13242466800, 'is_be_booked': 0}, {'time': 13242468600, 'is_be_booked': 0}, {'time': 13242470400, 'is_be_booked': 0}, {'time': 13242472200, 'is_be_booked': 0}, {'time': 13242474000, 'is_be_booked': 0}, {'time': 13242475800, 'is_be_booked': 0}, {'time': 13242477600, 'is_be_booked': 0}, {'time': 13242479400, 'is_be_booked': 0}, {'time': 13242481200, 'is_be_booked': 0}, {'time': 13242483000, 'is_be_booked': 0}, {'time': 13242484800, 'is_be_booked': 0}, {'time': 13242486600, 'is_be_booked': 0}]}}
+2017-09-19 16:55:56,378 TestRequest.py[line: 99] INFO: 预约模块获取预约时间V17-1-5
+2017-09-19 16:55:56,378 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 16:55:56,380 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'date不在有效范围'}}
+2017-09-19 16:55:56,478 TestRequest.py[line: 99] INFO: 预约模块获取预约时间V17-1-6
+2017-09-19 16:55:56,479 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 16:55:56,479 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'type不在有效范围'}}
+2017-09-19 16:55:56,578 TestRequest.py[line: 99] INFO: 预约模块获取预约时间V17-1-7
+2017-09-19 16:55:56,578 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 16:55:56,578 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'store_id不在有效范围'}}
+2017-09-19 16:55:56,683 TestRequest.py[line: 99] INFO: 预约模块获取预约时间V17-1-8
+2017-09-19 16:55:56,684 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 16:55:56,684 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-19 17:53:15,160 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-19 17:53:15,164 GetToken_str.py[line: 45] INFO: 当前token为：2ba6e7aaf3c7159c4690dd0983cb29ee
+2017-09-19 17:53:15,283 TestRequest.py[line: 127] INFO: 预约模块获取预约列表V17-2-22
+2017-09-19 17:53:15,284 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-19 17:53:15,284 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'id': 6637, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6636, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6635, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6634, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6633, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}], 'total': 5}}
+2017-09-19 17:55:43,012 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-19 17:55:43,012 GetToken_str.py[line: 45] INFO: 当前token为：575a24861195f5d5182fb1606d03dc10
+2017-09-19 17:55:43,128 TestRequest.py[line: 127] INFO: 预约模块预约详情V17-3-32
+2017-09-19 17:55:43,128 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-19 17:55:43,128 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 6638, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'address': '黄浦区九江路501号外滩WE1店面', 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消', 'store_name': '外滩店', 'type': 1}}
+2017-09-19 18:00:55,016 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-19 18:00:55,016 GetToken_str.py[line: 45] INFO: 当前token为：0beab2a633e3ac71859ad8c6f4aeab28
+2017-09-19 18:00:55,141 TestRequest.py[line: 189] INFO: 预约模块取消预约V17-4-40
+2017-09-19 18:00:55,141 TestRequest.py[line: 190] INFO: 测试通过
+2017-09-19 18:00:55,141 TestRequest.py[line: 191] INFO: 返回的消息是：{'status': 'ok'}
+2017-09-19 18:01:01,857 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-19 18:01:01,857 GetToken_str.py[line: 45] INFO: 当前token为：9e6b96ce28b1b95f804b975a3a0bf60a
+2017-09-19 18:01:01,974 TestRequest.py[line: 189] INFO: 预约模块取消预约V17-4-40
+2017-09-19 18:01:01,974 TestRequest.py[line: 190] INFO: 测试通过
+2017-09-19 18:01:01,974 TestRequest.py[line: 191] INFO: 返回的消息是：{'status': 'ok'}
+2017-09-19 18:08:57,609 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-19 18:08:57,609 GetToken_str.py[line: 45] INFO: 当前token为：93138cf78abe96470ecadbb639a3b26a
+2017-09-19 18:08:57,726 TestRequest.py[line: 189] INFO: 预约模块取消预约V17-4-40
+2017-09-19 18:08:57,727 TestRequest.py[line: 190] INFO: 测试通过
+2017-09-19 18:08:57,727 TestRequest.py[line: 191] INFO: 返回的消息是：{'status': 'ok'}
+2017-09-19 18:08:57,844 TestRequest.py[line: 60] INFO: 预约模块创建预约申请V17-5-14
+2017-09-19 18:08:57,845 TestRequest.py[line: 61] INFO: 测试通过
+2017-09-19 18:08:57,845 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok'}
+2017-09-19 18:08:57,943 TestRequest.py[line: 32] INFO: 预约模块创建预约申请V17-5-15
+2017-09-19 18:08:57,943 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-19 18:08:57,943 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '12002', 'message': '您有未完成的预约,请先去完成!'}}
+2017-09-19 18:09:24,735 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-19 18:09:24,735 GetToken_str.py[line: 45] INFO: 当前token为：056a090c1df7e53c36dbeae5ee10ddb2
+2017-09-19 18:09:24,855 TestRequest.py[line: 189] INFO: 预约模块取消预约V17-4-40
+2017-09-19 18:09:24,855 TestRequest.py[line: 190] INFO: 测试通过
+2017-09-19 18:09:24,855 TestRequest.py[line: 191] INFO: 返回的消息是：{'status': 'ok'}
+2017-09-19 18:09:24,970 TestRequest.py[line: 60] INFO: 预约模块创建预约申请V17-5-14
+2017-09-19 18:09:24,970 TestRequest.py[line: 61] INFO: 测试通过
+2017-09-19 18:09:24,970 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok'}
+2017-09-19 18:09:25,083 TestRequest.py[line: 32] INFO: 预约模块创建预约申请V17-5-15
+2017-09-19 18:09:25,084 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-19 18:09:25,084 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '12002', 'message': '您有未完成的预约,请先去完成!'}}
+2017-09-19 18:12:51,246 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-19 18:12:51,247 GetToken_str.py[line: 45] INFO: 当前token为：dbce219a3f10b7b8806f12807bb306fb
+2017-09-19 18:12:51,388 TestAllCass.py[line: 120] INFO: 开始测试
+2017-09-19 18:12:51,388 TestAllCass.py[line: 122] INFO: 2017-09-19-18-12-51
+2017-09-19 18:12:51,651 TestRequest.py[line: 127] INFO: 预约模块获取预约时间V17-1-4
+2017-09-19 18:12:51,652 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-19 18:12:51,652 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'time': 13242448800, 'is_be_booked': 0}, {'time': 13242450600, 'is_be_booked': 0}, {'time': 13242452400, 'is_be_booked': 0}, {'time': 13242454200, 'is_be_booked': 0}, {'time': 13242456000, 'is_be_booked': 0}, {'time': 13242457800, 'is_be_booked': 0}, {'time': 13242459600, 'is_be_booked': 0}, {'time': 13242461400, 'is_be_booked': 0}, {'time': 13242463200, 'is_be_booked': 0}, {'time': 13242465000, 'is_be_booked': 0}, {'time': 13242466800, 'is_be_booked': 0}, {'time': 13242468600, 'is_be_booked': 0}, {'time': 13242470400, 'is_be_booked': 0}, {'time': 13242472200, 'is_be_booked': 0}, {'time': 13242474000, 'is_be_booked': 0}, {'time': 13242475800, 'is_be_booked': 0}, {'time': 13242477600, 'is_be_booked': 0}, {'time': 13242479400, 'is_be_booked': 0}, {'time': 13242481200, 'is_be_booked': 0}, {'time': 13242483000, 'is_be_booked': 0}, {'time': 13242484800, 'is_be_booked': 0}, {'time': 13242486600, 'is_be_booked': 0}]}}
+2017-09-19 18:12:51,752 TestRequest.py[line: 99] INFO: 预约模块获取预约时间V17-1-5
+2017-09-19 18:12:51,752 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 18:12:51,752 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'date不在有效范围'}}
+2017-09-19 18:12:51,856 TestRequest.py[line: 99] INFO: 预约模块获取预约时间V17-1-6
+2017-09-19 18:12:51,856 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 18:12:51,856 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'type不在有效范围'}}
+2017-09-19 18:12:51,951 TestRequest.py[line: 99] INFO: 预约模块获取预约时间V17-1-7
+2017-09-19 18:12:51,951 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 18:12:51,951 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'store_id不在有效范围'}}
+2017-09-19 18:12:52,059 TestRequest.py[line: 99] INFO: 预约模块获取预约时间V17-1-8
+2017-09-19 18:12:52,059 TestRequest.py[line: 100] INFO: 测试通过
+2017-09-19 18:12:52,059 TestRequest.py[line: 101] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-19 18:12:52,161 TestRequest.py[line: 189] INFO: 预约模块取消预约V17-4-40
+2017-09-19 18:12:52,161 TestRequest.py[line: 190] INFO: 测试通过
+2017-09-19 18:12:52,161 TestRequest.py[line: 191] INFO: 返回的消息是：{'status': 'ok'}
+2017-09-19 18:12:52,279 TestRequest.py[line: 60] INFO: 预约模块创建预约申请V17-5-14
+2017-09-19 18:12:52,279 TestRequest.py[line: 61] INFO: 测试通过
+2017-09-19 18:12:52,279 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok'}
+2017-09-19 18:12:52,404 TestRequest.py[line: 32] INFO: 预约模块创建预约申请V17-5-15
+2017-09-19 18:12:52,404 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-19 18:12:52,404 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '12002', 'message': '您有未完成的预约,请先去完成!'}}
+2017-09-19 18:12:52,519 TestRequest.py[line: 127] INFO: 预约模块获取预约列表V17-2-22
+2017-09-19 18:12:52,519 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-19 18:12:52,519 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'id': 6641, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6640, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6639, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6638, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6637, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6636, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6635, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6634, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}, {'id': 6633, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'store_name': '外滩店', 'type': 1, 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消'}], 'total': 9}}
+2017-09-19 18:12:52,655 TestRequest.py[line: 127] INFO: 预约模块预约详情V17-3-32
+2017-09-19 18:12:52,656 TestRequest.py[line: 128] INFO: 测试通过
+2017-09-19 18:12:52,656 TestRequest.py[line: 129] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 6642, 'name': 'test 先生', 'mobile': '13585949577', 'city_name': '上海市', 'address': '黄浦区九江路501号外滩WE1店面', 'num': 5, 'date': 13242412800, 'start_time': 13242433380, 'remark': '测试数据一会取消', 'store_name': '外滩店', 'type': 1}}
+2017-09-19 18:12:52,656 TestAllCass.py[line: 128] INFO: 结束测试
