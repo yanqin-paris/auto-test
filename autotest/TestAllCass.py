@@ -15,6 +15,8 @@ import TestCass.TestCass_dingdan
 import TestCass.TestCass_shouye
 import TestCass.TestCass_shangpin
 import TestCass.TestCass_yuyue
+import TestCass.TestCass_nvshenka
+import TestCass.TestCass_faxian
 from PublicTools.log import logger
 
 
@@ -126,3 +128,34 @@ def TestCass_yuyue_Cass():
     TestCass.TestCass_yuyue.test_get_huoquyuyueliebiao()
     TestCass.TestCass_yuyue.test_get_yuyuexiangqing()
     logger.info("结束测试")
+
+
+def TestCass_nvshenka_Cass():
+    logger.info("开始测试")
+    now = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
+    logger.info(now)
+    TestCass.TestCass_nvshenka.test_get_huoqunvshenkaliebiao()
+    TestCass.TestCass_nvshenka.test_get_huoqunvshenkaxiangqing()
+    TestCass.TestCass_nvshenka.test_get_jiancenvshenkazhuangtai()
+    TestCass.TestCass_nvshenka.test_get_huoquyonghufeitiyannvshenkaid()
+    TestCass.TestCass_nvshenka.test_get_nvshenkaliebiaov1()
+    TestCass.TestCass_nvshenka.test_get_nvshenkaliebiaov311()
+    TestCass.TestCass_nvshenka.test_get_nvshenkaliebiaov312()
+    TestCass.TestCass_nvshenka.test_get_nvshenkalibiaozhimaxingyong()
+    TestCass.TestCass_nvshenka.test_get_zhimaxinyongkaliebiao()
+    logger.info("结束测试")
+
+
+def TestCass_faxian_Cass():
+    logger.info("开始测试")
+    now = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
+    logger.info(now)
+    TestCass.TestCass_faxian.test_post_guanzhuhuiyuan()
+    TestCass.TestCass_faxian.test_delete_quxiaoguanzhuhuiyuan()
+    TestCass.TestCass_faxian.test_get_huoquhuiyuanzulinhuogoumaiguodeyifu()
+    TestCass.TestCass_faxian.test_get_huoqufaxianliebiao()
+    TestCass.TestCass_faxian.test_get_huoqushaidanyonghuxiangqing()
+    TestCass.TestCass_faxian.test_get_huoqushaituxiangqing()
+    TestCass.TestCass_faxian.test_get_huoqupinglunliebiao()
+    logger.info("结束测试")
+TestCass_faxian_Cass()
