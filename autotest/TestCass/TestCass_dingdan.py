@@ -35,7 +35,7 @@ def test_post_pingtuankadancigoumai():
             'content-type': hcontent_type
         }
         htestcassid = "3-1-" + str(i + 1)
-        htestcassname = "【订单模块】拼团卡单次购买 V1" + htestcassid
+        htestcassname = "订单模块拼团卡单次购买 V1" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestPostRequest(hurl + 'order/single-buy', hdata, headers,
@@ -60,7 +60,7 @@ def test_post_kaituanmzhan():
             'content-type': hcontent_type
         }
         htestcassid = "3-2-" + str(i + 1)
-        htestcassname = "【订单模块】开团 （m站）" + htestcassid
+        htestcassname = "订单模块开团 m站" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestPostRequest(hurl + 'order/initiate-activities', hdata, headers,
@@ -86,9 +86,57 @@ def test_post_cantuanmzhan():
             'content-type': hcontent_type
         }
         htestcassid = "3-3-" + str(i + 1)
-        htestcassname = "【订单模块】参团 （m站）" + htestcassid
+        htestcassname = "订单模块参团 m站" + htestcassid
         htesthope = table.cell(i, 2).value
         fanhuitesthope = table.cell(i, 3).value
         TestPostRequest(hurl + 'order/participate-activities', hdata, headers,
                         htestcassid, htestcassname, htesthope, fanhuitesthope)
 # test_post_cantuanmzhan()
+
+
+def test_post_changjianyajinrenzhengdingdan():
+    for i in range(31, 35):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+        if i == 33:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "channel": table.cell(i, 1).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "channel": table.cell(i, 1).value
+            }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-4-" + str(i + 1)
+        htestcassname = "订单模块创建押金认证订单 V1" + htestcassid
+        htesthope = table.cell(i, 2).value
+        fanhuitesthope = table.cell(i, 3).value
+        TestPostRequest(hurl + 'order/deposit-certificate', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+# test_post_changjianyajinrenzhengdingdan()
+
+
+def test_get_xuanzeyouhuiquan():
+    for i in range(39, 41):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+
+        hdata = {
+            "access_token": access_token,
+            "price": table.cell(i, 1).value,
+            "type": table.cell(i, 2).value
+        }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-5-" + str(i + 1)
+        htestcassname = "订单模块选择优惠券 V1" + htestcassid
+        htesthope = table.cell(i, 3).value
+        fanhuitesthope = table.cell(i, 4).value
+        TestGetRequest(hurl + 'order/user-coupon', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+# test_get_xuanzeyouhuiquan()

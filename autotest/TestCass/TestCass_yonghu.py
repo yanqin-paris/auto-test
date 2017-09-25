@@ -10,6 +10,7 @@ from PublicTools.TestRequest import TestPostRequest
 from PublicTools.TestRequest import TestGetRequest
 from PublicTools.GetTestDataPath import GetTestDataPath
 from PublicTools.globalpy import GLOBAL_token
+from PublicTools.globalpy import GLOBAL_testdb
 
 Testdata = xlrd.open_workbook(GetTestDataPath())  # 读取测试数据
 table = Testdata.sheets()[0]  # 选择excle表中的sheet
@@ -17,6 +18,14 @@ hurl = table.cell(7, 1).value  # 从测试数据中读取url
 htoken = table.cell(8, 1).value
 hcontent_type = table.cell(6, 1).value
 access_token = GLOBAL_token
+
+query = 'DELETE from user_coupon where user_id=%s and coupon_id=%s'
+data = ('189152', '200')
+GLOBAL_testdb.execute_delete(query, data)
+
+query = 'DELETE from user_coupon where user_id=%s and coupon_id=%s'
+data = ('189152', '49319')
+GLOBAL_testdb.execute_delete(query, data)
 
 
 def test_post_mimadenglu():
@@ -59,30 +68,28 @@ def test_post_duanxindenglu():
 # test_post_duanxindenglu()
 
 
-def test_get_lingquyouhuiquan():
-    for i in range(21, 26):
+def test_post_lingquyouhuiquan():
+    for i in range(21, 24):
         table = Testdata.sheets()[2]  # 选择excle表中的sheet
-        if i == 25:
+        if i == 23:
             hdata = {
-                "access_token": table.cell(i, 0).value,
-                "type": table.cell(i, 1).value
+                "access_token": table.cell(i, 0).value
             }
 
         else:
             hdata = {
-                "access_token": access_token,
-                "type": table.cell(i, 1).value
+                "access_token": access_token
             }
 
         headers = {
             'content-type': hcontent_type
         }
         htestcassid = "2-3-" + str(i + 1)
-        htestcassname = "【优惠券模块】 ​ 领取优惠券 " + htestcassid
-        htesthope = table.cell(i, 2).value
-        fanhuitesthope = table.cell(i, 3).value
-        TestGetRequest(hurl + 'coupon/receive', hdata, headers,
-                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+        htestcassname = "用户模块领取优惠券" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestPostRequest(hurl + 'user/receive-coupon', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)
 # test_post_lingquyouhuiquan()
 
 
@@ -870,3 +877,24 @@ def test_get_yaoqingyoujiang():
         TestGetRequest(hurl + 'user/inviter', hdata, headers,
                        htestcassid, htestcassname, htesthope, fanhuitesthope)
 # test_get_yaoqingyoujiang()
+
+
+def test_post_lingquyouhuiquan():
+    for i in range(313, 315):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        hdata = {
+            "access_token": access_token,
+            "type": table.cell(i, 1).value,
+            "coupon": table.cell(i, 2).value,
+            "platform": table.cell(i, 3).value
+        }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-33-" + str(i + 1)
+        htestcassname = "优惠券模块领取优惠券-V2 " + htestcassid
+        htesthope = table.cell(i, 4).value
+        fanhuitesthope = table.cell(i, 5).value
+        TestPostRequest(hurl + 'coupon/receive-v2', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+# test_post_lingquyouhuiquan()

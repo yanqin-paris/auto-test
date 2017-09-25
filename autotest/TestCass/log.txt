@@ -1,0 +1,28 @@
+2017-09-25 17:05:43,152 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-25 17:05:43,153 GetToken_str.py[line: 45] INFO: 当前token为：4acdfb82b4840ff152309a4e65212b87
+2017-09-25 17:05:43,300 TestRequest.py[line: 60] INFO: 订单模块创建押金认证订单 V13-4-32
+2017-09-25 17:05:43,302 TestRequest.py[line: 61] INFO: 测试通过
+2017-09-25 17:05:43,302 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 7471, 'order_no': 'AM15063303374217', 'title': '押金认证', 'price': 20000}}
+2017-09-25 17:05:43,444 TestRequest.py[line: 60] INFO: 订单模块创建押金认证订单 V13-4-33
+2017-09-25 17:05:43,446 TestRequest.py[line: 61] INFO: 测试通过
+2017-09-25 17:05:43,446 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 7472, 'order_no': 'AM15063303379488', 'title': '押金认证', 'price': 20000}}
+2017-09-25 17:05:43,560 TestRequest.py[line: 32] INFO: 订单模块创建押金认证订单 V13-4-34
+2017-09-25 17:05:43,560 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-25 17:05:43,560 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-25 17:05:43,684 TestRequest.py[line: 32] INFO: 订单模块创建押金认证订单 V13-4-35
+2017-09-25 17:05:43,686 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-25 17:05:43,686 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'channel不在有效范围'}}
+2017-09-25 17:07:47,176 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-25 17:07:47,182 GetToken_str.py[line: 45] INFO: 当前token为：59b2542267096c851c2b54635f838db0
+2017-09-25 17:07:47,327 TestRequest.py[line: 60] INFO: 订单模块创建押金认证订单 V13-4-32
+2017-09-25 17:07:47,327 TestRequest.py[line: 61] INFO: 测试通过
+2017-09-25 17:07:47,328 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 7473, 'order_no': 'AM15063304614064', 'title': '押金认证', 'price': 20000}}
+2017-09-25 17:07:47,452 TestRequest.py[line: 60] INFO: 订单模块创建押金认证订单 V13-4-33
+2017-09-25 17:07:47,454 TestRequest.py[line: 61] INFO: 测试通过
+2017-09-25 17:07:47,454 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 7474, 'order_no': 'AM15063304617961', 'title': '押金认证', 'price': 20000}}
+2017-09-25 17:07:47,571 TestRequest.py[line: 32] INFO: 订单模块创建押金认证订单 V13-4-34
+2017-09-25 17:07:47,572 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-25 17:07:47,572 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-09-25 17:07:47,688 TestRequest.py[line: 32] INFO: 订单模块创建押金认证订单 V13-4-35
+2017-09-25 17:07:47,688 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-25 17:07:47,688 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'channel不在有效范围'}}

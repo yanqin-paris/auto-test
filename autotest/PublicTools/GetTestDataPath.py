@@ -23,6 +23,11 @@ def GetTestReportPath():
 
 def GetTestConfigPath():
     return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\\config\\'
+
+
+def GetTestLogPath():
+    return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\\logs\\log.txt'
+# print(GetTestLogPath())
 # print(GetTestDataPath())
 # print(GetTestReportPath())
 # print(GetTestConfigPath())

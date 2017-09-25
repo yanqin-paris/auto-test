@@ -10,6 +10,8 @@ from PublicTools.GetToken_str import test_get_token
 # logger.info('正在初始化数据库[名称：TESTDB]对象')
 GLOBAL_testdb = MyDB(GetTestConfigPath() + 'dbconfig.conf', 'TESTDB')
 GLOBAL_token = test_get_token()
+
+
 '''
 query = 'SELECT * FROM user_address WHERE id = %s or id = %s or id = %s'
 data = ('1', '2', '3')

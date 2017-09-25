@@ -40,6 +40,7 @@ def TestCass_yonghu_Cass():
     # TestCass.TestCass_yonghu.test_post_mimadenglu()
     TestCass.TestCass_yonghu.test_get_huiyuanzhongxinshouyeshuju()
     TestCass.TestCass_yonghu.test_post_xiugaimima()
+    TestCass.TestCass_yonghu.test_post_lingquyouhuiquan()
     TestCass.TestCass_yonghu.test_get_quanbuhuiyuantequan()
     TestCass.TestCass_yonghu.test_post_fenxiangmeiyijianglijifen()
     TestCass.TestCass_yonghu.test_get_wodenvshenkadingdan()
@@ -67,6 +68,7 @@ def TestCass_yonghu_Cass():
     TestCass.TestCass_yonghu.test_get_huoquwodeqianbao()
     TestCass.TestCass_yonghu.test_get_huoquyonghujibenxinxi()
     TestCass.TestCass_yonghu.test_get_yaoqingyoujiang()
+    TestCass.TestCass_yonghu.test_post_lingquyouhuiquan()
     logger.info("结束测试")
 
 
@@ -75,6 +77,8 @@ def TestCass_huodong_Cass():
     now = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
     logger.info(now)
     TestCass.TestCass_huodong.test_get_huoqupingtuanhuodngxiangqing()
+    TestCass.TestCass_huodong.test_get_huoqudiaochawenjuanjibenxinxi()
+    TestCass.TestCass_huodong.test_post_diaochawenjuanjibenxinxitijiao()
     logger.info("结束测试")
 
 
@@ -85,6 +89,8 @@ def TestCass_dingdan_Cass():
     TestCass.TestCass_dingdan.test_post_kaituanmzhan()
     TestCass.TestCass_dingdan.test_post_cantuanmzhan()
     TestCass.TestCass_dingdan.test_post_pingtuankadancigoumai()
+    TestCass.TestCass_dingdan.test_post_changjianyajinrenzhengdingdan()
+    TestCass.TestCass_dingdan.test_get_xuanzeyouhuiquan()
     logger.info("结束测试")
 
 
