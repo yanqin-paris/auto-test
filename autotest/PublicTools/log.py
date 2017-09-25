@@ -22,7 +22,7 @@ class LogSignleton(object):
             cls.instance = super(LogSignleton, cls).__new__(cls)
             config = configparser.ConfigParser()
             config.read(log_config, encoding='utf-8-sig')  # , encoding='utf-8'
-            cls.instance.log_filename = GetTestLogPath()
+            cls.instance.log_filename = config.get('LOGGING', 'log_file')
             cls.instance.max_bytes_each = int(
                 config.get('LOGGING', 'max_bytes_each'))
             cls.instance.backup_count = int(

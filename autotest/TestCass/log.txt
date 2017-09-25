@@ -26,3 +26,11 @@
 2017-09-25 17:07:47,688 TestRequest.py[line: 32] INFO: 订单模块创建押金认证订单 V13-4-35
 2017-09-25 17:07:47,688 TestRequest.py[line: 33] INFO: 测试通过
 2017-09-25 17:07:47,688 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10002', 'message': 'channel不在有效范围'}}
+2017-09-25 17:38:39,595 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-25 17:38:39,595 GetToken_str.py[line: 45] INFO: 当前token为：3230332a288094e2ea9362d3dc5b23c4
+2017-09-25 17:38:41,915 TestRequest.py[line: 60] INFO: 订单模块拼团卡单次购买 V13-1-4
+2017-09-25 17:38:41,915 TestRequest.py[line: 61] INFO: 测试通过
+2017-09-25 17:38:41,915 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok', 'data': {'user_card_id': 0, 'order_id': 200823, 'order_no': 'SM1506332314545', 'is_pay': 0, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'order_theme': '轻奢年卡-续费', 'total_sale': 2990}}
+2017-09-25 17:38:42,029 TestRequest.py[line: 32] INFO: 订单模块拼团卡单次购买 V13-1-5
+2017-09-25 17:38:42,030 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-25 17:38:42,030 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
