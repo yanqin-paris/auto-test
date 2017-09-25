@@ -1,0 +1,8 @@
+2017-09-25 18:28:12,433 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-09-25 18:28:12,435 GetToken_str.py[line: 45] INFO: 当前token为：4ff7e2ae8424e34b74046311c4e246b4
+2017-09-25 18:28:13,192 TestRequest.py[line: 60] INFO: 订单模块拼团卡单次购买 V13-1-4
+2017-09-25 18:28:13,192 TestRequest.py[line: 61] INFO: 测试通过
+2017-09-25 18:28:13,192 TestRequest.py[line: 62] INFO: 返回的消息是：{'status': 'ok', 'data': {'user_card_id': 0, 'order_id': 200825, 'order_no': 'SM1506335287178', 'is_pay': 0, 'cover_img': 'http://static-r.msparis.com/uploads/card/6/1/61105c92838c6abf6b7da020e67ddad0.png', 'order_theme': '轻奢年卡-续费', 'total_sale': 2990}}
+2017-09-25 18:28:13,304 TestRequest.py[line: 32] INFO: 订单模块拼团卡单次购买 V13-1-5
+2017-09-25 18:28:13,305 TestRequest.py[line: 33] INFO: 测试通过
+2017-09-25 18:28:13,305 TestRequest.py[line: 34] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
