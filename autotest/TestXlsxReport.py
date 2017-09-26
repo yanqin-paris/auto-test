@@ -43,7 +43,7 @@ def _write_center(worksheet, cl, data, wd):
 now = time.strftime("%Y-%m-%d-%H-%M-%S-", time.localtime(time.time()))
 timenow = time.strftime("%Y/%m/%d %H:%M", time.localtime(time.time()))
 workbook = xlsxwriter.Workbook(
-    GetTestReportPath)  # 生成的报告的路径
+    GetTestReportPath())  # 生成的报告的路径
 worksheet = workbook.add_worksheet("测试总况")
 worksheet2 = workbook.add_worksheet("测试详情")
 
@@ -196,7 +196,7 @@ try:
         '%\n' + "详细内容请看附件：" + "【" + (now + 'report.xlsx') + "】"
     mail_tiltle = '【接口自动化测试报告】' + timenow
     attachments = set(
-        [GetTestReportPath])
+        [GetTestReportPath()])
 
     logger.info('正在发送测试报告邮件...')
     mymail.send_mail(mail_tiltle, mail_content, attachments)
