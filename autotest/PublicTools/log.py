@@ -6,7 +6,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 import threading
 import configparser
-from PublicTools.GetTestDataPath import GetTestConfigPath
+#from PublicTools.GetTestDataPath import GetTestConfigPath
 from PublicTools.GetTestDataPath import GetTestLogPath
 from PublicTools.GetTestDataPath import GetLogConfigPath
 
