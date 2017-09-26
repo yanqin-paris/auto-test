@@ -10,7 +10,10 @@ import os
 
 
 def GetTestDataPath():
-    return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\\TestData\\TestData.xls'
+    ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(ospath, "TestData", "TestData.xls")
+# return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) +
+# '\\TestData\\TestData.xls'
 
 
 def GetTestData():
