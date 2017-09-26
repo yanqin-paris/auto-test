@@ -7,7 +7,6 @@ Created on 2017年9月2日
 '''
 import json
 import requests
-import demjson
 from PublicTools.log import logger
 #from distutils.log import info
 
