@@ -26,7 +26,7 @@ def GetTestConfigPath():
 
 
 def GetTestLogPath():
-    return os.path.join(os.path.dirname(os.getcwd()), "logs", "log.txt")
+    return os.path.join(os.getcwd(), "autotest", "logs", "log.txt")
 # return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) +
 # '\\logs\\log.txt'
 # print(os.path.abspath(__file__))
