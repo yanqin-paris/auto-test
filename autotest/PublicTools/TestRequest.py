@@ -7,8 +7,9 @@ Created on 2017年9月2日
 '''
 import json
 import requests
+import demjson
 from PublicTools.log import logger
-from distutils.log import info
+#from distutils.log import info
 
 hlist = []  # 添加一个数组，用来装测试结果
 
@@ -80,7 +81,6 @@ def TestGetRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, 
         hr = requests.get(hurl, headers=headers)
     else:
         hr = requests.get(hurl, params=hdata, headers=headers)
-
     hjson = json.loads(hr.text)  # 获取并处理返回的json数据
 
     herror = "error"

@@ -29,7 +29,7 @@ def test_get_banbengengxin():
             'content-type': hcontent_type
         }
         htestcassid = "1-1-" + str(i + 1)
-        htestcassname = "【通用】版本更新检查 V1 " + htestcassid
+        htestcassname = "通用版本更新检查 V1 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'common/version', hdata, headers,
@@ -56,7 +56,7 @@ def test_get_huodongzige():
             'content-type': hcontent_type
         }
         htestcassid = "1-2-" + str(i + 1)
-        htestcassname = "【通用】用户活动资格检查 V1 " + htestcassid
+        htestcassname = "通用用户活动资格检查 V1 " + htestcassid
         htesthope = table.cell(i, 2).value
         fanhuitesthope = table.cell(i, 3).value
         TestGetRequest(hurl + 'common/check-activity', hdata, headers,
@@ -75,7 +75,7 @@ def test_get_jianchashoujihao():
             'content-type': hcontent_type
         }
         htestcassid = "1-3-" + str(i + 1)
-        htestcassname = "【通用模块】 检查手机号 " + htestcassid
+        htestcassname = "通用模块 检查手机号 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'common/mobile', hdata, headers,
@@ -92,7 +92,7 @@ def test_get_peizhiwenjiangengxin():
             'content-type': hcontent_type
         }
         htestcassid = "1-4-" + str(i + 1)
-        htestcassname = "【通用】配置文件更新 V1 " + htestcassid
+        htestcassname = "通用配置文件更新 V1 " + htestcassid
         htesthope = table.cell(i, 0).value
         fanhuitesthope = table.cell(i, 1).value
         TestGetRequest(hurl + 'common/configs', hdata, headers,
@@ -108,7 +108,7 @@ def test_get_pophuodong():
             'content-type': hcontent_type
         }
         htestcassid = "1-5-" + str(i + 1)
-        htestcassname = "【通用模块】POP活动V1 " + htestcassid
+        htestcassname = "通用模块POP活动V1 " + htestcassid
         htesthope = table.cell(i, 0).value
         fanhuitesthope = table.cell(i, 1).value
         TestGetRequest(hurl + 'common/advertising', hdata, headers,

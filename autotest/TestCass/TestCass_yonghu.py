@@ -39,7 +39,7 @@ def test_post_mimadenglu():
             'content-type': hcontent_type
         }
         htestcassid = "2-1-" + str(i + 1)
-        htestcassname = "【用户模块】 密码登录 V1 " + htestcassid
+        htestcassname = "用户模块密码登录 V1 " + htestcassid
         htesthope = table.cell(i, 2).value
         fanhuitesthope = table.cell(i, 3).value
         TestPostRequest(hurl + 'user/password-login', hdata, headers,
@@ -60,7 +60,7 @@ def test_post_duanxindenglu():
             'token': htoken
         }
         htestcassid = "2-2-" + str(i + 1)
-        htestcassname = "【用户模块】 会员登录 V1 " + htestcassid
+        htestcassname = "用户模块会员登录 V1 " + htestcassid
         htesthope = table.cell(i, 2).value
         fanhuitesthope = table.cell(i, 3).value
         TestPostRequest(hurl + 'user/login', hdata, headers,
@@ -110,7 +110,7 @@ def test_get_huiyuanzhongxinshouyeshuju():
             'content-type': hcontent_type
         }
         htestcassid = "2-4-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 会员中心首页数据V1 " + htestcassid
+        htestcassname = "用户模块会员中心首页数据V1 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/member-centre', hdata, headers,
@@ -139,7 +139,7 @@ def test_post_xiugaimima():
             'content-type': hcontent_type
         }
         htestcassid = "2-5-" + str(i + 1)
-        htestcassname = "【用户模块】 修改密码 V1 " + htestcassid
+        htestcassname = "用户模块修改密码 V1 " + htestcassid
         htesthope = table.cell(i, 3).value
         fanhuitesthope = table.cell(i, 4).value
         TestPostRequest(hurl + 'user/password', hdata, headers,
@@ -164,7 +164,7 @@ def test_get_quanbuhuiyuantequan():
             'content-type': hcontent_type
         }
         htestcassid = "2-6-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 全部会员特权V1 " + htestcassid
+        htestcassname = "用户模块全部会员特权V1 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/member-privilege', hdata, headers,
@@ -189,7 +189,7 @@ def test_post_fenxiangmeiyijianglijifen():
             'content-type': hcontent_type
         }
         htestcassid = "2-6-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 全部会员特权V1 " + htestcassid
+        htestcassname = "用户模块全部会员特权V1 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestPostRequest(hurl + 'user/share-success', hdata, headers,
@@ -214,7 +214,7 @@ def test_get_wodenvshenkadingdan():
             'content-type': hcontent_type
         }
         htestcassid = "2-7-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 我的女神卡订单 V1 " + htestcassid
+        htestcassname = "用户模块我的女神卡订单 V1 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/card-orders', hdata, headers,
@@ -239,7 +239,7 @@ def test_get_wodenvshenkadingdan2():
             'content-type': hcontent_type
         }
         htestcassid = "2-8-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 我的女神卡订单 V1-3.2.0 " + htestcassid
+        htestcassname = "用户模块我的女神卡订单 V1-3.2.0 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/lteration-card-orders', hdata, headers,
@@ -266,7 +266,7 @@ def test_get_wodenvshenkadingdanxiangqing():
             'content-type': hcontent_type
         }
         htestcassid = "2-9-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 我的女神卡订单详情 V1 " + htestcassid
+        htestcassname = "用户模块我的女神卡订单详情 V1 " + htestcassid
         htesthope = table.cell(i, 2).value
         fanhuitesthope = table.cell(i, 3).value
         TestGetRequest(hurl + 'user/card-order-detail', hdata, headers,
@@ -293,7 +293,7 @@ def test_get_wodenvshenkadingdanxiangqing2():
             'content-type': hcontent_type
         }
         htestcassid = "2-10-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 我的女神卡订单详情 V1 " + htestcassid
+        htestcassname = "用户模块我的女神卡订单详情 V1 " + htestcassid
         htesthope = table.cell(i, 2).value
         fanhuitesthope = table.cell(i, 3).value
         TestGetRequest(hurl + 'user/lteration-card-order-detail', hdata, headers,
@@ -318,7 +318,7 @@ def test_get_wodeshouyeshuju():
             'content-type': hcontent_type
         }
         htestcassid = "2-11-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 我的首页数据V1 " + htestcassid
+        htestcassname = "用户模块我的首页数据V1 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user', hdata, headers,
@@ -343,7 +343,7 @@ def test_get_wodeshouyeshuju2():
             'content-type': hcontent_type
         }
         htestcassid = "2-12-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 我的首页数据V3.1.1 " + htestcassid
+        htestcassname = "用户模块我的首页数据V3.1.1 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/lteration', hdata, headers,
@@ -368,7 +368,7 @@ def test_get_wodeshouyedingdanheyichushuju():
             'content-type': hcontent_type
         }
         htestcassid = "2-13-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 我的首页订单和衣橱数据V3.1.1 " + htestcassid
+        htestcassname = "用户模块我的首页订单和衣橱数据V3.1.1 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/lteration-other', hdata, headers,
@@ -395,7 +395,7 @@ def test_post_shoucangshangpin():
             'content-type': hcontent_type
         }
         htestcassid = "2-14-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 收藏商品V1 " + htestcassid
+        htestcassname = "用户模块收藏商品V1 " + htestcassid
         htesthope = table.cell(i, 2).value
         fanhuitesthope = table.cell(i, 3).value
         TestPostRequest(hurl + 'user/wish', hdata, headers,
@@ -420,7 +420,7 @@ def test_get_liulanjilu():
             'content-type': hcontent_type
         }
         htestcassid = "2-15-" + str(i + 1)
-        htestcassname = "【用户模块】浏览记录 V1 " + htestcassid
+        htestcassname = "用户模块浏览记录 V1 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/browsing-history', hdata, headers,
@@ -445,7 +445,7 @@ def test_get_xiaoxizhongxin():
             'content-type': hcontent_type
         }
         htestcassid = "2-16-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 消息中心V1 " + htestcassid
+        htestcassname = "用户模块消息中心V1 " + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'common/message-center', hdata, headers,
@@ -480,7 +480,7 @@ def test_post_tianjiahuiyuanpeisongdizhi():
             'content-type': hcontent_type
         }
         htestcassid = "2-17-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 添加会员配送地址V1" + htestcassid
+        htestcassname = "用户模块添加会员配送地址V1" + htestcassid
         htesthope = table.cell(i, 6).value
         fanhuitesthope = table.cell(i, 7).value
         TestPostRequest(hurl + 'user/address', hdata, headers,
@@ -517,7 +517,7 @@ def test_post_gengxinhuiyuanpeisongdizhi():
             'content-type': hcontent_type
         }
         htestcassid = "2-18-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 更新会员配送地址V1" + htestcassid
+        htestcassname = "用户模块更新会员配送地址V1" + htestcassid
         htesthope = table.cell(i, 7).value
         fanhuitesthope = table.cell(i, 8).value
         TestPostRequest(hurl + 'user/address', hdata, headers,
@@ -542,7 +542,7 @@ def test_get_huoquyonghupingtuandingdanxinximzhan():
             'content-type': hcontent_type
         }
         htestcassid = "2-19-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 获取用户的拼团订单信息 m站" + htestcassid
+        htestcassname = "用户模块获取用户的拼团订单信息 m站" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/team-buy-list', hdata, headers,
@@ -569,7 +569,7 @@ def test_post_tianjiadingyuepingpai():
             'content-type': hcontent_type
         }
         htestcassid = "2-20-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 添加订阅品牌V1 " + htestcassid
+        htestcassname = "用户模块添加订阅品牌V1 " + htestcassid
         htesthope = table.cell(i, 2).value
         fanhuitesthope = table.cell(i, 3).value
         TestPostRequest(hurl + 'user/brands', hdata, headers,
@@ -594,7 +594,7 @@ def test_get_yonghuyajinrenzhengjinqian():
             'content-type': hcontent_type
         }
         htestcassid = "2-21-" + str(i + 1)
-        htestcassname = "【用户模块】用户押金认证金钱 V1" + htestcassid
+        htestcassname = "用户模块用户押金认证金钱 V1" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/deposit-certificate', hdata, headers,
@@ -619,7 +619,7 @@ def test_get_jifenmingxi():
             'content-type': hcontent_type
         }
         htestcassid = "2-22-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 积分明细 V1" + htestcassid
+        htestcassname = "用户模块积分明细 V1" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/points', hdata, headers,
@@ -644,7 +644,7 @@ def test_get_qiandaoyemian():
             'content-type': hcontent_type
         }
         htestcassid = "2-23-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 签到页面V1" + htestcassid
+        htestcassname = "用户模块签到页面V1" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/signs', hdata, headers,
@@ -669,7 +669,7 @@ def test_get_huoquyouhuiquanliebiao():
             'content-type': hcontent_type
         }
         htestcassid = "2-24-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 获取优惠券列表 V1" + htestcassid
+        htestcassname = "用户模块获取优惠券列表 V1" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/coupon', hdata, headers,
@@ -694,7 +694,7 @@ def test_get_huoquhuiyuanpeisongdizhi():
             'content-type': hcontent_type
         }
         htestcassid = "2-25-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 获取会员配送地址V1" + htestcassid
+        htestcassname = "用户模块获取会员配送地址V1" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/address', hdata, headers,
@@ -719,7 +719,7 @@ def test_get_huoqulishiyouhuiquanliebiao():
             'content-type': hcontent_type
         }
         htestcassid = "2-26-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 获取历史优惠券列表 V1" + htestcassid
+        htestcassname = "用户模块获取历史优惠券列表 V1" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/coupon-history', hdata, headers,
@@ -744,7 +744,7 @@ def test_get_huoqushiminrenzhengxinxi():
             'content-type': hcontent_type
         }
         htestcassid = "2-27-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 获取实名认证信息V1" + htestcassid
+        htestcassname = "用户模块获取实名认证信息V1" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/realname', hdata, headers,
@@ -769,7 +769,7 @@ def test_get_huoqukaipiaojiluliebiao():
             'content-type': hcontent_type
         }
         htestcassid = "2-28-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 获取开票记录列表 V1" + htestcassid
+        htestcassname = "用户模块获取开票记录列表 V1" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/invoices', hdata, headers,
@@ -796,7 +796,7 @@ def test_get_huoquwodexinyuandanliebiao():
             'content-type': hcontent_type
         }
         htestcassid = "2-29-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 获取我的心愿单列表V1 " + htestcassid
+        htestcassname = "用户模块获取我的心愿单列表V1 " + htestcassid
         htesthope = table.cell(i, 2).value
         fanhuitesthope = table.cell(i, 3).value
         TestGetRequest(hurl + 'user/wish', hdata, headers,
@@ -821,7 +821,7 @@ def test_get_huoquwodeqianbao():
             'content-type': hcontent_type
         }
         htestcassid = "2-30-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 获取我的钱包V1" + htestcassid
+        htestcassname = "用户模块获取我的钱包V1" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/wallet', hdata, headers,
@@ -846,7 +846,7 @@ def test_get_huoquyonghujibenxinxi():
             'content-type': hcontent_type
         }
         htestcassid = "2-31-" + str(i + 1)
-        htestcassname = "【用户模块】 ​ 获取用户基本信息V1" + htestcassid
+        htestcassname = "用户模块获取用户基本信息V1" + htestcassid
         htesthope = table.cell(i, 1).value
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'user/show', hdata, headers,
@@ -879,7 +879,7 @@ def test_get_yaoqingyoujiang():
 # test_get_yaoqingyoujiang()
 
 
-def test_post_lingquyouhuiquan():
+def test_post_lingquyouhuiquanv2():
     for i in range(313, 315):
         table = Testdata.sheets()[2]  # 选择excle表中的sheet
         hdata = {

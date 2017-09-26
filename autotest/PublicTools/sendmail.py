@@ -11,7 +11,7 @@ from email.mime.audio import MIMEAudio
 from email.mime.application import MIMEApplication
 import mimetypes
 import os
-from PublicTools.log import logger
+#from PublicTools.log import logger
 
 
 class MyMail:

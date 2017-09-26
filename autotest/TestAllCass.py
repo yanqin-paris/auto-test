@@ -68,7 +68,7 @@ def TestCass_yonghu_Cass():
     TestCass.TestCass_yonghu.test_get_huoquwodeqianbao()
     TestCass.TestCass_yonghu.test_get_huoquyonghujibenxinxi()
     TestCass.TestCass_yonghu.test_get_yaoqingyoujiang()
-    TestCass.TestCass_yonghu.test_post_lingquyouhuiquan()
+    TestCass.TestCass_yonghu.test_post_lingquyouhuiquanv2()
     logger.info("结束测试")
 
 
@@ -164,4 +164,3 @@ def TestCass_faxian_Cass():
     TestCass.TestCass_faxian.test_get_huoqushaituxiangqing()
     TestCass.TestCass_faxian.test_get_huoqupinglunliebiao()
     logger.info("结束测试")
-TestCass_faxian_Cass()

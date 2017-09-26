@@ -60,6 +60,6 @@ def GetTestLogPath():
 def GetLogConfigPath():
     ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     return os.path.join(ospath, "config", "logconfig.conf")
-print(GetLogConfigPath())
-print(GetTestLogPath())
+# print(GetLogConfigPath())
+# print(GetTestLogPath())
 # print(GetTestConfigPath())
