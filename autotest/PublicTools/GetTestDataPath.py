@@ -35,3 +35,10 @@ def GetTestLogPath():
 # print(GetTestDataPath())
 # print(GetTestReportPath())
 # print(GetTestConfigPath())
+# print(os.path.dirname(os.getcwd()))
+
+
+def GetLogConfigPath():
+    return os.path.join(os.getcwd(), "config", "logconfig.conf")
+# print(GetLogConfigPath())
+# print(GetTestConfigPath())
