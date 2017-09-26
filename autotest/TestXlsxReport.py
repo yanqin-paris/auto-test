@@ -10,10 +10,10 @@ import time
 import TestAllRunner
 import PublicTools.TestRequest
 from PublicTools.GetTestDataPath import GetTestReportPath
-from PublicTools.GetTestDataPath import GetTestData
+from PublicTools.GetTestDataPath import GetLogoDataPath
 from PublicTools.log import logger
 from PublicTools.sendmail import MyMail
-from PublicTools.GetTestDataPath import GetTestConfigPath
+from PublicTools.GetTestDataPath import GetMailConfigPath
 
 TestAllRunner.hthreads()
 TestReport = PublicTools.TestRequest.hlist  # 调用测试结果
@@ -43,7 +43,7 @@ def _write_center(worksheet, cl, data, wd):
 now = time.strftime("%Y-%m-%d-%H-%M-%S-", time.localtime(time.time()))
 timenow = time.strftime("%Y/%m/%d %H:%M", time.localtime(time.time()))
 workbook = xlsxwriter.Workbook(
-    GetTestReportPath() + now + 'report.xlsx')  # 生成的报告的路径
+    GetTestReportPath)  # 生成的报告的路径
 worksheet = workbook.add_worksheet("测试总况")
 worksheet2 = workbook.add_worksheet("测试详情")
 
@@ -78,7 +78,7 @@ def init(worksheet):
     worksheet.merge_range('A1:F1', '接口自动化测试报告', define_format_H1)
     worksheet.merge_range('A2:F2', '测试概括', define_format_H2)
     worksheet.merge_range('A3:A6', '千颂网络', get_format_center(workbook))
-    worksheet.insert_image('A1', GetTestData() + 'logo.png')
+    worksheet.insert_image('A1', GetLogoDataPath())
 
     _write_center(worksheet, "B3", '项目名称', workbook)
     _write_center(worksheet, "B4", '接口版本', workbook)
@@ -186,7 +186,7 @@ workbook.close()
 
 try:
     logger.info('生成测试报告成功')
-    mymail = MyMail(GetTestConfigPath() + 'mail.conf')
+    mymail = MyMail(GetMailConfigPath())
     mymail.connect()
     mymail.login()
     mail_content = '接口自动化测试报告:\n' + "测试用例总数:" + \
@@ -196,7 +196,7 @@ try:
         '%\n' + "详细内容请看附件：" + "【" + (now + 'report.xlsx') + "】"
     mail_tiltle = '【接口自动化测试报告】' + timenow
     attachments = set(
-        [GetTestReportPath() + now + 'report.xlsx'])
+        [GetTestReportPath])
 
     logger.info('正在发送测试报告邮件...')
     mymail.send_mail(mail_tiltle, mail_content, attachments)

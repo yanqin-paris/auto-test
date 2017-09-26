@@ -7,6 +7,7 @@ Created on 2017年9月5日
 
 '''
 import os
+import time
 
 
 def GetTestDataPath():
@@ -16,16 +17,29 @@ def GetTestDataPath():
 # '\\TestData\\TestData.xls'
 
 
-def GetTestData():
-    return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\\TestData\\'
+def GetLogoDataPath():
+    ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(ospath, "TestData", "logo.png")
 
 
 def GetTestReportPath():
-    return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\\TestReport\\'
+    now = time.strftime("%Y-%m-%d-%H-%M-%S-", time.localtime(time.time()))
+    ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(ospath, "TestReport", now + "report.xlsx")
+# return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) +
+# '\\TestReport\\'
 
 
-def GetTestConfigPath():
-    return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\\config\\'
+def GetDbConfigPath():
+    ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(ospath, "config", "dbconfig.conf")
+# return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) +
+# '\\config\\'
+
+
+def GetMailConfigPath():
+    ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(ospath, "config", "mail.conf")
 
 
 def GetTestLogPath():
