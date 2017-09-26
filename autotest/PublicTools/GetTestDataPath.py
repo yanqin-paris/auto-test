@@ -26,8 +26,7 @@ def GetTestConfigPath():
 
 
 def GetTestLogPath():
-    ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    return os.path.join("logs", "log.txt")
+    return os.path.join(os.path.dirname(os.getcwd()), "logs", "log.txt")
 # return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) +
 # '\\logs\\log.txt'
 # print(os.path.abspath(__file__))
@@ -40,5 +39,6 @@ def GetTestLogPath():
 
 def GetLogConfigPath():
     return os.path.join(os.path.dirname(os.getcwd()), "config", "logconfig.conf")
-# print(GetLogConfigPath())
+print(GetLogConfigPath())
+print(GetTestLogPath())
 # print(GetTestConfigPath())
