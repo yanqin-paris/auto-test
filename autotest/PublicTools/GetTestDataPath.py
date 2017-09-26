@@ -42,8 +42,6 @@ def GetMailConfigPath():
     return os.path.join(ospath, "config", "mail.conf")
 
 
-def GetTestLogPath():
-    return os.path.join(os.getcwd(), "autotest", "logs", "log.txt")
 # return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) +
 # '\\logs\\log.txt'
 # print(os.path.abspath(__file__))
@@ -53,9 +51,14 @@ def GetTestLogPath():
 # print(GetTestConfigPath())
 # print(os.path.dirname(os.getcwd()))
 
+def GetTestLogPath():
+    ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(ospath, "logs", "log.txt")
+
 
 def GetLogConfigPath():
-    return os.path.join(os.getcwd(), "autotest", "config", "logconfig.conf")
+    ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(ospath, "config", "logconfig.conf")
 print(GetLogConfigPath())
 print(GetTestLogPath())
 # print(GetTestConfigPath())
