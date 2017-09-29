@@ -20,7 +20,15 @@ class MyMail:
         config = configparser.ConfigParser()
         config.read(mail_config_file)
 
-        self.smtp = smtplib.SMTP()
+        self.smtp = smtplib.SMTP_SSL()
+
+        #self.smtp = smtplib.SMTP()
+        '''
+        self.smtp.set_debuglevel(True)
+        self.smtp.ehlo()
+        self.smtp.starttls()
+        self.smtp.ehlo()
+        '''
         self.login_user = config.get('SMTP', 'login_user')
         self.login_pwd = config.get('SMTP', 'login_pwd')
         self.from_addr = config.get('SMTP', 'from_addr')
@@ -30,6 +38,8 @@ class MyMail:
 
     # 连接到服务器
     def connect(self):
+        # self.smtp.set_debuglevel(True)
+        # self.smtp.starttls()
         self.smtp.connect(self.host, self.port)
 
     # 登陆邮件服务器
@@ -94,10 +104,7 @@ class MyMail:
     def quit(self):
         self.smtp.quit()
 
-
 '''
-logger.info('生成测试报告成功')
-
 mymail = MyMail('D:\\autotestapi\\autotest\\config\\mail.conf')
 mymail.connect()
 mymail.login()
@@ -105,12 +112,9 @@ mail_content = 'Hi，附件为接口测试报告，烦请查阅'
 mail_tiltle = '【测试报告】接口测试报告'
 
 attachments = set(
-    ['D:\\autotestapi\\autotest\\TestReport\\2017-09-05-18-45-36-report.xlsx'])
+    ['D:\\autotestapi\\autotest\\TestReport\\2017-09-26-17-55-47-report.xlsx'])
 
-logger.info('正在发送测试报告邮件...')
+
 mymail.send_mail(mail_tiltle, mail_content, attachments)
 mymail.quit()
-
-logger.info('发送邮件成功')
-
 '''
