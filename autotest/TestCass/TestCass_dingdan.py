@@ -7,6 +7,7 @@ Created on 2017年9月5日
 '''
 import xlrd
 import TestCass.TestCass_zulinjihua
+from PublicTools.TestRequest import TestGetRequestjiaqiang
 from PublicTools.TestRequest import TestPostRequest
 from PublicTools.TestRequest import TestGetRequest
 from PublicTools.TestRequest import TestDeleteRequest
@@ -141,8 +142,8 @@ def test_get_xuanzeyouhuiquan():
         htestcassname = "订单模块选择优惠券 V1" + htestcassid
         htesthope = table.cell(i, 3).value
         fanhuitesthope = table.cell(i, 4).value
-        TestGetRequest(hurl + 'order/user-coupon', hdata, headers,
-                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+        TestGetRequestjiaqiang(hurl + 'order/user-coupon', hdata, headers,
+                               htestcassid, htestcassname, htesthope, fanhuitesthope)
 # test_get_xuanzeyouhuiquan()
 
 #********************************************************************8

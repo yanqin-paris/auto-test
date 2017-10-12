@@ -1,34 +1,37 @@
-2017-10-12 17:39:03,934 TestRequest.py[line: 129] INFO: 购物计划商品详情 添加衣袋商品积点 V3611-1-22
-2017-10-12 17:39:03,944 TestRequest.py[line: 130] INFO: 测试通过
-2017-10-12 17:39:03,944 TestRequest.py[line: 131] INFO: 返回的消息是：{'status': 'ok', 'data': {'is_disabled': False, 'is_not_enough_dots': False, 'not_enough_message': '美衣件数已超衣袋上限，可将部分美衣删除或移入心愿单后再预定', 'is_valid': True, 'is_full': False, 'no_stock': False, 'product_exist': True, 'plan_id': 279096, 'delivery_region': '310101', 'delivery_region_name': '黄浦区', 'delivery_date': 1510329600, 'send_back_date': 1510675200, 'can_use_dots': 4, 'free_rental_count': 2, 'pay_rental_count': 2, 'is_pay_grid': False, 'pay_mode': 'free', 'go_chose': True, 'have_invalid_product': False, 'items': [{'plan_item_id': 499764, 'product_id': 7836, 'name': 'ANI条纹衬衫露肩连衣裙', 'brand': 'BCBG MAXAZRIA', 'specification': '美码', 'dots': 2, 'images': 'http://static-t.msparis.com/uploads/products/f/9/f9f908ced495c3917c58d4769338afc5.jpg', 'spu': 'BC475A', 'is_valid': True}], 'min_cost_dots': 2, 'items_count': 1, 'product_cost_dots': 2, 'price': {'original_total': 0, 'pay_dots_price': 0, 'pay_dots_num': 0, 'pay_dots_grid': 0, 'deposit': 0, 'express': 0, 'total': 0}, 'max_rental_count': 5}}
-2017-10-12 17:39:04,476 TestRequest.py[line: 62] INFO: 计算模块计算日常租赁订单价格积点 V311-8-68
-2017-10-12 17:39:04,476 TestRequest.py[line: 63] INFO: 测试通过
-2017-10-12 17:39:04,476 TestRequest.py[line: 64] INFO: 返回的消息是：{'status': 'ok', 'data': {'original_total': 0, 'pay_dots_price': 0, 'pay_dots_num': 0, 'pay_dots_grid': 0, 'deposit': 0, 'express': 0, 'total': 0, 'pay_dots_origin_price': 1000, 'pay_dots_discount_price': 600, 'pay_mode': 'free'}}
-2017-10-12 17:39:05,246 TestRequest.py[line: 196] INFO: 租赁计划商品详情 获取衣袋商品详情获取 积点 V3611-6-58
-2017-10-12 17:39:05,246 TestRequest.py[line: 197] INFO: 测试通过
-2017-10-12 17:39:05,246 TestRequest.py[line: 198] INFO: 返回的消息是：{'status': 'ok', 'data': {'is_disabled': False, 'is_not_enough_dots': False, 'not_enough_message': '美衣件数已超衣袋上限，可将部分美衣删除或移入心愿单后再预定', 'is_valid': True, 'is_full': False, 'no_stock': False, 'product_exist': True, 'plan_id': 279096, 'delivery_region': '310101', 'delivery_region_name': '黄浦区', 'delivery_date': 1510329600, 'send_back_date': 1510675200, 'can_use_dots': 4, 'free_rental_count': 2, 'pay_rental_count': 2, 'is_pay_grid': False, 'pay_mode': 'free', 'go_chose': True, 'have_invalid_product': False, 'items': [{'plan_item_id': 499764, 'product_id': 7836, 'name': 'ANI条纹衬衫露肩连衣裙', 'brand': 'BCBG MAXAZRIA', 'specification': '美码', 'dots': 2, 'images': 'http://static-t.msparis.com/uploads/products/f/9/f9f908ced495c3917c58d4769338afc5.jpg', 'spu': 'BC475A', 'is_valid': True}], 'min_cost_dots': 2, 'items_count': 1, 'product_cost_dots': 2, 'price': {'original_total': 0, 'pay_dots_price': 0, 'pay_dots_num': 0, 'pay_dots_grid': 0, 'deposit': 0, 'express': 0, 'total': 0}, 'max_rental_count': 5}}
-2017-10-12 17:39:05,424 TestRequest.py[line: 196] INFO: 购物计划获取购物计划和购物车内已添加商品数量 V111-7-14
-2017-10-12 17:39:05,424 TestRequest.py[line: 197] INFO: 测试通过
-2017-10-12 17:39:05,424 TestRequest.py[line: 198] INFO: 返回的消息是：{'status': 'ok', 'data': {'package_amount': 1, 'cart_item_amount': 0}}
-2017-10-12 17:39:05,585 TestRequest.py[line: 168] INFO: 购物计划获取购物计划和购物车内已添加商品数量 V111-7-15
-2017-10-12 17:39:05,585 TestRequest.py[line: 169] INFO: 测试通过
-2017-10-12 17:39:05,585 TestRequest.py[line: 170] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
-2017-10-12 17:39:06,515 TestRequest.py[line: 196] INFO: 租赁计划商品详情 获取有效的衣袋 V3611-5-50
-2017-10-12 17:39:06,515 TestRequest.py[line: 197] INFO: 测试通过
-2017-10-12 17:39:06,515 TestRequest.py[line: 198] INFO: 返回的消息是：{'status': 'ok', 'data': {'valid_plan': {'is_disabled': False, 'is_not_enough_dots': False, 'not_enough_message': '美衣件数已超衣袋上限，可将部分美衣删除或移入心愿单后再预定', 'is_valid': True, 'is_full': False, 'no_stock': False, 'product_exist': True, 'plan_id': 279096, 'delivery_region': '310101', 'delivery_region_name': '黄浦区', 'delivery_date': 1510329600, 'send_back_date': 1510675200, 'can_use_dots': 4, 'free_rental_count': 2, 'pay_rental_count': 2, 'is_pay_grid': False, 'pay_mode': 'free', 'go_chose': True, 'have_invalid_product': False, 'items': [{'plan_item_id': 499764, 'product_id': 7836, 'name': 'ANI条纹衬衫露肩连衣裙', 'brand': 'BCBG MAXAZRIA', 'specification': '美码', 'dots': 2, 'images': 'http://static-t.msparis.com/uploads/products/f/9/f9f908ced495c3917c58d4769338afc5.jpg', 'spu': 'BC475A', 'is_valid': True}], 'min_cost_dots': 2, 'items_count': 1, 'product_cost_dots': 2, 'price': {'original_total': 0, 'pay_dots_price': 0, 'pay_dots_num': 0, 'pay_dots_grid': 0, 'deposit': 0, 'express': 0, 'total': 0}, 'max_rental_count': 5}, 'plan_count': 1}}
-2017-10-12 17:39:07,263 TestRequest.py[line: 196] INFO: 租赁计划商品详情 显示所有切换衣袋 V3611-4-40
-2017-10-12 17:39:07,264 TestRequest.py[line: 197] INFO: 测试通过
-2017-10-12 17:39:07,264 TestRequest.py[line: 198] INFO: 返回的消息是：{'status': 'ok', 'data': [{'is_disabled': False, 'is_not_enough_dots': False, 'not_enough_message': '美衣件数已超衣袋上限，可将部分美衣删除或移入心愿单后再预定', 'is_valid': True, 'is_full': False, 'no_stock': False, 'product_exist': True, 'plan_id': 279096, 'delivery_region': '310101', 'delivery_region_name': '黄浦区', 'delivery_date': 1510329600, 'send_back_date': 1510675200, 'can_use_dots': 4, 'free_rental_count': 2, 'pay_rental_count': 2, 'is_pay_grid': False, 'pay_mode': 'free', 'go_chose': True, 'have_invalid_product': False, 'items': [{'plan_item_id': 499764, 'product_id': 7836, 'name': 'ANI条纹衬衫露肩连衣裙', 'brand': 'BCBG MAXAZRIA', 'specification': '美码', 'dots': 2, 'images': 'http://static-t.msparis.com/uploads/products/f/9/f9f908ced495c3917c58d4769338afc5.jpg', 'spu': 'BC475A', 'is_valid': True}], 'min_cost_dots': 2, 'items_count': 1, 'product_cost_dots': 2, 'price': {'original_total': 0, 'pay_dots_price': 0, 'pay_dots_num': 0, 'pay_dots_grid': 0, 'deposit': 0, 'express': 0, 'total': 0}, 'max_rental_count': 5}]}
-2017-10-12 17:39:07,697 TestRequest.py[line: 196] INFO: 租赁计划商品列表 获取已添加的衣袋 v3611-3-4
-2017-10-12 17:39:07,697 TestRequest.py[line: 197] INFO: 测试通过
-2017-10-12 17:39:07,697 TestRequest.py[line: 198] INFO: 返回的消息是：{'status': 'ok', 'data': {'plans': [{'delivery_date': 1510329600, 'send_back_date': 1510675200, 'region': 310101, 'region_name': '黄浦区'}]}}
-2017-10-12 17:39:07,860 TestRequest.py[line: 209] INFO: 租赁计划商品列表 获取已添加的衣袋 v3611-3-5
-2017-10-12 17:39:07,860 TestRequest.py[line: 210] INFO: 测试不通过
-2017-10-12 17:39:07,862 TestRequest.py[line: 211] INFO: 返回的消息为：{'status': 'ok', 'data': {'plans': None}}
-2017-10-12 17:39:08,068 TestRequest.py[line: 258] INFO: 租赁计划商品详情 删除衣袋商品 V3611-2-32
-2017-10-12 17:39:08,068 TestRequest.py[line: 259] INFO: 测试通过
-2017-10-12 17:39:08,068 TestRequest.py[line: 260] INFO: 返回的消息是：{'status': 'ok'}
-2017-10-12 17:39:08,068 TestAllCass.py[line: 201] INFO: 结束测试
-2017-10-12 17:39:08,327 TestXlsxReport.py[line: 188] INFO: 生成测试报告成功
-2017-10-12 17:39:09,411 TestXlsxReport.py[line: 201] INFO: 正在发送测试报告邮件...
-2017-10-12 17:39:12,096 TestXlsxReport.py[line: 208] INFO: 发送邮件成功
+2017-10-12 18:21:35,126 TestAllCass.py[line: 186] INFO: 结束测试
+2017-10-12 18:21:35,136 TestAllCass.py[line: 190] INFO: 开始测试
+2017-10-12 18:21:35,136 TestAllCass.py[line: 192] INFO: 2017-10-12-18-21-35
+2017-10-12 18:21:36,486 TestRequest.py[line: 129] INFO: 购物计划商品详情 添加衣袋商品积点 V3611-1-22
+2017-10-12 18:21:36,487 TestRequest.py[line: 130] INFO: 测试通过
+2017-10-12 18:21:36,487 TestRequest.py[line: 131] INFO: 返回的消息是：{'status': 'ok', 'data': {'is_disabled': False, 'is_not_enough_dots': False, 'not_enough_message': '美衣件数已超衣袋上限，可将部分美衣删除或移入心愿单后再预定', 'is_valid': True, 'is_full': False, 'no_stock': False, 'product_exist': True, 'plan_id': 279099, 'delivery_region': '310101', 'delivery_region_name': '黄浦区', 'delivery_date': 1510329600, 'send_back_date': 1510675200, 'can_use_dots': 4, 'free_rental_count': 2, 'pay_rental_count': 2, 'is_pay_grid': False, 'pay_mode': 'free', 'go_chose': True, 'have_invalid_product': False, 'items': [{'plan_item_id': 499768, 'product_id': 7836, 'name': 'ANI条纹衬衫露肩连衣裙', 'brand': 'BCBG MAXAZRIA', 'specification': '美码', 'dots': 2, 'images': 'http://static-t.msparis.com/uploads/products/f/9/f9f908ced495c3917c58d4769338afc5.jpg', 'spu': 'BC475A', 'is_valid': True}], 'min_cost_dots': 2, 'items_count': 1, 'product_cost_dots': 2, 'price': {'original_total': 0, 'pay_dots_price': 0, 'pay_dots_num': 0, 'pay_dots_grid': 0, 'deposit': 0, 'express': 0, 'total': 0}, 'max_rental_count': 5}}
+2017-10-12 18:21:36,923 TestRequest.py[line: 62] INFO: 计算模块计算日常租赁订单价格积点 V311-8-68
+2017-10-12 18:21:36,924 TestRequest.py[line: 63] INFO: 测试通过
+2017-10-12 18:21:36,924 TestRequest.py[line: 64] INFO: 返回的消息是：{'status': 'ok', 'data': {'original_total': 0, 'pay_dots_price': 0, 'pay_dots_num': 0, 'pay_dots_grid': 0, 'deposit': 0, 'express': 0, 'total': 0, 'pay_dots_origin_price': 1000, 'pay_dots_discount_price': 600, 'pay_mode': 'free'}}
+2017-10-12 18:21:37,707 TestRequest.py[line: 196] INFO: 租赁计划商品详情 获取衣袋商品详情获取 积点 V3611-6-58
+2017-10-12 18:21:37,707 TestRequest.py[line: 197] INFO: 测试通过
+2017-10-12 18:21:37,707 TestRequest.py[line: 198] INFO: 返回的消息是：{'status': 'ok', 'data': {'is_disabled': False, 'is_not_enough_dots': False, 'not_enough_message': '美衣件数已超衣袋上限，可将部分美衣删除或移入心愿单后再预定', 'is_valid': True, 'is_full': False, 'no_stock': False, 'product_exist': True, 'plan_id': 279099, 'delivery_region': '310101', 'delivery_region_name': '黄浦区', 'delivery_date': 1510329600, 'send_back_date': 1510675200, 'can_use_dots': 4, 'free_rental_count': 2, 'pay_rental_count': 2, 'is_pay_grid': False, 'pay_mode': 'free', 'go_chose': True, 'have_invalid_product': False, 'items': [{'plan_item_id': 499768, 'product_id': 7836, 'name': 'ANI条纹衬衫露肩连衣裙', 'brand': 'BCBG MAXAZRIA', 'specification': '美码', 'dots': 2, 'images': 'http://static-t.msparis.com/uploads/products/f/9/f9f908ced495c3917c58d4769338afc5.jpg', 'spu': 'BC475A', 'is_valid': True}], 'min_cost_dots': 2, 'items_count': 1, 'product_cost_dots': 2, 'price': {'original_total': 0, 'pay_dots_price': 0, 'pay_dots_num': 0, 'pay_dots_grid': 0, 'deposit': 0, 'express': 0, 'total': 0}, 'max_rental_count': 5}}
+2017-10-12 18:21:37,884 TestRequest.py[line: 196] INFO: 购物计划获取购物计划和购物车内已添加商品数量 V111-7-14
+2017-10-12 18:21:37,884 TestRequest.py[line: 197] INFO: 测试通过
+2017-10-12 18:21:37,884 TestRequest.py[line: 198] INFO: 返回的消息是：{'status': 'ok', 'data': {'package_amount': 1, 'cart_item_amount': 0}}
+2017-10-12 18:21:38,049 TestRequest.py[line: 168] INFO: 购物计划获取购物计划和购物车内已添加商品数量 V111-7-15
+2017-10-12 18:21:38,049 TestRequest.py[line: 169] INFO: 测试通过
+2017-10-12 18:21:38,049 TestRequest.py[line: 170] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-12 18:21:38,986 TestRequest.py[line: 196] INFO: 租赁计划商品详情 获取有效的衣袋 V3611-5-50
+2017-10-12 18:21:38,987 TestRequest.py[line: 197] INFO: 测试通过
+2017-10-12 18:21:38,987 TestRequest.py[line: 198] INFO: 返回的消息是：{'status': 'ok', 'data': {'valid_plan': {'is_disabled': False, 'is_not_enough_dots': False, 'not_enough_message': '美衣件数已超衣袋上限，可将部分美衣删除或移入心愿单后再预定', 'is_valid': True, 'is_full': False, 'no_stock': False, 'product_exist': True, 'plan_id': 279099, 'delivery_region': '310101', 'delivery_region_name': '黄浦区', 'delivery_date': 1510329600, 'send_back_date': 1510675200, 'can_use_dots': 4, 'free_rental_count': 2, 'pay_rental_count': 2, 'is_pay_grid': False, 'pay_mode': 'free', 'go_chose': True, 'have_invalid_product': False, 'items': [{'plan_item_id': 499768, 'product_id': 7836, 'name': 'ANI条纹衬衫露肩连衣裙', 'brand': 'BCBG MAXAZRIA', 'specification': '美码', 'dots': 2, 'images': 'http://static-t.msparis.com/uploads/products/f/9/f9f908ced495c3917c58d4769338afc5.jpg', 'spu': 'BC475A', 'is_valid': True}], 'min_cost_dots': 2, 'items_count': 1, 'product_cost_dots': 2, 'price': {'original_total': 0, 'pay_dots_price': 0, 'pay_dots_num': 0, 'pay_dots_grid': 0, 'deposit': 0, 'express': 0, 'total': 0}, 'max_rental_count': 5}, 'plan_count': 1}}
+2017-10-12 18:21:39,855 TestRequest.py[line: 196] INFO: 租赁计划商品详情 显示所有切换衣袋 V3611-4-40
+2017-10-12 18:21:39,855 TestRequest.py[line: 197] INFO: 测试通过
+2017-10-12 18:21:39,855 TestRequest.py[line: 198] INFO: 返回的消息是：{'status': 'ok', 'data': [{'is_disabled': False, 'is_not_enough_dots': False, 'not_enough_message': '美衣件数已超衣袋上限，可将部分美衣删除或移入心愿单后再预定', 'is_valid': True, 'is_full': False, 'no_stock': False, 'product_exist': True, 'plan_id': 279099, 'delivery_region': '310101', 'delivery_region_name': '黄浦区', 'delivery_date': 1510329600, 'send_back_date': 1510675200, 'can_use_dots': 4, 'free_rental_count': 2, 'pay_rental_count': 2, 'is_pay_grid': False, 'pay_mode': 'free', 'go_chose': True, 'have_invalid_product': False, 'items': [{'plan_item_id': 499768, 'product_id': 7836, 'name': 'ANI条纹衬衫露肩连衣裙', 'brand': 'BCBG MAXAZRIA', 'specification': '美码', 'dots': 2, 'images': 'http://static-t.msparis.com/uploads/products/f/9/f9f908ced495c3917c58d4769338afc5.jpg', 'spu': 'BC475A', 'is_valid': True}], 'min_cost_dots': 2, 'items_count': 1, 'product_cost_dots': 2, 'price': {'original_total': 0, 'pay_dots_price': 0, 'pay_dots_num': 0, 'pay_dots_grid': 0, 'deposit': 0, 'express': 0, 'total': 0}, 'max_rental_count': 5}]}
+2017-10-12 18:21:40,313 TestRequest.py[line: 196] INFO: 租赁计划商品列表 获取已添加的衣袋 v3611-3-4
+2017-10-12 18:21:40,313 TestRequest.py[line: 197] INFO: 测试通过
+2017-10-12 18:21:40,313 TestRequest.py[line: 198] INFO: 返回的消息是：{'status': 'ok', 'data': {'plans': [{'delivery_date': 1510329600, 'send_back_date': 1510675200, 'region': 310101, 'region_name': '黄浦区'}]}}
+2017-10-12 18:21:40,481 TestRequest.py[line: 209] INFO: 租赁计划商品列表 获取已添加的衣袋 v3611-3-5
+2017-10-12 18:21:40,483 TestRequest.py[line: 210] INFO: 测试不通过
+2017-10-12 18:21:40,483 TestRequest.py[line: 211] INFO: 返回的消息为：{'status': 'ok', 'data': {'plans': None}}
+2017-10-12 18:21:40,665 TestRequest.py[line: 339] INFO: 租赁计划商品详情 删除衣袋商品 V3611-2-32
+2017-10-12 18:21:40,667 TestRequest.py[line: 340] INFO: 测试通过
+2017-10-12 18:21:40,667 TestRequest.py[line: 341] INFO: 返回的消息是：{'status': 'ok'}
+2017-10-12 18:21:40,667 TestAllCass.py[line: 201] INFO: 结束测试
+2017-10-12 18:21:40,910 TestXlsxReport.py[line: 188] INFO: 生成测试报告成功
+2017-10-12 18:21:42,278 TestXlsxReport.py[line: 201] INFO: 正在发送测试报告邮件...
+2017-10-12 18:21:45,363 TestXlsxReport.py[line: 208] INFO: 发送邮件成功
