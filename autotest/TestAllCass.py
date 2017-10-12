@@ -17,6 +17,7 @@ import TestCass.TestCass_shangpin
 import TestCass.TestCass_yuyue
 import TestCass.TestCass_nvshenka
 import TestCass.TestCass_faxian
+import TestCass.TestCass_zulinjihua
 from PublicTools.log import logger
 
 
@@ -36,8 +37,8 @@ def TestCass_yonghu_Cass():
     logger.info("开始测试")
     now = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
     logger.info(now)
-    TestCass.TestCass_yonghu.test_post_duanxindenglu()
-    TestCass.TestCass_yonghu.test_post_mimadenglu()
+    # TestCass.TestCass_yonghu.test_post_duanxindenglu()
+    # TestCass.TestCass_yonghu.test_post_mimadenglu()
     TestCass.TestCass_yonghu.test_get_huiyuanzhongxinshouyeshuju()
     TestCass.TestCass_yonghu.test_post_xiugaimima()
     TestCass.TestCass_yonghu.test_post_lingquyouhuiquan()
@@ -70,7 +71,7 @@ def TestCass_yonghu_Cass():
     TestCass.TestCass_yonghu.test_get_yaoqingyoujiang()
     TestCass.TestCass_yonghu.test_post_lingquyouhuiquanv2()
 
-    TestCass.TestCass_yonghu.test_get_dingdanxiangqing310()
+    # TestCass.TestCass_yonghu.test_get_dingdanxiangqing310()
     TestCass.TestCass_yonghu.test_get_wodedingdanzulingoumaidingdan310()
     TestCass.TestCass_yonghu.test_get_wuliuxinxi()
     TestCass.TestCass_yonghu.test_get_huoquwodenvshenkashiyongminxi()
@@ -107,6 +108,9 @@ def TestCass_dingdan_Cass():
     TestCass.TestCass_dingdan.test_post_chuanjiannvshenkagoumaidingdanV310()
     TestCass.TestCass_dingdan.test_post_zhifuwancheng()
     TestCass.TestCass_dingdan.test_get_yonghuhuiyuankashoucixiadanjiancha()
+    TestCass.TestCass_dingdan.test_post_chuangjianrichangzulindingdan()
+    TestCass.TestCass_dingdan.test_get_dingdanxiangqing()
+    TestCass.TestCass_dingdan.test_delete_zulingoumaidingdanquxiao()
     logger.info("结束测试")
 
 
@@ -179,4 +183,19 @@ def TestCass_faxian_Cass():
     TestCass.TestCass_faxian.test_get_huoqushaidanyonghuxiangqing()
     TestCass.TestCass_faxian.test_get_huoqushaituxiangqing()
     TestCass.TestCass_faxian.test_get_huoqupinglunliebiao()
+    logger.info("结束测试")
+
+
+def TestCass_zulinjihua_Cass():
+    logger.info("开始测试")
+    now = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
+    logger.info(now)
+    TestCass.TestCass_zulinjihua.test_post_tianjiayidaishangpin()
+    TestCass.TestCass_zulinjihua.test_post_jisuanrichangzulindingdanjiage()
+    TestCass.TestCass_zulinjihua.test_get_huoquyidaishangpinxiangqinghuoqu()
+    TestCass.TestCass_zulinjihua.test_get_huoqugouwujihuahegouwucheyitianjiashangpinshuliang()
+    TestCass.TestCass_zulinjihua.test_get_huoquyouxiaoyidai()
+    TestCass.TestCass_zulinjihua.test_get_xianshisuoyouqiehuanyidai()
+    TestCass.TestCass_zulinjihua.test_get_huoquyitianjiayidai()
+    TestCass.TestCass_zulinjihua.test_delete_shanchuyidaishangpin()
     logger.info("结束测试")

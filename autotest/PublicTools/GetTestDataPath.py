@@ -8,11 +8,24 @@ Created on 2017年9月5日
 '''
 import os
 import time
+import configparser
+
+
+def GetenvironmentPath():
+    ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(ospath, "config", "environment.conf")
 
 
 def GetTestDataPath():
-    ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    return os.path.join(ospath, "TestData", "TestData.xls")
+    config = configparser.ConfigParser()
+    config.read(GetenvironmentPath())
+    environment = config['environment']['environment']
+    if environment == 'test':
+        ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        return os.path.join(ospath, "TestData", "TestDatatest.xls")
+    else:
+        ospath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        return os.path.join(ospath, "TestData", "TestData.xls")
 # return os.path.dirname(os.path.dirname(os.path.abspath(__file__))) +
 # '\\TestData\\TestData.xls'
 

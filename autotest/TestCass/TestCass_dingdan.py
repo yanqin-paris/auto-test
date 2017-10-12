@@ -6,8 +6,10 @@ Created on 2017年9月5日
 @author: Jim
 '''
 import xlrd
+import TestCass.TestCass_zulinjihua
 from PublicTools.TestRequest import TestPostRequest
 from PublicTools.TestRequest import TestGetRequest
+from PublicTools.TestRequest import TestDeleteRequest
 from PublicTools.GetTestDataPath import GetTestDataPath
 from PublicTools.globalpy import GLOBAL_token
 
@@ -17,6 +19,8 @@ hurl = table.cell(7, 1).value  # 从测试数据中读取url
 htoken = table.cell(8, 1).value
 hcontent_type = table.cell(6, 1).value
 access_token = GLOBAL_token
+
+variables = {}
 
 
 def test_post_pingtuankadancigoumai():
@@ -321,3 +325,78 @@ def test_get_yonghuhuiyuankashoucixiadanjiancha():
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'order/daily-first', hdata, headers,
                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_post_chuangjianrichangzulindingdan():
+    TestCass.TestCass_zulinjihua.test_post_tianjiayidaishangpin()
+    for i in range(111, 112):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+
+        hdata = {
+            "access_token": access_token,
+            "plan_id": TestCass.TestCass_zulinjihua.TestResults['plan_id'],
+            "user_address_id": table.cell(i, 2).value,
+            "order_item": [{"plan_item_id": TestCass.TestCass_zulinjihua.TestResults['plan_item_id']}],
+            "remark": '配送前来电确认'
+        }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-13-" + str(i + 1)
+        htestcassname = "订单模块创建日常租赁订单积点付费 V3" + htestcassid
+        htesthope = table.cell(i, 4).value
+        fanhuitesthope = table.cell(i, 5).value
+        r = TestPostRequest(hurl + 'order/plan-daily-v3', hdata, headers,
+                            htestcassid, htestcassname, htesthope, fanhuitesthope)
+    variables['order_id'] = r['data']['order_id']
+# test_post_chuangjianrichangzulindingdan()
+
+
+def test_get_dingdanxiangqing():
+    for i in range(399, 401):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+
+        if i == 400:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "id": variables['order_id']
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "id": variables['order_id']
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-42-" + str(i + 1)
+        htestcassname = "用户模块订单详情 迭代310" + htestcassid
+        htesthope = table.cell(i, 2).value
+        fanhuitesthope = table.cell(i, 3).value
+        TestGetRequest(hurl + 'user/order-detail', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+# test_get_dingdanxiangqing()
+
+
+def test_delete_zulingoumaidingdanquxiao():
+    for i in range(121, 122):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+
+        hdata = {
+            "access_token": access_token,
+            "order_id": variables['order_id'],
+            "reason": table.cell(i, 2).value
+        }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-14-" + str(i + 1)
+        htestcassname = "订单模块租赁购买订单取消 V1" + htestcassid
+        htesthope = table.cell(i, 3).value
+        fanhuitesthope = table.cell(i, 4).value
+        TestDeleteRequest(hurl + 'order', hdata, headers,
+                          htestcassid, htestcassname, htesthope, fanhuitesthope)
+# test_delete_zulingoumaidingdanquxiao()

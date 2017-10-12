@@ -20,11 +20,11 @@ hcontent_type = table.cell(6, 1).value
 access_token = GLOBAL_token
 
 query = 'DELETE from user_coupon where user_id=%s and coupon_id=%s'
-data = ('15903', '200')
+data = ('189152', '200')
 GLOBAL_testdb.execute_delete(query, data)
 
 query = 'DELETE from user_coupon where user_id=%s and coupon_id=%s'
-data = ('15903', '49319')
+data = ('189152', '49319')
 GLOBAL_testdb.execute_delete(query, data)
 
 

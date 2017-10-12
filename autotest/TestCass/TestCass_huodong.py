@@ -20,7 +20,7 @@ hcontent_type = table.cell(6, 1).value
 access_token = GLOBAL_token
 
 query = 'delete from user_base_information where user_id=%s'
-data = ('15903',)
+data = ('189152',)
 GLOBAL_testdb.execute_delete(query, data)
 
 

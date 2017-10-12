@@ -194,7 +194,7 @@ try:
         "\n失败总数：" + str(len(TestReport) - hpassnum) + "\n通过率为：" + \
         str(round(hpassnum / len(TestReport), 2) * 100) + \
         '%\n' + "详细内容请看附件：" + "【" + (now + 'report.xlsx') + "】"
-    mail_tiltle = '【接口自动化测试报告】' + timenow
+    mail_tiltle = '【接口自动化测试报告_(api.test.msparis.com)】' + timenow
     attachments = set(
         [ReportPath])
 
