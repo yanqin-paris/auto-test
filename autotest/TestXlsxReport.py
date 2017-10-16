@@ -10,22 +10,20 @@ import time
 import TestAllRunner
 import PublicTools.TestRequest
 import sys
-import configparser
 from PublicTools.GetTestDataPath import GetTestReportPath
 from PublicTools.GetTestDataPath import GetLogoDataPath
-from PublicTools.GetTestDataPath import GetenvironmentPath
 from PublicTools.log import logger
 from PublicTools.sendmail import MyMail
 from PublicTools.GetTestDataPath import GetMailConfigPath
-
-
-def Writeconfig(e):
-    config = configparser.ConfigParser()
-    config.read(GetenvironmentPath())
-    config.set('environment', 'environment', e)
-    config.write(open(GetenvironmentPath(), "w"))
+from PublicTools.GetTestDataPath import Writeconfig
 
 Writeconfig(sys.argv[1])
+
+if sys.argv[1] == 'test':
+    test_net = 'http://api.test.msparis.com/'
+elif sys.argv[1] == 'auto':
+    test_net = 'http://api.auto.msparis.com/'
+
 
 TestAllRunner.hthreads()
 TestReport = PublicTools.TestRequest.hlist  # 调用测试结果
@@ -98,7 +96,7 @@ def init(worksheet):
     _write_center(worksheet, "B6", '测试地址', workbook)
 
     data = {"test_name": "女神派项目接口", "test_version": "v1.0.0",
-            "test_pl": "Python3", "test_net": "http://api.auto.msparis.com/"}
+            "test_pl": "Python3", "test_net": test_net}
     _write_center(worksheet, "C3", data['test_name'], workbook)
     _write_center(worksheet, "C4", data['test_version'], workbook)
     _write_center(worksheet, "C5", data['test_pl'], workbook)
@@ -206,7 +204,7 @@ try:
         "\n失败总数：" + str(len(TestReport) - hpassnum) + "\n通过率为：" + \
         str(round(hpassnum / len(TestReport), 2) * 100) + \
         '%\n' + "详细内容请看附件：" + "【" + (now + 'report.xlsx') + "】"
-    mail_tiltle = '【接口自动化测试报告_(api.test.msparis.com)】' + timenow
+    mail_tiltle = '【接口自动化测试报告】' + test_net + timenow
     attachments = set(
         [ReportPath])
 

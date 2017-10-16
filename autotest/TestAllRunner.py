@@ -34,8 +34,9 @@ def hthreads():
         threading.Thread(target=TestAllCass.TestCass_nvshenka_Cass()))  # 添加线程到数组
     threads.append(
         threading.Thread(target=TestAllCass.TestCass_faxian_Cass()))  # 添加线程到数组
-    threads.append(
-        threading.Thread(target=TestAllCass.TestCass_zulinjihua_Cass()))  # 添加线程到数组
+#   threads.append(
+#   threading.Thread(target=TestAllCass.TestCass_zulinjihua_Cass()))  #
+#   添加线程到数组
     for h in threads:
         # 读取数组里的所有线程，并同时执行
         h.start()  # 开始线程活动
