@@ -9,11 +9,24 @@ import xlsxwriter
 import time
 import TestAllRunner
 import PublicTools.TestRequest
+import os
+import sys
+import configparser
 from PublicTools.GetTestDataPath import GetTestReportPath
 from PublicTools.GetTestDataPath import GetLogoDataPath
+from PublicTools.GetTestDataPath import GetenvironmentPath
 from PublicTools.log import logger
 from PublicTools.sendmail import MyMail
 from PublicTools.GetTestDataPath import GetMailConfigPath
+
+
+def Writeconfig(e):
+    config = configparser.ConfigParser()
+    config.read(GetenvironmentPath())
+    config.set('environment', 'environment', e)
+    config.write(open(GetenvironmentPath(), "w"))
+
+Writeconfig(sys.argv[1])
 
 TestAllRunner.hthreads()
 TestReport = PublicTools.TestRequest.hlist  # 调用测试结果
