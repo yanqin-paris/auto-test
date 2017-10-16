@@ -9,7 +9,6 @@ Created on 2017年9月5日
 import os
 import time
 import configparser
-import sys
 
 
 def GetenvironmentPath():
@@ -25,9 +24,6 @@ def Writeconfig(e):
     cfgfile = open(environmentPath, "w")
     config.write(cfgfile)
     cfgfile.close()
-
-
-Writeconfig(sys.argv[1])
 
 
 def GetTestDataPath():

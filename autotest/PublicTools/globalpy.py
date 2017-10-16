@@ -1,14 +1,23 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-
-from PublicTools.log import logger
+import configparser
 from PublicTools.mydb import MyDB
 from PublicTools.GetTestDataPath import GetDbConfigPath
 from PublicTools.GetToken_str import test_get_token
+from PublicTools.GetTestDataPath import GetenvironmentPath
 
 # logger.info('正在初始化数据库[名称：TESTDB]对象')
-GLOBAL_testdb = MyDB(GetDbConfigPath(), 'TESTDB')
+config = configparser.ConfigParser()
+config.read(GetenvironmentPath())
+environment = config['environment']['environment']
+
+if environment == 'test':
+    GLOBAL_testdb = MyDB(GetDbConfigPath(), 'TESTDB')
+elif environment == 'auto':
+    GLOBAL_testdb = MyDB(GetDbConfigPath(), 'AUTODB')
+
+
 GLOBAL_token = test_get_token()
 
 
