@@ -17,10 +17,11 @@ table = Testdata.sheets()[0]  # 选择excle表中的sheet
 hurl = table.cell(7, 1).value  # 从测试数据中读取url
 htoken = table.cell(8, 1).value
 hcontent_type = table.cell(6, 1).value
+userid = table.cell(10, 1).value
 access_token = GLOBAL_token
 
 query = 'delete from user_base_information where user_id=%s'
-data = ('189152',)
+data = (userid,)
 GLOBAL_testdb.execute_delete(query, data)
 
 

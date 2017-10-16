@@ -49,4 +49,4 @@ def test_get_token():
             exit()
 
 
-# print(test_get_token())
+print(test_get_token())
