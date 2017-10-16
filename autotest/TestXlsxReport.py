@@ -9,7 +9,6 @@ import xlsxwriter
 import time
 import TestAllRunner
 import PublicTools.TestRequest
-import os
 import sys
 import configparser
 from PublicTools.GetTestDataPath import GetTestReportPath
