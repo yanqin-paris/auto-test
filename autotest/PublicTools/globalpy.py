@@ -6,6 +6,8 @@ from PublicTools.mydb import MyDB
 from PublicTools.GetTestDataPath import GetDbConfigPath
 from PublicTools.GetToken_str import test_get_token
 from PublicTools.GetTestDataPath import GetenvironmentPath
+from PublicTools.GetTestDataPath import GetTestDataPath
+
 
 # logger.info('正在初始化数据库[名称：TESTDB]对象')
 config = configparser.ConfigParser()
@@ -17,7 +19,7 @@ if environment == 'test':
 elif environment == 'auto':
     GLOBAL_testdb = MyDB(GetDbConfigPath(), 'AUTODB')
 
-
+GLOBAL_TestDataPath = GetTestDataPath()
 GLOBAL_token = test_get_token()
 
 

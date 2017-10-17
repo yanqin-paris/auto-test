@@ -9,12 +9,14 @@ Created on 2017年9月1日
 import json
 import requests
 import xlrd
-# import xlwt
-from xlutils.copy import copy
-from PublicTools.GetTestDataPath import GetTestDataPath
+import sys
 from PublicTools.log import logger
+from PublicTools.GetTestDataPath import GetTestDataPath
+from PublicTools.GetTestDataPath import Writeconfig
 
-Testdata = xlrd.open_workbook(GetTestDataPath())  # 打开测试数据，路径需要自己配，相对路径似乎不行
+Writeconfig(sys.argv[1])
+# 打开测试数据，路径需要自己配，相对路径似乎不行
+Testdata = xlrd.open_workbook(GetTestDataPath())
 table = Testdata.sheets()[0]  # 选择sheet
 hurl = table.cell(7, 1).value  # 读取URL
 

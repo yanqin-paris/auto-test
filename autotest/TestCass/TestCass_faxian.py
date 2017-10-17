@@ -9,10 +9,10 @@ import xlrd
 from PublicTools.TestRequest import TestPostRequest
 from PublicTools.TestRequest import TestGetRequest
 from PublicTools.TestRequest import TestDeleteRequest
-from PublicTools.GetTestDataPath import GetTestDataPath
 from PublicTools.globalpy import GLOBAL_token
+from PublicTools.globalpy import GLOBAL_TestDataPath
 
-Testdata = xlrd.open_workbook(GetTestDataPath())  # 读取测试数据
+Testdata = xlrd.open_workbook(GLOBAL_TestDataPath)  # 读取测试数据
 table = Testdata.sheets()[0]  # 选择excle表中的sheet
 hurl = table.cell(7, 1).value  # 从测试数据中读取url
 htoken = table.cell(8, 1).value

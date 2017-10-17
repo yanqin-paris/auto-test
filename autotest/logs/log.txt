@@ -1,5 +1,249 @@
-2017-10-17 14:30:55,732 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
-2017-10-17 14:30:55,733 GetToken_str.py[line: 45] INFO: 当前token为：6fb96a7d2d965bfb736fb7e581ac7026
-2017-10-17 14:30:55,773 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '200')
-2017-10-17 14:30:55,816 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '49319')
-2017-10-17 14:30:56,639 mydb.py[line: 69] INFO: query：delete from user_base_information where user_id=%s  data：('15903',)
+2017-10-17 15:31:27,135 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'dress': [{'id': '75', 'category_id': 't8', 'name': '晚宴', 'image': 'http://static-t.msparis.com/uploads/tags/e/e/eedcd73bf4220f5011f6b415dadb366a.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/e/e/eedcd73bf4220f5011f6b415dadb366a.png'}, {'id': '74', 'category_id': 't8', 'name': '年会/婚礼', 'image': 'http://static-t.msparis.com/uploads/tags/c/6/c66240152b9f52e727ae6f1016e6bd8f.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/c/6/c66240152b9f52e727ae6f1016e6bd8f.png'}, {'id': '73', 'category_id': 't8', 'name': '派对/夜店', 'image': 'http://static-t.msparis.com/uploads/tags/5/6/5640398c8c20b1551816005103204ca4.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/5/6/5640398c8c20b1551816005103204ca4.png'}, {'id': '77', 'category_id': 't8', 'name': '度假', 'image': 'http://static-t.msparis.com/uploads/tags/0/e/0e3c41cda0403a34e197ab911e0b08a9.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/0/e/0e3c41cda0403a34e197ab911e0b08a9.png'}, {'id': '72', 'category_id': 't8', 'name': '婚纱', 'image': 'http://static-t.msparis.com/uploads/tags/d/6/d667d81d975dec2565467b19ed2bde50.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/d/6/d667d81d975dec2565467b19ed2bde50.png'}, {'id': '70', 'category_id': 't8', 'name': '伴娘', 'image': 'http://static-t.msparis.com/uploads/tags/e/5/e57cb0a56d98d4dfba26ef684ee12f34.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/e/5/e57cb0a56d98d4dfba26ef684ee12f34.png'}], 'cloth': [{'id': '14', 'category_id': 't1', 'name': '时尚OL', 'image': 'http://static-t.msparis.com/uploads/tags/8/7/87c4b82c2e0b90c9e7257cb1f5a5e442.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/8/7/87c4b82c2e0b90c9e7257cb1f5a5e442.png'}, {'id': '13', 'category_id': 't1', 'name': '约会小聚', 'image': 'http://static-t.msparis.com/uploads/tags/0/0/00d61beb84ee1ca8304683e421c4f8ec.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/0/0/00d61beb84ee1ca8304683e421c4f8ec.png'}, {'id': '12', 'category_id': 't1', 'name': '休闲', 'image': 'http://static-t.msparis.com/uploads/tags/c/2/c24d75abff6fa1c76d662870d31c1cc9.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/c/2/c24d75abff6fa1c76d662870d31c1cc9.png'}, {'id': '10', 'category_id': 't1', 'name': '度假', 'image': 'http://static-t.msparis.com/uploads/tags/b/6/b60c642f315011c4337d2df4f54895e6.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/b/6/b60c642f315011c4337d2df4f54895e6.png'}, {'id': '9', 'category_id': 't1', 'name': '职场正装', 'image': 'http://static-t.msparis.com/uploads/tags/8/e/8ed2849a2cb7a4b66d47a9d18e23b9c1.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/8/e/8ed2849a2cb7a4b66d47a9d18e23b9c1.png'}, {'id': '7,6', 'category_id': 't1', 'name': '年会/婚礼', 'image': 'http://static-t.msparis.com/uploads/tags/7/b/7be49e43ebc4469072f8250bc8cccaaf.png', 'image_selected': 'http://static-t.msparis.com/uploads/tags/7/b/7be49e43ebc4469072f8250bc8cccaaf.png'}]}}
+2017-10-17 15:36:13,476 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-10-17 15:36:13,478 GetToken_str.py[line: 45] INFO: 当前token为：11ace390c4dd35cfa29090e613a7b23d
+2017-10-17 15:36:13,531 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '200')
+2017-10-17 15:36:13,560 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '49319')
+2017-10-17 15:36:13,633 mydb.py[line: 69] INFO: query：delete from user_base_information where user_id=%s  data：('15903',)
+2017-10-17 15:40:45,761 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-10-17 15:40:45,763 GetToken_str.py[line: 45] INFO: 当前token为：974bdd368197671204189d72d15c98c2
+2017-10-17 15:40:45,825 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('189152', '200')
+2017-10-17 15:40:45,860 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('189152', '49319')
+2017-10-17 15:40:45,929 mydb.py[line: 69] INFO: query：delete from user_base_information where user_id=%s  data：('189152',)
+2017-10-17 15:44:25,278 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-10-17 15:44:25,278 GetToken_str.py[line: 45] INFO: 当前token为：aec78da46612d7aff5d3774e1f6a3505
+2017-10-17 15:44:25,334 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '200')
+2017-10-17 15:44:25,352 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '49319')
+2017-10-17 15:44:25,431 mydb.py[line: 69] INFO: query：delete from user_base_information where user_id=%s  data：('15903',)
+2017-10-17 15:44:25,674 TestAllCass.py[line: 25] INFO: 开始测试
+2017-10-17 15:44:25,674 TestAllCass.py[line: 27] INFO: 2017-10-17-15-44-25
+2017-10-17 15:44:25,788 TestRequest.py[line: 213] INFO: 通用版本更新检查 V1 1-1-4
+2017-10-17 15:44:25,788 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 15:44:25,788 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'platform': 'ios', 'version': '3.5.5', 'build': '355', 'note': '个人中心新增完善女神信息活动，丰厚奖励等您拿！', 'update_url': 'itms-apps://itunes.apple.com/app/id1118853941', 'forced_update': 0, 'status': '1'}}
+2017-10-17 15:58:39,193 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-10-17 15:58:39,193 GetToken_str.py[line: 45] INFO: 当前token为：f1da20d111fe65dcbe59df276a833172
+2017-10-17 15:58:39,249 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('189152', '200')
+2017-10-17 15:58:39,273 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('189152', '49319')
+2017-10-17 15:58:39,345 mydb.py[line: 69] INFO: query：delete from user_base_information where user_id=%s  data：('189152',)
+2017-10-17 15:58:39,606 TestAllCass.py[line: 25] INFO: 开始测试
+2017-10-17 15:58:39,607 TestAllCass.py[line: 27] INFO: 2017-10-17-15-58-39
+2017-10-17 15:58:39,755 TestRequest.py[line: 213] INFO: 通用版本更新检查 V1 1-1-4
+2017-10-17 15:58:39,755 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 15:58:39,756 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'platform': 'ios', 'version': '3.5.4', 'build': '354', 'note': '七夕福利！全年仅此一次，限时5折特惠，互动还有好礼送。快来参加！（更新版本后参加活动才可付款购买哦）', 'update_url': 'itms-apps://itunes.apple.com/app/id1118853941', 'forced_update': 0, 'status': '1'}}
+2017-10-17 16:14:02,404 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-10-17 16:14:02,404 GetToken_str.py[line: 45] INFO: 当前token为：52bcd5ca807ff80ba5db6fcccb69e5fe
+2017-10-17 16:14:02,463 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '200')
+2017-10-17 16:14:02,489 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '49319')
+2017-10-17 16:14:02,575 mydb.py[line: 69] INFO: query：delete from user_base_information where user_id=%s  data：('15903',)
+2017-10-17 16:14:02,884 TestAllCass.py[line: 25] INFO: 开始测试
+2017-10-17 16:14:02,884 TestAllCass.py[line: 27] INFO: 2017-10-17-16-14-02
+2017-10-17 16:14:03,006 TestRequest.py[line: 213] INFO: 通用版本更新检查 V1 1-1-4
+2017-10-17 16:14:03,006 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 16:14:03,006 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'platform': 'ios', 'version': '3.5.5', 'build': '355', 'note': '个人中心新增完善女神信息活动，丰厚奖励等您拿！', 'update_url': 'itms-apps://itunes.apple.com/app/id1118853941', 'forced_update': 0, 'status': '1'}}
+2017-10-17 16:14:03,111 TestRequest.py[line: 213] INFO: 通用版本更新检查 V1 1-1-5
+2017-10-17 16:14:03,111 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 16:14:03,112 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'platform': 'android', 'version': '3.5.5', 'build': '355', 'note': '个人中心新增完善女神信息活动，丰厚奖励等您拿！', 'update_url': 'http://static-r.msparis.com/app-official_mobile-release.apk', 'forced_update': 0, 'status': '1'}}
+2017-10-17 16:14:03,211 TestRequest.py[line: 185] INFO: 通用版本更新检查 V1 1-1-6
+2017-10-17 16:14:03,211 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 16:14:03,211 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-10-17 16:14:03,318 TestRequest.py[line: 213] INFO: 通用用户活动资格检查 V1 1-2-14
+2017-10-17 16:14:03,319 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 16:14:03,319 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'qualified': 0, 'lasttime': 0, 'count': 0}}
+2017-10-17 16:14:03,419 TestRequest.py[line: 185] INFO: 通用用户活动资格检查 V1 1-2-15
+2017-10-17 16:14:03,419 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 16:14:03,419 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 16:14:03,518 TestRequest.py[line: 213] INFO: 通用模块 检查手机号 1-3-22
+2017-10-17 16:14:03,519 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 16:14:03,519 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'is_register': 1, 'is_sent_sms': 0}}
+2017-10-17 16:14:03,618 TestRequest.py[line: 185] INFO: 通用模块 检查手机号 1-3-23
+2017-10-17 16:14:03,618 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 16:14:03,619 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10012', 'message': '请输入有效手机号!'}}
+2017-10-17 16:14:03,720 TestRequest.py[line: 213] INFO: 通用模块 检查手机号 1-3-24
+2017-10-17 16:14:03,720 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 16:14:03,720 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'is_register': 0, 'is_sent_sms': 0}}
+2017-10-17 16:16:32,746 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-10-17 16:16:32,747 GetToken_str.py[line: 45] INFO: 当前token为：1f9a83d1106059f1406665c499f4c930
+2017-10-17 16:16:32,803 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('189152', '200')
+2017-10-17 16:16:32,836 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('189152', '49319')
+2017-10-17 16:16:32,936 mydb.py[line: 69] INFO: query：delete from user_base_information where user_id=%s  data：('189152',)
+2017-10-17 16:16:33,154 TestAllCass.py[line: 25] INFO: 开始测试
+2017-10-17 16:16:33,154 TestAllCass.py[line: 27] INFO: 2017-10-17-16-16-33
+2017-10-17 16:16:33,292 TestRequest.py[line: 213] INFO: 通用版本更新检查 V1 1-1-4
+2017-10-17 16:16:33,292 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 16:16:33,292 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'platform': 'ios', 'version': '3.5.4', 'build': '354', 'note': '七夕福利！全年仅此一次，限时5折特惠，互动还有好礼送。快来参加！（更新版本后参加活动才可付款购买哦）', 'update_url': 'itms-apps://itunes.apple.com/app/id1118853941', 'forced_update': 0, 'status': '1'}}
+2017-10-17 16:16:33,431 TestRequest.py[line: 213] INFO: 通用版本更新检查 V1 1-1-5
+2017-10-17 16:16:33,431 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 16:16:33,432 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'platform': 'android', 'version': '3.5.4', 'build': '354', 'note': '七夕福利！全年仅此一次，限时5折特惠，互动还有好礼送。快来参加！（更新版本后参加活动才可付款购买哦）', 'update_url': 'http://static-r.msparis.com/app-official_mobile-release.apk', 'forced_update': 0, 'status': '1'}}
+2017-10-17 16:16:33,569 TestRequest.py[line: 185] INFO: 通用版本更新检查 V1 1-1-6
+2017-10-17 16:16:33,569 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 16:16:33,569 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-10-17 16:53:59,518 GetToken_str.py[line: 44] INFO: 请求返回状态为：ok
+2017-10-17 16:53:59,523 GetToken_str.py[line: 47] INFO: 当前token为：486a7a19edd8325d0b3693628efdcc01
+2017-10-17 16:53:59,580 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('189152', '200')
+2017-10-17 16:53:59,605 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('189152', '49319')
+2017-10-17 16:53:59,676 mydb.py[line: 69] INFO: query：delete from user_base_information where user_id=%s  data：('189152',)
+2017-10-17 16:53:59,908 TestAllCass.py[line: 25] INFO: 开始测试
+2017-10-17 16:53:59,908 TestAllCass.py[line: 27] INFO: 2017-10-17-16-53-59
+2017-10-17 17:01:59,657 GetToken_str.py[line: 44] INFO: 请求返回状态为：ok
+2017-10-17 17:01:59,659 GetToken_str.py[line: 47] INFO: 当前token为：64dcb3a94aa7e1ecf6098bcac1984bc7
+2017-10-17 17:01:59,707 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '200')
+2017-10-17 17:01:59,734 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '49319')
+2017-10-17 17:01:59,825 mydb.py[line: 69] INFO: query：delete from user_base_information where user_id=%s  data：('15903',)
+2017-10-17 17:02:00,137 TestAllCass.py[line: 25] INFO: 开始测试
+2017-10-17 17:02:00,139 TestAllCass.py[line: 27] INFO: 2017-10-17-17-02-00
+2017-10-17 17:02:00,248 TestRequest.py[line: 213] INFO: 通用版本更新检查 V1 1-1-4
+2017-10-17 17:02:00,249 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:02:00,249 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'platform': 'ios', 'version': '3.5.5', 'build': '355', 'note': '个人中心新增完善女神信息活动，丰厚奖励等您拿！', 'update_url': 'itms-apps://itunes.apple.com/app/id1118853941', 'forced_update': 0, 'status': '1'}}
+2017-10-17 17:10:35,254 GetToken_str.py[line: 44] INFO: 请求返回状态为：ok
+2017-10-17 17:10:35,254 GetToken_str.py[line: 47] INFO: 当前token为：e094de1bce3c08c62737624ab39720eb
+2017-10-17 17:10:35,289 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '200')
+2017-10-17 17:10:35,312 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '49319')
+2017-10-17 17:10:35,375 mydb.py[line: 69] INFO: query：delete from user_base_information where user_id=%s  data：('15903',)
+2017-10-17 17:10:35,585 TestAllCass.py[line: 25] INFO: 开始测试
+2017-10-17 17:10:35,587 TestAllCass.py[line: 27] INFO: 2017-10-17-17-10-35
+2017-10-17 17:10:36,689 TestRequest.py[line: 213] INFO: 通用版本更新检查 V1 1-1-4
+2017-10-17 17:10:36,689 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:36,689 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'platform': 'ios', 'version': '3.5.5', 'build': '355', 'note': '个人中心新增完善女神信息活动，丰厚奖励等您拿！', 'update_url': 'itms-apps://itunes.apple.com/app/id1118853941', 'forced_update': 0, 'status': '1'}}
+2017-10-17 17:10:36,798 TestRequest.py[line: 213] INFO: 通用版本更新检查 V1 1-1-5
+2017-10-17 17:10:36,799 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:36,799 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'platform': 'android', 'version': '3.5.5', 'build': '355', 'note': '个人中心新增完善女神信息活动，丰厚奖励等您拿！', 'update_url': 'http://static-r.msparis.com/app-official_mobile-release.apk', 'forced_update': 0, 'status': '1'}}
+2017-10-17 17:10:36,897 TestRequest.py[line: 185] INFO: 通用版本更新检查 V1 1-1-6
+2017-10-17 17:10:36,897 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:36,897 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-10-17 17:10:37,001 TestRequest.py[line: 213] INFO: 通用用户活动资格检查 V1 1-2-14
+2017-10-17 17:10:37,001 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:37,001 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'qualified': 0, 'lasttime': 0, 'count': 0}}
+2017-10-17 17:10:37,111 TestRequest.py[line: 185] INFO: 通用用户活动资格检查 V1 1-2-15
+2017-10-17 17:10:37,112 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:37,112 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:37,217 TestRequest.py[line: 213] INFO: 通用模块 检查手机号 1-3-22
+2017-10-17 17:10:37,217 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:37,217 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'is_register': 1, 'is_sent_sms': 0}}
+2017-10-17 17:10:37,318 TestRequest.py[line: 185] INFO: 通用模块 检查手机号 1-3-23
+2017-10-17 17:10:37,318 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:37,318 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10012', 'message': '请输入有效手机号!'}}
+2017-10-17 17:10:37,415 TestRequest.py[line: 213] INFO: 通用模块 检查手机号 1-3-24
+2017-10-17 17:10:37,415 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:37,415 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'is_register': 0, 'is_sent_sms': 0}}
+2017-10-17 17:10:37,532 TestRequest.py[line: 213] INFO: 通用配置文件更新 V1 1-4-32
+2017-10-17 17:10:37,534 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:37,534 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'goddess_card_agreement': 'http://m.msparis.com/card/rule/agreement?platform=app', 'dots_pay_origin_price': 1000, 'dots_pay_price': 600, 'login_slogan': '新用户注册即享2800元礼包'}}
+2017-10-17 17:10:37,748 TestRequest.py[line: 213] INFO: 通用模块POP活动V1 1-5-41
+2017-10-17 17:10:37,748 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:37,748 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'advertising_data': {'id': 6, 'image': 'http://static-r.msparis.com/uploads/notices/8/d/8d9ad3ee5f63e2af9ff4233f17feee3d.jpg', 'width': '1242.00', 'height': '1242.00', 'need_login': 0, 'start_time': '2017-10-09', 'end_time': '2017-10-31', 'frequency': 3, 'load_type': 1, 'value1': 'http://m.msparis.com/activity/group_index2', 'value2': None, 'status': 1}}}
+2017-10-17 17:10:37,748 TestAllCass.py[line: 33] INFO: 结束测试
+2017-10-17 17:10:37,748 TestAllCass.py[line: 37] INFO: 开始测试
+2017-10-17 17:10:37,748 TestAllCass.py[line: 39] INFO: 2017-10-17-17-10-37
+2017-10-17 17:10:37,905 TestRequest.py[line: 213] INFO: 用户模块会员中心首页数据V1 2-4-32
+2017-10-17 17:10:37,907 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:37,907 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'nickname': '131****0101', 'head_portrait': 'http://static-r.msparis.com/image/users/female.png', 'points': 4509, 'is_active': 1, 'is_sign': 0, 'upgrade_need_intergral': 491, 'level_icon': 'http://static-r.msparis.com/uploads/user/b/1/b16a8882b58829bd9870f2d84d01b9f9.png', 'member_privilege': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}], 'welfare_activities_url': '', 'integral_rules_url': 'http://m.msparis.com/card/rule/point?platform=app'}}
+2017-10-17 17:10:38,041 TestRequest.py[line: 185] INFO: 用户模块会员中心首页数据V1 2-4-33
+2017-10-17 17:10:38,042 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:38,042 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:38,155 TestRequest.py[line: 185] INFO: 用户模块会员中心首页数据V1 2-4-34
+2017-10-17 17:10:38,156 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:38,156 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-10-17 17:10:38,425 TestRequest.py[line: 62] INFO: 用户模块修改密码 V1 2-5-40
+2017-10-17 17:10:38,425 TestRequest.py[line: 63] INFO: 测试通过
+2017-10-17 17:10:38,425 TestRequest.py[line: 64] INFO: 返回的消息是：{'status': 'ok'}
+2017-10-17 17:10:38,635 TestRequest.py[line: 34] INFO: 用户模块修改密码 V1 2-5-41
+2017-10-17 17:10:38,636 TestRequest.py[line: 35] INFO: 测试通过
+2017-10-17 17:10:38,636 TestRequest.py[line: 36] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11043', 'message': '原始密码有误，请重新输入'}}
+2017-10-17 17:10:38,783 TestRequest.py[line: 34] INFO: 用户模块修改密码 V1 2-5-42
+2017-10-17 17:10:38,783 TestRequest.py[line: 35] INFO: 测试通过
+2017-10-17 17:10:38,783 TestRequest.py[line: 36] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11042', 'message': '密码必须是8-20位字母或数字!'}}
+2017-10-17 17:10:38,907 TestRequest.py[line: 34] INFO: 用户模块修改密码 V1 2-5-43
+2017-10-17 17:10:38,907 TestRequest.py[line: 35] INFO: 测试通过
+2017-10-17 17:10:38,907 TestRequest.py[line: 36] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:39,019 TestRequest.py[line: 34] INFO: 用户模块修改密码 V1 2-5-44
+2017-10-17 17:10:39,019 TestRequest.py[line: 35] INFO: 测试通过
+2017-10-17 17:10:39,019 TestRequest.py[line: 36] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-10-17 17:10:39,356 TestRequest.py[line: 34] INFO: 用户模块领取优惠券2-3-22
+2017-10-17 17:10:39,358 TestRequest.py[line: 35] INFO: 测试通过
+2017-10-17 17:10:39,358 TestRequest.py[line: 36] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '22006', 'message': '您已是我们尊贵的会员，可直接挑选美衣 '}}
+2017-10-17 17:10:39,464 TestRequest.py[line: 34] INFO: 用户模块领取优惠券2-3-23
+2017-10-17 17:10:39,464 TestRequest.py[line: 35] INFO: 测试通过
+2017-10-17 17:10:39,464 TestRequest.py[line: 36] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '22006', 'message': '您已是我们尊贵的会员，可直接挑选美衣 '}}
+2017-10-17 17:10:39,575 TestRequest.py[line: 34] INFO: 用户模块领取优惠券2-3-24
+2017-10-17 17:10:39,575 TestRequest.py[line: 35] INFO: 测试通过
+2017-10-17 17:10:39,575 TestRequest.py[line: 36] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:39,702 TestRequest.py[line: 213] INFO: 用户模块全部会员特权V1 2-6-50
+2017-10-17 17:10:39,703 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:39,703 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'name': '普通会员', 'highlight': 0, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}, {'name': '铜牌会员', 'highlight': 0, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}, {'name': '银牌会员', 'highlight': 0, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}, {'name': '金牌会员', 'highlight': 0, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}, {'name': '钻石会员', 'highlight': 1, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}, {'name': 'VIP会员', 'highlight': 0, 'rows': [{'id': 17, 'name': '美妆惊喜', 'icon': 'http://static-r.msparis.com/uploads/user/a/9/a989fabc8d5f20c4f12a9cc2fb66bebd.png'}, {'id': 16, 'name': '客服优先', 'icon': 'http://static-r.msparis.com/uploads/user/7/2/7261362cf94aab03561496b90b24f340.png'}, {'id': 15, 'name': '生日礼遇', 'icon': 'http://static-r.msparis.com/uploads/user/8/1/8117347f1ee4790b58d283c9bcbdb0aa.png'}, {'id': 18, 'name': '敬请期待', 'icon': 'http://static-r.msparis.com/uploads/user/1/3/1375d64f54c61996c6afcfb66c512057.png'}]}], 'total': 6}}
+2017-10-17 17:10:39,809 TestRequest.py[line: 185] INFO: 用户模块全部会员特权V1 2-6-51
+2017-10-17 17:10:39,809 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:39,809 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:40,174 TestRequest.py[line: 62] INFO: 用户模块全部会员特权V1 2-6-58
+2017-10-17 17:10:40,174 TestRequest.py[line: 63] INFO: 测试通过
+2017-10-17 17:10:40,174 TestRequest.py[line: 64] INFO: 返回的消息是：{'status': 'ok'}
+2017-10-17 17:10:40,276 TestRequest.py[line: 34] INFO: 用户模块全部会员特权V1 2-6-59
+2017-10-17 17:10:40,278 TestRequest.py[line: 35] INFO: 测试通过
+2017-10-17 17:10:40,278 TestRequest.py[line: 36] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:40,381 TestRequest.py[line: 34] INFO: 用户模块全部会员特权V1 2-6-60
+2017-10-17 17:10:40,382 TestRequest.py[line: 35] INFO: 测试通过
+2017-10-17 17:10:40,382 TestRequest.py[line: 36] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-10-17 17:10:40,496 TestRequest.py[line: 213] INFO: 用户模块我的女神卡订单 V1 2-7-66
+2017-10-17 17:10:40,497 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:40,497 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'id': 240095, 'card_order_no': 'CM15082251775628', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡'}, {'id': 240094, 'card_order_no': 'CM15082241759305', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡'}, {'id': 240093, 'card_order_no': 'CM15082239367223', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡'}, {'id': 240092, 'card_order_no': 'CM15082234342297', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡'}, {'id': 240091, 'card_order_no': 'CM15082136983104', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡'}, {'id': 240090, 'card_order_no': 'CM15082103801682', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡'}, {'id': 240089, 'card_order_no': 'CM15082096949402', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡'}, {'id': 240088, 'card_order_no': 'CM15082095491692', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡'}, {'id': 240087, 'card_order_no': 'CM15082075562281', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡'}, {'id': 240086, 'card_order_no': 'CM15081496883995', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡'}], 'total': 23}}
+2017-10-17 17:10:40,603 TestRequest.py[line: 185] INFO: 用户模块我的女神卡订单 V1 2-7-67
+2017-10-17 17:10:40,603 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:40,603 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:40,723 TestRequest.py[line: 185] INFO: 用户模块我的女神卡订单 V1 2-7-68
+2017-10-17 17:10:40,723 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:40,723 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-10-17 17:10:40,841 TestRequest.py[line: 213] INFO: 用户模块我的女神卡订单 V1-3.2.0 2-8-72
+2017-10-17 17:10:40,841 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:40,841 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'id': 240095, 'card_order_no': 'CM15082251775628', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡', 'created_at': '2017-10-17 15:26:17'}, {'id': 240094, 'card_order_no': 'CM15082241759305', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡', 'created_at': '2017-10-17 15:09:35'}, {'id': 240093, 'card_order_no': 'CM15082239367223', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡', 'created_at': '2017-10-17 15:05:37'}, {'id': 240092, 'card_order_no': 'CM15082234342297', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡', 'created_at': '2017-10-17 14:57:14'}, {'id': 240091, 'card_order_no': 'CM15082136983104', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡', 'created_at': '2017-10-17 12:14:58'}, {'id': 240090, 'card_order_no': 'CM15082103801682', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡', 'created_at': '2017-10-17 11:19:40'}, {'id': 240089, 'card_order_no': 'CM15082096949402', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡', 'created_at': '2017-10-17 11:08:15'}, {'id': 240088, 'card_order_no': 'CM15082095491692', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡', 'created_at': '2017-10-17 11:05:49'}, {'id': 240087, 'card_order_no': 'CM15082075562281', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡', 'created_at': '2017-10-17 10:32:37'}, {'id': 240086, 'card_order_no': 'CM15081496883995', 'card_action_type': 'renewal', 'price': 478800, 'cover_img': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'status': 6, 'total_sale': 478800, 'is_pay': 0, 'card_id': 45, 'card_name': '[续费]轻奢年卡', 'created_at': '2017-10-16 18:28:09'}], 'total': 23}}
+2017-10-17 17:10:40,966 TestRequest.py[line: 185] INFO: 用户模块我的女神卡订单 V1-3.2.0 2-8-73
+2017-10-17 17:10:40,966 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:40,966 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:41,094 TestRequest.py[line: 185] INFO: 用户模块我的女神卡订单 V1-3.2.0 2-8-74
+2017-10-17 17:10:41,095 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:41,095 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10001', 'message': '缺少必要参数'}}
+2017-10-17 17:10:41,222 TestRequest.py[line: 213] INFO: 用户模块我的女神卡订单详情 V1 2-9-78
+2017-10-17 17:10:41,222 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:41,222 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 65759, 'card_order_no': 'M0566325', 'card_action_type': 'buy', 'price': 358800, 'cover_img': '', 'status': 2, 'card_notice': '', 'total_sale': 179400, 'is_pay': 1, 'card_id': 0, 'card_name': 'ps1612', 'created_at': 1486608767, 'discount_price': 179400, 'membership_discount_price': 0, 'deposit': 0, 'cancel_reason': None, 'pay_method': 'wxpay', 'order_status': '已支付'}}
+2017-10-17 17:10:41,323 TestRequest.py[line: 185] INFO: 用户模块我的女神卡订单详情 V1 2-9-79
+2017-10-17 17:10:41,323 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:41,323 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:41,439 TestRequest.py[line: 185] INFO: 用户模块我的女神卡订单详情 V1 2-9-80
+2017-10-17 17:10:41,440 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:41,440 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10004', 'message': '没有找到相应数据!'}}
+2017-10-17 17:10:41,543 TestRequest.py[line: 213] INFO: 用户模块我的女神卡订单详情 V1 2-10-84
+2017-10-17 17:10:41,543 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:41,543 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'id': 65759, 'card_order_no': 'M0566325', 'card_action_type': 'buy', 'price': 358800, 'cover_img': '', 'status': 2, 'card_notice': '', 'total_sale': 179400, 'is_pay': 1, 'card_id': 0, 'card_name': '[购买]ps1612', 'created_at': 1486608767, 'discount_price': 179400, 'membership_discount_price': 0, 'deposit': 0, 'gift_data': None, 'cancel_reason': None, 'pay_method': 'wxpay', 'remaining_time': 0}}
+2017-10-17 17:10:41,644 TestRequest.py[line: 185] INFO: 用户模块我的女神卡订单详情 V1 2-10-85
+2017-10-17 17:10:41,644 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:41,644 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:41,766 TestRequest.py[line: 185] INFO: 用户模块我的女神卡订单详情 V1 2-10-86
+2017-10-17 17:10:41,766 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:41,766 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '10004', 'message': '没有找到相应数据!'}}
+2017-10-17 17:10:41,911 TestRequest.py[line: 213] INFO: 用户模块我的首页数据V1 2-11-90
+2017-10-17 17:10:41,911 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:41,911 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'nickname': '131****0101', 'head_portrait': 'http://static-r.msparis.com/image/users/female.png', 'authentication_type': 1, 'orders': {'pending_num': 0, 'to_be_delivered_num': 0, 'to_be_received_num': 0, 'to_be_commented_num': 0}, 'level_name': '钻石会员', 'level_icon': 'http://static-r.msparis.com/uploads/user/b/1/b16a8882b58829bd9870f2d84d01b9f9.png', 'user_card': {'icon': 'http://static-r.msparis.com/uploads/card/3/7/3779b0f5ffb47a1f32fe046135071067.png', 'name': '轻奢年卡', 'expiry_date': 1555862399}, 'user_card_num': 1, 'wardrobe_num': 0, 'to_be_clothes': 0, 'favorite_product_num': 318, 'favorite_brand_num': 9, 'invoice_amount': 0, 'share_prizes_url': 'http://m.msparis.com/user/inviter?platform=app', 'new_information': 0, 'browsing_history_total': 0, 'coupon_number': 0}}
+2017-10-17 17:10:42,044 TestRequest.py[line: 185] INFO: 用户模块我的首页数据V1 2-11-91
+2017-10-17 17:10:42,046 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:42,046 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:42,196 TestRequest.py[line: 213] INFO: 用户模块我的首页数据V3.1.1 2-12-96
+2017-10-17 17:10:42,196 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:42,197 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'nickname': '131****0101', 'head_portrait': 'http://static-r.msparis.com/image/users/female.png', 'authentication_type': 1, 'created_at': '2016-01-16 21:41:44', 'level_name': '钻石会员', 'level_icon': 'http://static-r.msparis.com/uploads/user/b/1/b16a8882b58829bd9870f2d84d01b9f9.png', 'user_card': {'icon': 'http://static-r.msparis.com/image/card/card_black.png', 'name': '轻奢卡', 'type': 'VIP', 'is_paused': 0, 'expiry_date': 1555862399}, 'user_card_num': 1, 'favorite_product_num': 318, 'favorite_brand_num': 9, 'invoice_amount': 0, 'share_prizes_url': 'http://m.msparis.com/user/inviter?platform=app', 'new_information': 0, 'browsing_history_total': 100, 'coupon_number': 46, 'reservation_data': '已预约,2389-08-21 05:43'}}
+2017-10-17 17:10:42,331 TestRequest.py[line: 185] INFO: 用户模块我的首页数据V3.1.1 2-12-97
+2017-10-17 17:10:42,332 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:42,332 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:42,464 TestRequest.py[line: 213] INFO: 用户模块我的首页订单和衣橱数据V3.1.1 2-13-106
+2017-10-17 17:10:42,465 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:42,465 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'orders': {'pending_num': 0, 'to_be_delivered_num': 2, 'to_be_received_num': 0, 'to_be_commented_num': 22, 'be_evaluated': 35}, 'wardrobe_num': 100, 'to_be_clothes': 0}}
+2017-10-17 17:10:42,592 TestRequest.py[line: 185] INFO: 用户模块我的首页订单和衣橱数据V3.1.1 2-13-107
+2017-10-17 17:10:42,592 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:42,592 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:42,718 TestRequest.py[line: 62] INFO: 用户模块收藏商品V1 2-14-116
+2017-10-17 17:10:42,718 TestRequest.py[line: 63] INFO: 测试通过
+2017-10-17 17:10:42,718 TestRequest.py[line: 64] INFO: 返回的消息是：{'status': 'ok'}
+2017-10-17 17:10:42,832 TestRequest.py[line: 34] INFO: 用户模块收藏商品V1 2-14-117
+2017-10-17 17:10:42,832 TestRequest.py[line: 35] INFO: 测试通过
+2017-10-17 17:10:42,832 TestRequest.py[line: 36] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}
+2017-10-17 17:10:42,963 TestRequest.py[line: 213] INFO: 用户模块浏览记录 V1 2-15-122
+2017-10-17 17:10:42,963 TestRequest.py[line: 214] INFO: 测试通过
+2017-10-17 17:10:42,963 TestRequest.py[line: 215] INFO: 返回的消息是：{'status': 'ok', 'data': {'rows': [{'date': 1506355200, 'rows': [{'is_favorite': 1, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '拼接印花休闲连衣裙', 'rental_price': 19000, 'market_price': 48000, 'id': 12114, 'cover_image': 'http://static-r.msparis.com/uploads/products/7/3/736c3032f975a464722dd768bb9a2958.jpg', 'brand': 'JUNIOR SELECT', 'show_specifications': 'XS S', 'brows_date': 1506355200}, {'is_favorite': 1, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '白色空气层针织小鹿外套', 'rental_price': 20000, 'market_price': 119000, 'id': 12362, 'cover_image': 'http://static-r.msparis.com/uploads/products/e/8/e81ae16a147dcbcd0a7aa1d5c4d7f12a.jpg', 'brand': 'OCHIRLY 欧时力', 'show_specifications': 'M L', 'brows_date': 1506355200}, {'is_favorite': 0, 'dots': 3, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '红色圆领网纱拼接连衣裙', 'rental_price': 22000, 'market_price': 230500, 'id': 12439, 'cover_image': 'http://static-r.msparis.com/uploads/products/0/c/0c20fa02658dafccc98b17440a908e1e.jpg', 'brand': 'THREE FLOOR', 'show_specifications': 'S M', 'brows_date': 1506355200}, {'is_favorite': 1, 'dots': 3, 'type_id': 2, 'limit_tag': '年卡专享', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '豹纹印花真丝连衣裙', 'rental_price': 42000, 'market_price': 625000, 'id': 12604, 'cover_image': 'http://static-r.msparis.com/uploads/products/5/c/5c064390d82e51f4209516af493144b9.JPG', 'brand': 'THOMAS WYLDE', 'show_specifications': 'M L XL', 'brows_date': 1506355200}, {'is_favorite': 0, 'dots': 3, 'type_id': 2, 'limit_tag': '年卡专享', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '黑色网纱拼接连衣裙', 'rental_price': 30000, 'market_price': 388000, 'id': 12592, 'cover_image': 'http://static-r.msparis.com/uploads/products/0/1/014faec3e45efee5109df01c9e061295.jpg', 'brand': 'BADGLEY MISCHKA', 'show_specifications': 'M L', 'brows_date': 1506355200}, {'is_favorite': 0, 'dots': 3, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '深蓝色暗扣印花斗篷外套', 'rental_price': 26000, 'market_price': 259900, 'id': 12467, 'cover_image': 'http://static-r.msparis.com/uploads/products/5/4/549d9bb2c45aa7467f2c5d7353f44396.jpg', 'brand': 'MA BY MA STUDIO', 'show_specifications': 'XS S M', 'brows_date': 1506355200}, {'is_favorite': 1, 'dots': 2, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '清爽蓼蓝印花连衣裙', 'rental_price': 16000, 'market_price': 188000, 'id': 1299, 'cover_image': 'http://static-r.msparis.com/media/catalog/product/r/l/rl044m--1.jpg', 'brand': 'RALPH LAUREN', 'show_specifications': 'M', 'brows_date': 1506355200}, {'is_favorite': 1, 'dots': 3, 'type_id': 2, 'limit_tag': '年卡专享', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '黑白字母印花连衣裙', 'rental_price': 22000, 'market_price': 328000, 'id': 7421, 'cover_image': 'http://static-r.msparis.com/uploads/products/4/1/4122bc7867e50b8278835e187c857f69.jpg', 'brand': 'KATE SPADE', 'show_specifications': 'M L', 'brows_date': 1506355200}, {'is_favorite': 1, 'dots': 2, 'type_id': 1, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '黑底印花系带连衣裙', 'rental_price': 18000, 'market_price': 43600, 'id': 6621, 'cover_image': 'http://static-r.msparis.com/image/product/R/U/RU055B-1.jpg', 'brand': 'MSPARIS SELECT', 'show_specifications': 'S M L XL', 'brows_date': 1506355200}, {'is_favorite': 1, 'dots': 3, 'type_id': 2, 'limit_tag': '', 'enabled': 1, 'rental_limit_days': '3', 'mode_id': 1, 'name': '拼色镂空连衣裙', 'rental_price': 32000, 'market_price': 360000, 'id': 11496, 'cover_image': 'http://static-r.msparis.com/uploads/products/6/e/6e95e87ba1b33ddf0ee91db47acc4f8b.jpg', 'brand': 'TED BAKER', 'show_specifications': 'S M L XL', 'brows_date': 1506355200}]}], 'total': 100}}
+2017-10-17 17:10:43,059 TestRequest.py[line: 185] INFO: 用户模块浏览记录 V1 2-15-123
+2017-10-17 17:10:43,059 TestRequest.py[line: 186] INFO: 测试通过
+2017-10-17 17:10:43,059 TestRequest.py[line: 187] INFO: 返回的消息是：{'status': 'error', 'error': {'code': '11008', 'message': '用户TOKEN不存在或已超时!'}}

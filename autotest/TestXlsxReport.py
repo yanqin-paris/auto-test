@@ -5,6 +5,7 @@ Created on 2017年9月5日
 
 @author: Jim
 '''
+from PublicTools.GetTestDataPath import Writeconfig
 import xlsxwriter
 import time
 import TestAllRunner
@@ -15,10 +16,7 @@ from PublicTools.GetTestDataPath import GetLogoDataPath
 from PublicTools.log import logger
 from PublicTools.sendmail import MyMail
 from PublicTools.GetTestDataPath import GetMailConfigPath
-from PublicTools.GetTestDataPath import Writeconfig
 
-
-Writeconfig(sys.argv[1])
 
 if sys.argv[1] == 'test':
     test_net = 'http://api.test.msparis.com/'
