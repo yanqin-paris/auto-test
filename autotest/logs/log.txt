@@ -1,0 +1,5 @@
+2017-10-17 14:30:55,732 GetToken_str.py[line: 42] INFO: 请求返回状态为：ok
+2017-10-17 14:30:55,733 GetToken_str.py[line: 45] INFO: 当前token为：6fb96a7d2d965bfb736fb7e581ac7026
+2017-10-17 14:30:55,773 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '200')
+2017-10-17 14:30:55,816 mydb.py[line: 69] INFO: query：DELETE from user_coupon where user_id=%s and coupon_id=%s  data：('15903', '49319')
+2017-10-17 14:30:56,639 mydb.py[line: 69] INFO: query：delete from user_base_information where user_id=%s  data：('15903',)
