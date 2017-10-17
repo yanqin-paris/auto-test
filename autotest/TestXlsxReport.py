@@ -17,6 +17,7 @@ from PublicTools.sendmail import MyMail
 from PublicTools.GetTestDataPath import GetMailConfigPath
 from PublicTools.GetTestDataPath import Writeconfig
 
+
 Writeconfig(sys.argv[1])
 
 if sys.argv[1] == 'test':
