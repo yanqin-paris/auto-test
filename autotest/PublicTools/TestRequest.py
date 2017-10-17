@@ -106,6 +106,8 @@ def TestPostRequestGetStr(hurl, hdata, headers, htestcassid, htestcassname, htes
                        "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
                        "t_actual": str(hjson),
                        "t_result": "失败"}
+            results['plan_id'] = ""
+            results['plan_item_id'] = ""
             hlist.append(hhhdata)
             logger.info(htestcassname)
             logger.info('测试不通过')

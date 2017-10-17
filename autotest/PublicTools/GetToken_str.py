@@ -47,6 +47,3 @@ def test_get_token():
         else:
             logger.error("登陆失败，退出程序！")
             exit()
-
-
-print(test_get_token())

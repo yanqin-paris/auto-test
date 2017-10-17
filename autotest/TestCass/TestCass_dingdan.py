@@ -351,7 +351,10 @@ def test_post_chuangjianrichangzulindingdan():
         fanhuitesthope = table.cell(i, 5).value
         r = TestPostRequest(hurl + 'order/plan-daily-v3', hdata, headers,
                             htestcassid, htestcassname, htesthope, fanhuitesthope)
-    variables['order_id'] = r['data']['order_id']
+        if "error" in r:
+            variables['order_id'] = ""
+        else:
+            variables['order_id'] = r['data']['order_id']
 # test_post_chuangjianrichangzulindingdan()
 
 

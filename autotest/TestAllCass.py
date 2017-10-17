@@ -108,9 +108,9 @@ def TestCass_dingdan_Cass():
     TestCass.TestCass_dingdan.test_post_chuanjiannvshenkagoumaidingdanV310()
     TestCass.TestCass_dingdan.test_post_zhifuwancheng()
     TestCass.TestCass_dingdan.test_get_yonghuhuiyuankashoucixiadanjiancha()
-#    TestCass.TestCass_dingdan.test_post_chuangjianrichangzulindingdan()
-#    TestCass.TestCass_dingdan.test_get_dingdanxiangqing()
-#    TestCass.TestCass_dingdan.test_delete_zulingoumaidingdanquxiao()
+    TestCass.TestCass_dingdan.test_post_chuangjianrichangzulindingdan()
+    TestCass.TestCass_dingdan.test_get_dingdanxiangqing()
+    TestCass.TestCass_dingdan.test_delete_zulingoumaidingdanquxiao()
     logger.info("结束测试")
 
 
