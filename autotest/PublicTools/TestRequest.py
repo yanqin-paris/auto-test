@@ -121,14 +121,29 @@ def TestPostRequestGetStr(hurl, hdata, headers, htestcassid, htestcassname, htes
                        "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
                        "t_actual": "status:" + hcode + ";msg:" + str(hjson),
                        "t_result": "通过"}
-            plan_id = hjson['data']['plan_id']
-            plan_item_id = hjson['data']['items'][0]['plan_item_id']
+            try:
+                plan_id = hjson['data']['plan_id']
+                plan_item_id = hjson['data']['items'][0]['plan_item_id']
+            except Exception as e:
+                results['plan_id'] = ""
+                results['plan_item_id'] = ""
+                logger.info('参数获取失败：' + str(e))
+            else:
+                results['plan_id'] = plan_id
+                results['plan_item_id'] = plan_item_id
+                hlist.append(hhhdata)  # 把测试结果添加到数组里面
+                logger.info(htestcassname)
+                logger.info("测试通过")
+                logger.info("返回的消息是：" + str(hjson))
+
+            '''
             results['plan_id'] = plan_id
             results['plan_item_id'] = plan_item_id
             hlist.append(hhhdata)  # 把测试结果添加到数组里面
             logger.info(htestcassname)
             logger.info("测试通过")
             logger.info("返回的消息是：" + str(hjson))
+            '''
         else:
             hhhdata = {"t_id": htestcassid,
                        "t_name": htestcassname,
