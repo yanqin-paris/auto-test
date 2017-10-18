@@ -19,6 +19,7 @@ if environment == 'test':
 elif environment == 'auto':
     GLOBAL_testdb = MyDB(GetDbConfigPath(), 'AUTODB')
 
+
 GLOBAL_TestDataPath = GetTestDataPath()
 GLOBAL_token = test_get_token()
 

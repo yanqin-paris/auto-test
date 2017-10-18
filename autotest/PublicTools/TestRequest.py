@@ -48,156 +48,19 @@ def TestPostRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope,
             logger.info('测试不通过')
             logger.info("返回的消息为：" + str(hjson))
     else:
-        hcode = str(hjson['status'])
-        if hcode == htesthope and fanhuitesthope in str(hjson):
+        if "'status_code': 500" in str(hjson):
             hhhdata = {"t_id": htestcassid,
                        "t_name": htestcassname,
-                       "t_method": "post",
+                       "t_method": "get",
                        "t_url": hurl,
                        "t_param": "测试数据:" + str(hdata),
                        "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
-                       "t_actual": "status:" + hcode + ";msg:" + str(hjson),
-                       "t_result": "通过"}
-            hlist.append(hhhdata)  # 把测试结果添加到数组里面
-            logger.info(htestcassname)
-            logger.info("测试通过")
-            logger.info("返回的消息是：" + str(hjson))
-        else:
-            hhhdata = {"t_id": htestcassid,
-                       "t_name": htestcassname,
-                       "t_method": "post",
-                       "t_url": hurl,
-                       "t_param": "测试数据:" + str(hdata),
-                       "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
-                       "t_actual": "status:" + hcode + ";msg:" + str(hjson),
+                       "t_actual": "status:" + "500" + ";msg:" + str(hjson),
                        "t_result": "失败"}
             hlist.append(hhhdata)
             logger.info(htestcassname)
             logger.info('测试不通过')
             logger.info("返回的消息为：" + str(hjson))
-    return hjson
-
-
-def TestPostRequestGetStr(hurl, hdata, headers, htestcassid, htestcassname, htesthope, fanhuitesthope):
-    hr = requests.post(hurl, data=json.dumps(hdata), headers=headers)
-    hjson = json.loads(hr.text)  # 获取并处理返回的json数据
-    herror = "error"
-    if herror in hjson:
-        hstatus = str(hjson["status"])
-        if hstatus == htesthope and fanhuitesthope in str(hjson):
-            hhhdata = {"t_id": htestcassid,
-                       "t_name": htestcassname,
-                       "t_method": "post",
-                       "t_url": hurl,
-                       "t_param": "测试数据:" + str(hdata),
-                       "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
-                       "t_actual": "status:" + hstatus + ";msg:" + str(hjson),
-                       "t_result": "通过"}
-            hlist.append(hhhdata)  # 把测试结果添加到数组里面
-            logger.info(htestcassname)
-            logger.info("测试通过")
-            logger.info("返回的消息是：" + str(hjson))
-        else:
-            hhhdata = {"t_id": htestcassid,
-                       "t_name": htestcassname,
-                       "t_method": "post",
-                       "t_url": hurl,
-                       "t_param": "测试数据:" + str(hdata),
-                       "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
-                       "t_actual": str(hjson),
-                       "t_result": "失败"}
-            results['plan_id'] = ""
-            results['plan_item_id'] = ""
-            hlist.append(hhhdata)
-            logger.info(htestcassname)
-            logger.info('测试不通过')
-            logger.info("返回的消息为：" + str(hjson))
-    else:
-        hcode = str(hjson['status'])
-        if hcode == htesthope and fanhuitesthope in str(hjson):
-            hhhdata = {"t_id": htestcassid,
-                       "t_name": htestcassname,
-                       "t_method": "post",
-                       "t_url": hurl,
-                       "t_param": "测试数据:" + str(hdata),
-                       "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
-                       "t_actual": "status:" + hcode + ";msg:" + str(hjson),
-                       "t_result": "通过"}
-            try:
-                plan_id = hjson['data']['plan_id']
-                plan_item_id = hjson['data']['items'][0]['plan_item_id']
-            except Exception as e:
-                results['plan_id'] = ""
-                results['plan_item_id'] = ""
-                logger.info('参数获取失败：' + str(e))
-            else:
-                results['plan_id'] = plan_id
-                results['plan_item_id'] = plan_item_id
-                hlist.append(hhhdata)  # 把测试结果添加到数组里面
-                logger.info(htestcassname)
-                logger.info("测试通过")
-                logger.info("返回的消息是：" + str(hjson))
-
-            '''
-            results['plan_id'] = plan_id
-            results['plan_item_id'] = plan_item_id
-            hlist.append(hhhdata)  # 把测试结果添加到数组里面
-            logger.info(htestcassname)
-            logger.info("测试通过")
-            logger.info("返回的消息是：" + str(hjson))
-            '''
-        else:
-            hhhdata = {"t_id": htestcassid,
-                       "t_name": htestcassname,
-                       "t_method": "post",
-                       "t_url": hurl,
-                       "t_param": "测试数据:" + str(hdata),
-                       "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
-                       "t_actual": "status:" + hcode + ";msg:" + str(hjson),
-                       "t_result": "失败"}
-            hlist.append(hhhdata)
-            logger.info(htestcassname)
-            logger.info('测试不通过')
-            logger.info("返回的消息为：" + str(hjson))
-
-
-def TestGetRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, fanhuitesthope):
-    if hdata == '':
-        hr = requests.get(hurl, headers=headers)
-    else:
-        hr = requests.get(hurl, params=hdata, headers=headers)
-
-    if is_json(hr.text):
-        hjson = json.loads(hr.text)  # 获取并处理返回的json数据
-        herror = "error"
-        if herror in hjson:
-            hstatus = str(hjson["status"])
-            if hstatus == htesthope and fanhuitesthope in str(hjson):
-                hhhdata = {"t_id": htestcassid,
-                           "t_name": htestcassname,
-                           "t_method": "get",
-                           "t_url": hurl,
-                           "t_param": "测试数据:" + str(hdata),
-                           "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
-                           "t_actual": "status:" + hstatus + ";msg:" + str(hjson),
-                           "t_result": "通过"}
-                hlist.append(hhhdata)  # 把测试结果添加到数组里面
-                logger.info(htestcassname)
-                logger.info("测试通过")
-                logger.info("返回的消息是：" + str(hjson))
-            else:
-                hhhdata = {"t_id": htestcassid,
-                           "t_name": htestcassname,
-                           "t_method": "get",
-                           "t_url": hurl,
-                           "t_param": "测试数据:" + str(hdata),
-                           "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
-                           "t_actual": str(hjson),
-                           "t_result": "失败"}
-                hlist.append(hhhdata)
-                logger.info(htestcassname)
-                logger.info('测试不通过')
-                logger.info("返回的消息为：" + str(hjson))
         else:
             hcode = str(hjson['status'])
             if hcode == htesthope and fanhuitesthope in str(hjson):
@@ -226,9 +89,10 @@ def TestGetRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, 
                 logger.info(htestcassname)
                 logger.info('测试不通过')
                 logger.info("返回的消息为：" + str(hjson))
+    return hjson
 
 
-def TestGetRequestjiaqiang(hurl, hdata, headers, htestcassid, htestcassname, htesthope, fanhuitesthope):
+def TestGetRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, fanhuitesthope):
     if hdata == '':
         hr = requests.get(hurl, headers=headers)
     else:

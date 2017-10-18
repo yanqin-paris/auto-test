@@ -6,12 +6,9 @@ Created on 2017年9月5日
 @author: Jim
 '''
 import xlrd
-import PublicTools.TestRequest
 from PublicTools.TestRequest import TestPostRequest
-from PublicTools.TestRequest import TestPostRequestGetStr
 from PublicTools.TestRequest import TestGetRequest
 from PublicTools.TestRequest import TestDeleteRequest
-from PublicTools.GetTestDataPath import GetTestDataPath
 from PublicTools.globalpy import GLOBAL_token
 from PublicTools.time import shijiancuo
 
@@ -24,7 +21,7 @@ htoken = table.cell(8, 1).value
 hcontent_type = table.cell(6, 1).value
 access_token = GLOBAL_token
 
-TestResults = PublicTools.TestRequest.results
+TestResults = {}
 
 
 def test_post_tianjiayidaishangpin():
@@ -46,8 +43,15 @@ def test_post_tianjiayidaishangpin():
         htestcassname = "购物计划商品详情 添加衣袋商品积点 V36" + htestcassid
         htesthope = table.cell(i, 7).value
         fanhuitesthope = table.cell(i, 8).value
-        TestPostRequestGetStr(hurl + 'plans-v3/product', hdata, headers,
-                              htestcassid, htestcassname, htesthope, fanhuitesthope)
+        r = TestPostRequest(hurl + 'plans-v3/product', hdata, headers,
+                            htestcassid, htestcassname, htesthope, fanhuitesthope)
+        if "error" in r:
+            TestResults['plan_id'] = ""
+            TestResults['plan_item_id'] = ""
+        else:
+            TestResults['plan_id'] = r['data']['plan_id']
+            TestResults['plan_item_id'] = r['data']['items'][0]['plan_item_id']
+        return r
 
 # test_post_tianjiayidaishangpin()
 

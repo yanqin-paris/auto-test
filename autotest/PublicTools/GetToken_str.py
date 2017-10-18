@@ -14,6 +14,7 @@ from PublicTools.log import logger
 from PublicTools.GetTestDataPath import GetTestDataPath
 from PublicTools.GetTestDataPath import Writeconfig
 
+
 Writeconfig(sys.argv[1])
 # 打开测试数据，路径需要自己配，相对路径似乎不行
 Testdata = xlrd.open_workbook(GetTestDataPath())

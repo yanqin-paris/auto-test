@@ -7,19 +7,24 @@ Created on 2017年9月5日
 '''
 import xlrd
 import TestCass.TestCass_zulinjihua
-from PublicTools.TestRequest import TestGetRequestjiaqiang
 from PublicTools.TestRequest import TestPostRequest
 from PublicTools.TestRequest import TestGetRequest
 from PublicTools.TestRequest import TestDeleteRequest
 from PublicTools.globalpy import GLOBAL_token
 from PublicTools.globalpy import GLOBAL_TestDataPath
+from PublicTools.globalpy import GLOBAL_testdb
 
 Testdata = xlrd.open_workbook(GLOBAL_TestDataPath)  # 读取测试数据
 table = Testdata.sheets()[0]  # 选择excle表中的sheet
 hurl = table.cell(7, 1).value  # 从测试数据中读取url
 htoken = table.cell(8, 1).value
 hcontent_type = table.cell(6, 1).value
+sku_id = table.cell(11, 1).value
 access_token = GLOBAL_token
+
+query = 'DELETE from wms_stock_used where sku_id=%s'
+data = (sku_id)
+GLOBAL_testdb.execute_delete(query, data)
 
 variables = {}
 
@@ -142,8 +147,8 @@ def test_get_xuanzeyouhuiquan():
         htestcassname = "订单模块选择优惠券 V1" + htestcassid
         htesthope = table.cell(i, 3).value
         fanhuitesthope = table.cell(i, 4).value
-        TestGetRequestjiaqiang(hurl + 'order/user-coupon', hdata, headers,
-                               htestcassid, htestcassname, htesthope, fanhuitesthope)
+        TestGetRequest(hurl + 'order/user-coupon', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
 # test_get_xuanzeyouhuiquan()
 
 #********************************************************************8
@@ -329,15 +334,21 @@ def test_get_yonghuhuiyuankashoucixiadanjiancha():
 
 
 def test_post_chuangjianrichangzulindingdan():
-    TestCass.TestCass_zulinjihua.test_post_tianjiayidaishangpin()
+    result = TestCass.TestCass_zulinjihua.test_post_tianjiayidaishangpin()
+    if "error" in result:
+        variables['plan_id'] = ""
+        variables['plan_item_id'] = ""
+    else:
+        variables['plan_id'] = result['data']['plan_id']
+        variables['plan_item_id'] = result['data']['items'][0]['plan_item_id']
     for i in range(111, 112):
         table = Testdata.sheets()[3]  # 选择excle表中的sheet
 
         hdata = {
             "access_token": access_token,
-            "plan_id": TestCass.TestCass_zulinjihua.TestResults['plan_id'],
+            "plan_id": variables['plan_id'],
             "user_address_id": table.cell(i, 2).value,
-            "order_item": [{"plan_item_id": TestCass.TestCass_zulinjihua.TestResults['plan_item_id']}],
+            "order_item": [{"plan_item_id": variables['plan_item_id']}],
             "remark": '配送前来电确认'
         }
 

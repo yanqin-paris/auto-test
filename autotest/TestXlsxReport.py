@@ -5,7 +5,6 @@ Created on 2017年9月5日
 
 @author: Jim
 '''
-from PublicTools.GetTestDataPath import Writeconfig
 import xlsxwriter
 import time
 import TestAllRunner
