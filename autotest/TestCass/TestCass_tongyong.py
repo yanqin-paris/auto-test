@@ -116,3 +116,37 @@ def test_get_pophuodong():
         TestGetRequest(hurl + 'common/advertising', hdata, headers,
                        htestcassid, htestcassname, htesthope, fanhuitesthope)
 # test_get_pophuodong()
+
+
+def test_get_huoquwuliutianshu():
+    for i in range(48, 51):
+        table = Testdata.sheets()[1]  # 选择excle表中的sheet
+        hdata = {
+            "region_code": table.cell(i, 0).value,
+        }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "1-6-" + str(i + 1)
+        htestcassname = "通用模块获取物流天数 " + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'common/express-days', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_huoquwuliutianshudiedai():
+    for i in range(57, 60):
+        table = Testdata.sheets()[1]  # 选择excle表中的sheet
+        hdata = {
+            "region_code": table.cell(i, 0).value,
+        }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "1-7-" + str(i + 1)
+        htestcassname = "通用模块获取物流天数迭代版本" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'common/express-days-v2', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)

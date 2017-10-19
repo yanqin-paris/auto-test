@@ -20,6 +20,7 @@ hurl = table.cell(7, 1).value  # 从测试数据中读取url
 htoken = table.cell(8, 1).value
 hcontent_type = table.cell(6, 1).value
 userid = table.cell(10, 1).value
+couponid = table.cell(12, 1).value
 access_token = GLOBAL_token
 
 query = 'DELETE from user_coupon where user_id=%s and coupon_id=%s'
@@ -28,6 +29,16 @@ GLOBAL_testdb.execute_delete(query, data)
 
 query = 'DELETE from user_coupon where user_id=%s and coupon_id=%s'
 data = (userid, '49319')
+GLOBAL_testdb.execute_delete(query, data)
+
+
+query = 'DELETE from user_coupon where user_id=%s and coupon_id=%s'
+data = (userid, couponid)
+GLOBAL_testdb.execute_delete(query, data)
+
+
+query = 'DELETE from user_signs_log where user_id=%s'
+data = (userid)
 GLOBAL_testdb.execute_delete(query, data)
 
 
@@ -1110,4 +1121,158 @@ def test_get_huoquxinyuandanliebiao():
         htesthope = table.cell(i, 2).value
         fanhuitesthope = table.cell(i, 3).value
         TestGetRequest(hurl + 'user/wish-v2', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_post_duihuanyouhuiquan():
+    for i in range(409, 413):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 412:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "code": table.cell(i, 1).value,
+                "channel": table.cell(i, 2).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "code": table.cell(i, 1).value,
+                "channel": table.cell(i, 2).value
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-42-" + str(i + 1)
+        htestcassname = "用户模块兑换优惠券 V1" + htestcassid
+        htesthope = table.cell(i, 3).value
+        fanhuitesthope = table.cell(i, 4).value
+        TestPostRequest(hurl + 'user/exchange-coupon', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_wodeyichu():
+    for i in range(417, 420):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 419:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "type": table.cell(i, 1).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "type": table.cell(i, 1).value
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-43-" + str(i + 1)
+        htestcassname = "用户模块我的衣橱 V1" + htestcassid
+        htesthope = table.cell(i, 2).value
+        fanhuitesthope = table.cell(i, 3).value
+        TestGetRequest(hurl + 'user/wardrobe', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_wodeyichucengjinyongyou():
+    for i in range(427, 429):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 428:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-44-" + str(i + 1)
+        htestcassname = "用户模块我的衣橱曾经拥有 V1" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'user/history-wardrobe', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_baocuoxinxihuoquyonghunvshenkaxinxi():
+    for i in range(435, 444):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 443:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "type": table.cell(i, 1).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "type": table.cell(i, 1).value
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-45-" + str(i + 1)
+        htestcassname = "用户模块报错信息获取用户女神卡信息 V1" + htestcassid
+        htesthope = table.cell(i, 2).value
+        fanhuitesthope = table.cell(i, 3).value
+        TestGetRequest(hurl + 'user/user-card', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_post_yonghuqiandao():
+    for i in range(449, 452):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 451:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-46-" + str(i + 1)
+        htestcassname = "用户模块​用户签到V1" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestPostRequest(hurl + 'user/signs', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_huoquhuiyuankeyongjidian():
+    for i in range(457, 461):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 460:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "days": table.cell(i, 1).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "days": table.cell(i, 1).value
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-47-" + str(i + 1)
+        htestcassname = "用户模块获取会员可用积点 V1" + htestcassid
+        htesthope = table.cell(i, 2).value
+        fanhuitesthope = table.cell(i, 3).value
+        TestGetRequest(hurl + 'user/dots', hdata, headers,
                        htestcassid, htestcassname, htesthope, fanhuitesthope)

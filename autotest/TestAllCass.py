@@ -30,6 +30,8 @@ def TestCass_tongyong_Cass():
     TestCass.TestCass_tongyong.test_get_jianchashoujihao()
     TestCass.TestCass_tongyong.test_get_peizhiwenjiangengxin()
     TestCass.TestCass_tongyong.test_get_pophuodong()
+    TestCass.TestCass_tongyong.test_get_huoquwuliutianshu()
+    TestCass.TestCass_tongyong.test_get_huoquwuliutianshudiedai()
     logger.info("结束测试")
 
 
@@ -79,6 +81,12 @@ def TestCass_yonghu_Cass():
     TestCass.TestCass_yonghu.test_get_huoqupingjiashaitudexiangguanshuju()
     TestCass.TestCass_yonghu.test_post_xuanzenvshenka()
     TestCass.TestCass_yonghu.test_get_huoquxinyuandanliebiao()
+    TestCass.TestCass_yonghu.test_post_duihuanyouhuiquan()
+    TestCass.TestCass_yonghu.test_get_wodeyichu()
+    TestCass.TestCass_yonghu.test_get_wodeyichucengjinyongyou()
+    TestCass.TestCass_yonghu.test_get_baocuoxinxihuoquyonghunvshenkaxinxi()
+    TestCass.TestCass_yonghu.test_post_yonghuqiandao()
+    TestCass.TestCass_yonghu.test_get_huoquhuiyuankeyongjidian()
     logger.info("结束测试")
 
 
