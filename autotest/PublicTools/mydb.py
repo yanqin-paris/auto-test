@@ -78,11 +78,11 @@ class MyDB:
             db_cursor.close()
             exit()
 
-    def execute_update(self, query):
-        logger.info('query：%s' % query)
+    def execute_update(self, query, data):
+        logger.info('query：%s  data：%s' % (query, data))
         try:
             db_cursor = self.dbconn.cursor()
-            db_cursor.execute(query)
+            db_cursor.execute(query, data)
             db_cursor.execute('commit')
             return True
         except Exception as e:

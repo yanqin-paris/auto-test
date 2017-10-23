@@ -1276,3 +1276,129 @@ def test_get_huoquhuiyuankeyongjidian():
         fanhuitesthope = table.cell(i, 3).value
         TestGetRequest(hurl + 'user/dots', hdata, headers,
                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_huoqukekaipiaojine():
+    for i in range(467, 469):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 468:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-48-" + str(i + 1)
+        htestcassname = "用户模块 获取可开票金额 V1" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'user/invoice-limit', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_huoquwodingyuedepingpai():
+    for i in range(475, 477):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 476:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-49-" + str(i + 1)
+        htestcassname = "用户模块获取我订阅的品牌V1" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'user/brands', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_huoquyajinliebiao():
+    for i in range(485, 489):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 488:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "type": table.cell(i, 1).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "type": table.cell(i, 1).value
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-50-" + str(i + 1)
+        htestcassname = "用户模块获取押金列表 V1" + htestcassid
+        htesthope = table.cell(i, 2).value
+        fanhuitesthope = table.cell(i, 3).value
+        TestGetRequest(hurl + 'user/order-deposit', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_huoquyonghujinbenxinxi310():
+    for i in range(493, 495):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 494:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-51-" + str(i + 1)
+        htestcassname = "用户模块获取用户基本信息迭代3.10" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'user/show', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_post_genxinhuiyuanjibenxinxi():
+    for i in range(503, 505):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        if i == 504:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "source": table.cell(i, 1).value,
+                "nickname": table.cell(i, 2).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "source": table.cell(i, 1).value,
+                "nickname": table.cell(i, 2).value
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-52-" + str(i + 1)
+        htestcassname = "用户模板更新会员基本信息 V1" + htestcassid
+        htesthope = table.cell(i, 3).value
+        fanhuitesthope = table.cell(i, 4).value
+        TestPostRequest(hurl + 'user/show', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)

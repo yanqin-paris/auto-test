@@ -87,6 +87,11 @@ def TestCass_yonghu_Cass():
     TestCass.TestCass_yonghu.test_get_baocuoxinxihuoquyonghunvshenkaxinxi()
     TestCass.TestCass_yonghu.test_post_yonghuqiandao()
     TestCass.TestCass_yonghu.test_get_huoquhuiyuankeyongjidian()
+    TestCass.TestCass_yonghu.test_get_huoqukekaipiaojine()
+    TestCass.TestCass_yonghu.test_get_huoquwodingyuedepingpai()
+    TestCass.TestCass_yonghu.test_get_huoquyajinliebiao()
+    TestCass.TestCass_yonghu.test_get_huoquyonghujinbenxinxi310()
+    TestCass.TestCass_yonghu.test_post_genxinhuiyuanjibenxinxi()
     logger.info("结束测试")
 
 
@@ -119,6 +124,16 @@ def TestCass_dingdan_Cass():
     TestCass.TestCass_dingdan.test_post_chuangjianrichangzulindingdan()
     TestCass.TestCass_dingdan.test_get_dingdanxiangqing()
     TestCass.TestCass_dingdan.test_delete_zulingoumaidingdanquxiao()
+    TestCass.TestCass_dingdan.test_get_xufeitaocanyemian()
+    TestCass.TestCass_dingdan.test_get_xufeiquerenyemian()
+    TestCass.TestCass_dingdan.test_get_huoquhuiyuanpeisongdizhi()
+    TestCass.TestCass_dingdan.test_get_huoquhuanyijiluliebiao()
+    TestCass.TestCass_dingdan.test_get_shengjiquerenyemian()
+    TestCass.TestCass_dingdan.test_get_jidianquerenye()
+    TestCass.TestCass_dingdan.test_get_xufeiquerenye()
+    TestCass.TestCass_dingdan.test_post_chuangjianrichangzulindingdan()
+    TestCass.TestCass_dingdan.test_post_dingdanquerenshouhuo()
+    TestCass.TestCass_dingdan.test_post_chuangjianrichangxuzudingdan()
     logger.info("结束测试")
 
 

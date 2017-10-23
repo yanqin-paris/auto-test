@@ -13,6 +13,11 @@ from PublicTools.TestRequest import TestDeleteRequest
 from PublicTools.globalpy import GLOBAL_token
 from PublicTools.globalpy import GLOBAL_TestDataPath
 from PublicTools.globalpy import GLOBAL_testdb
+from PublicTools.mydb import MyDB
+from PublicTools.GetTestDataPath import GetDbConfigPath
+import configparser
+from PublicTools.GetTestDataPath import GetenvironmentPath
+from PublicTools.time import shijiancuo
 
 Testdata = xlrd.open_workbook(GLOBAL_TestDataPath)  # 读取测试数据
 table = Testdata.sheets()[0]  # 选择excle表中的sheet
@@ -20,11 +25,27 @@ hurl = table.cell(7, 1).value  # 从测试数据中读取url
 htoken = table.cell(8, 1).value
 hcontent_type = table.cell(6, 1).value
 sku_id = table.cell(11, 1).value
+
+order_id = table.cell(13, 1).value
+order_split_id = table.cell(14, 1).value
+order_split_item_id = table.cell(15, 1).value
+db = GLOBAL_testdb
 access_token = GLOBAL_token
+config = configparser.ConfigParser()
+config.read(GetenvironmentPath())
+environment = config['environment']['environment']
+
 
 query = 'DELETE from wms_stock_used where sku_id=%s'
 data = (sku_id)
-GLOBAL_testdb.execute_delete(query, data)
+db.execute_delete(query, data)
+
+
+'''
+query = "UPDATE `order`,order_split,order_split_item set `order`.status=4,order_split.`status`=5,order_split_item.`status`=2 where `order`.id=order_split.m_order_id and order_split.id=order_split_item.split_order_id and `order`.id = %s"
+data = (order_id)
+GLOBAL_testdb.execute_update(query, data)
+'''
 
 variables = {}
 
@@ -365,7 +386,16 @@ def test_post_chuangjianrichangzulindingdan():
             variables['order_id'] = ""
         else:
             variables['order_id'] = r['data']['order_id']
-# test_post_chuangjianrichangzulindingdan()
+            query = "select `order`.id orderid,order_split.id ordersplitid,order_split_item.id  ordersplititemid from  `order`,order_split,order_split_item  where `order`.id=order_split.m_order_id and order_split.id=order_split_item.split_order_id and `order`.id = %s"
+            data = (variables['order_id'])
+
+            if environment == 'test':
+                testdb = MyDB(GetDbConfigPath(), 'TESTDB')
+            elif environment == 'auto':
+                testdb = MyDB(GetDbConfigPath(), 'AUTODB')
+            r = testdb.select_one_record(query, data)
+            variables['ordersplitid'] = r['ordersplitid']
+            variables['ordersplititemid'] = r['ordersplititemid']
 
 
 def test_get_dingdanxiangqing():
@@ -415,3 +445,280 @@ def test_delete_zulingoumaidingdanquxiao():
         TestDeleteRequest(hurl + 'order', hdata, headers,
                           htestcassid, htestcassname, htesthope, fanhuitesthope)
 # test_delete_zulingoumaidingdanquxiao()
+
+
+def test_get_xufeitaocanyemian():
+    for i in range(129, 131):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+
+        if i == 130:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-15-" + str(i + 1)
+        htestcassname = "订单模块续费套餐页面 V34" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'order/renewal-package-v2', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_xufeiquerenyemian():
+    for i in range(137, 139):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+
+        if i == 138:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "card_id": table.cell(i, 1).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "card_id": table.cell(i, 1).value
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-16-" + str(i + 1)
+        htestcassname = "订单模块续费确认页面 V34" + htestcassid
+        htesthope = table.cell(i, 2).value
+        fanhuitesthope = table.cell(i, 3).value
+        TestGetRequest(hurl + 'order/renewal-confirm', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_huoquhuiyuanpeisongdizhi():
+    for i in range(145, 147):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+
+        if i == 146:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "logistices_days": table.cell(i, 1).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "logistices_days": table.cell(i, 1).value
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-17-" + str(i + 1)
+        htestcassname = "订单模块 获取会员配送地址V1" + htestcassid
+        htesthope = table.cell(i, 2).value
+        fanhuitesthope = table.cell(i, 3).value
+        TestGetRequest(hurl + 'order/address', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_huoquhuanyijiluliebiao():
+    for i in range(153, 155):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+
+        if i == 154:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-18-" + str(i + 1)
+        htestcassname = "订单模块获取还衣记录列表 V1" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'order/return', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_shengjiquerenyemian():
+    for i in range(161, 163):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+
+        if i == 162:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-19-" + str(i + 1)
+        htestcassname = "订单确认模块升级确认确认页面 V330" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'order/upgrade-confirm', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_jidianquerenye():
+    for i in range(169, 171):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+
+        if i == 170:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-20-" + str(i + 1)
+        htestcassname = "订单确认模块积点确认页面 V1" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'order/dots-package', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_xufeiquerenye():
+    for i in range(177, 179):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+
+        if i == 178:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-21-" + str(i + 1)
+        htestcassname = "订单确认模块续费确认页面 V1" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'order/renewal-package', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_post_dingdanquerenshouhuo():
+    query = "UPDATE `order`,order_split,order_split_item set `order`.status=4,order_split.`status`=5,order_split_item.`status`=2 where `order`.id=order_split.m_order_id and order_split.id=order_split_item.split_order_id and `order`.id = %s"
+    data = (variables['order_id'])
+    if environment == 'test':
+        testdb = MyDB(GetDbConfigPath(), 'TESTDB')
+    elif environment == 'auto':
+        testdb = MyDB(GetDbConfigPath(), 'AUTODB')
+    testdb.execute_update(query, data)
+    for i in range(185, 187):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+        if i == 186:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "order_id": variables['order_id'],
+                "order_split_id": variables['ordersplitid']
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "order_id": variables['order_id'],
+                "order_split_id": variables['ordersplitid']
+            }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-22-" + str(i + 1)
+        htestcassname = "订单模块订单确认收货 V1" + htestcassid
+        htesthope = table.cell(i, 3).value
+        fanhuitesthope = table.cell(i, 4).value
+        TestPostRequest(hurl + 'order/sign', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_post_chuangjianrichangxuzudingdan():
+    for i in range(193, 195):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+        if i == 194:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "order_id": variables['order_id'],
+                "order_split_item_id": variables['ordersplititemid'],
+                "start_date": shijiancuo(35),
+                "end_date": shijiancuo(38)
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "order_id": variables['order_id'],
+                "order_split_item_id": variables['ordersplititemid'],
+                "start_date": shijiancuo(35),
+                "end_date": shijiancuo(38)
+            }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-23-" + str(i + 1)
+        htestcassname = "订单模块创建日常续租订单积点 V35" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestPostRequest(hurl + 'order/plan-relet-v3', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_post_chuangjianhuanyidingdan():
+    for i in range(201, 203):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+        if i == 202:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "user_address_id": table.cell(i, 1).value,
+                "express_company": table.cell(i, 2).value,
+                "get_bag_starttime": shijiancuo(5),
+                "get_bag_endtime": shijiancuo(5),
+                "split_order_id": variables['ordersplitid']
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "user_address_id": table.cell(i, 1).value,
+                "express_company": table.cell(i, 2).value,
+                "get_bag_starttime": shijiancuo(5),
+                "get_bag_endtime": shijiancuo(5),
+                "split_order_id": variables['ordersplitid']
+            }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-24-" + str(i + 1)
+        htestcassname = "订单模块创建还衣订单 V1" + htestcassid
+        htesthope = table.cell(i, 3).value
+        fanhuitesthope = table.cell(i, 4).value
+        TestPostRequest(hurl + 'order/return', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)
