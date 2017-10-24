@@ -172,6 +172,8 @@ def TestGetRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, 
                     logger.info('测试不通过')
                     logger.info("返回的消息为：" + str(hjson))
 
+        return hjson
+
 
 def TestDeleteRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, fanhuitesthope):
     hr = requests.delete(hurl, data=json.dumps(hdata), headers=headers)

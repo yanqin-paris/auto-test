@@ -134,6 +134,8 @@ def TestCass_dingdan_Cass():
     TestCass.TestCass_dingdan.test_post_chuangjianrichangzulindingdan()
     TestCass.TestCass_dingdan.test_post_dingdanquerenshouhuo()
     TestCass.TestCass_dingdan.test_post_chuangjianrichangxuzudingdan()
+    TestCass.TestCass_dingdan.test_post_chuangjianlifuzulindingdan()
+    TestCass.TestCass_dingdan.test_delete_zulingoumaidingdanquxiao()
     logger.info("结束测试")
 
 

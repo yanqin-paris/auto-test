@@ -24,6 +24,7 @@ table = Testdata.sheets()[0]  # 选择excle表中的sheet
 hurl = table.cell(7, 1).value  # 从测试数据中读取url
 htoken = table.cell(8, 1).value
 hcontent_type = table.cell(6, 1).value
+user_id = table.cell(10, 1).value
 sku_id = table.cell(11, 1).value
 
 order_id = table.cell(13, 1).value
@@ -35,9 +36,17 @@ config = configparser.ConfigParser()
 config.read(GetenvironmentPath())
 environment = config['environment']['environment']
 
+query = 'DELETE from user_dots_detail where user_id=%s'
+data = (user_id)
+db.execute_delete(query, data)
+
 
 query = 'DELETE from wms_stock_used where sku_id=%s'
 data = (sku_id)
+db.execute_delete(query, data)
+
+query = 'DELETE from wms_stock_used where sku_id=%s'
+data = ('21526')
 db.execute_delete(query, data)
 
 
@@ -722,3 +731,60 @@ def test_post_chuangjianhuanyidingdan():
         fanhuitesthope = table.cell(i, 4).value
         TestPostRequest(hurl + 'order/return', hdata, headers,
                         htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_post_jisuanliwuzulindingdanjiage():
+    for i in range(217, 218):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+        hdata = {
+            "access_token": access_token,
+            "region_code": table.cell(i, 1).value,
+            "order_item": [{"cart_item_id": variables['cart_item_id']}]
+        }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-26-" + str(i + 1)
+        htestcassname = "计算模块计算礼服租凭订单价格 V1" + htestcassid
+        htesthope = table.cell(i, 2).value
+        fanhuitesthope = table.cell(i, 3).value
+        TestPostRequest(hurl + 'price/dress', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_post_chuangjianlifuzulindingdan():
+    TestCass.TestCass_zulinjihua.test_post_tianjiagouwuchelifu()
+    r = TestCass.TestCass_zulinjihua.test_get_huoqulifugouwucheshangpinliebiao()
+    if "error" in r:
+        variables['cart_item_id'] = ''
+    else:
+        variables['cart_item_id'] = r['data'][0]['items'][0]['cart_item_id']
+    test_post_jisuanliwuzulindingdanjiage()
+    for i in range(209, 211):
+        table = Testdata.sheets()[3]  # 选择excle表中的sheet
+        if i == 210:
+            hdata = {
+                "access_token": table.cell(i, 0).value,
+                "user_address_id": table.cell(i, 1).value,
+                "order_item": [{"cart_item_id": variables['cart_item_id']}]
+            }
+
+        else:
+            hdata = {
+                "access_token": access_token,
+                "user_address_id": table.cell(i, 1).value,
+                "order_item": [{"cart_item_id": variables['cart_item_id']}]
+            }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "3-25-" + str(i + 1)
+        htestcassname = "订单模块创建礼服租赁订单 V1" + htestcassid
+        htesthope = table.cell(i, 2).value
+        fanhuitesthope = table.cell(i, 3).value
+        rr = TestPostRequest(hurl + 'order/dress', hdata, headers,
+                             htestcassid, htestcassname, htesthope, fanhuitesthope)
+        if "error" in rr:
+            variables['order_id'] = ''
+        else:
+            variables['order_id'] = rr['data']['order_id']

@@ -25,9 +25,9 @@ TestResults = {}
 
 
 def test_post_tianjiayidaishangpin():
-    for i in range(21, 22):
+    for i in range(21, 23):
         table = Testdata.sheets()[11]  # 选择excle表中的sheet
-
+        print(table.cell(i, 1).value)
         hdata = {
             "access_token": access_token,
             "product_id": table.cell(i, 1).value,
@@ -51,9 +51,7 @@ def test_post_tianjiayidaishangpin():
         else:
             TestResults['plan_id'] = r['data']['plan_id']
             TestResults['plan_item_id'] = r['data']['items'][0]['plan_item_id']
-        return r
-
-# test_post_tianjiayidaishangpin()
+    return r
 
 
 def test_post_jisuanrichangzulindingdanjiage():
@@ -207,4 +205,51 @@ def test_delete_shanchuyidaishangpin():
         fanhuitesthope = table.cell(i, 6).value
         TestDeleteRequest(hurl + 'plans-v3/product', hdata, headers,
                           htestcassid, htestcassname, htesthope, fanhuitesthope)
-# test_delete_shanchuyidaishangpin()
+
+
+def test_post_tianjiagouwuchelifu():
+    for i in range(75, 76):
+        table = Testdata.sheets()[11]  # 选择excle表中的sheet
+        hdata = {
+            "access_token": access_token,
+            "product_id": table.cell(i, 1).value,
+            "specification_key": table.cell(i, 2).value,
+            "delivery_region": table.cell(i, 3).value,
+            "delivery_region_name": table.cell(i, 4).value,
+            "start_date": shijiancuo(10),
+            "end_date": shijiancuo(12)
+        }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "11-9-" + str(i + 1)
+        htestcassname = "购物车添加购物车礼服 V1" + htestcassid
+        htesthope = table.cell(i, 5).value
+        fanhuitesthope = table.cell(i, 6).value
+        TestPostRequest(hurl + 'cart/product', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_huoqulifugouwucheshangpinliebiao():
+    for i in range(85, 86):
+        table = Testdata.sheets()[11]  # 选择excle表中的sheet
+
+        if i == 86:
+            hdata = {
+                "access_token": table.cell(i, 0).value
+            }
+        else:
+            hdata = {
+                "access_token": access_token
+            }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "11-10-" + str(i + 1)
+        htestcassname = "购物袋获取礼服购物车商品列表 V1" + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        r = TestGetRequest(hurl + 'cart/dress', hdata, headers,
+                           htestcassid, htestcassname, htesthope, fanhuitesthope)
+    return r
