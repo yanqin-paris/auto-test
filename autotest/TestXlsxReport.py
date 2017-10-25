@@ -191,7 +191,47 @@ init(worksheet)
 
 workbook.close()
 
+msg = """
+<table width="800" border="0" cellspacing="0" cellpadding="4">
+    <tr>
+        <td bgcolor="#CECFAD" height="20" style="font-size:20px">接口自动化测试报告    <a href="http://101.37.15.193:8081/view/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"> 更多内容>></a></td>
+    </tr>
+    <tr>
+     <td bgcolor="#EFEBDE" height="100" style="font-size:13px">
+       1) 测试用例总数:<font color=red>%(yonglizongshu)s</font><br><br>
+       2) 通过用例总数:<font color=red>%(tongguoyongil)s</font><br><br>
+       3) 失败总数:<font color=red>%(shibaiyongli)s</font><br><br>
+       4) 通过率:<font color=red>%(tongguolv)s</font><br><br>
+       5) 接口请求地址:<font color=red>%(test_net)s</font><br><br>
+       6) 测试时间:<font color=red>%(test_net)s</font><br><br>
+                         详细内容请看附件：<font color=red>%(timenow)s</font>
+     </td>
+    </tr>
+"""
 
+
+try:
+    logger.info('生成测试报告成功')
+    mymail = MyMail(GetMailConfigPath())
+    mymail.connect()
+    mymail.login()
+    mail_content = msg % dict(yonglizongshu=str(len(TestReport)), tongguoyongil=str(hpassnum), shibaiyongli=str(
+        len(TestReport) - hpassnum), tongguolv=str(round(hpassnum / len(TestReport), 2) * 100), neirong="【" + (now + 'report.xlsx') + "】", test_net=test_net, timenow=timenow)
+    mail_tiltle = '【接口自动化测试报告】'
+    attachments = set(
+        [ReportPath])
+
+    logger.info('正在发送测试报告邮件...')
+    mymail.send_mail(mail_tiltle, mail_content, attachments)
+except Exception as e:
+    logger.info('邮件发送失败：' + str(e))
+    mymail.quit()
+else:
+    mymail.quit()
+    logger.info('发送邮件成功')
+
+
+'''
 try:
     logger.info('生成测试报告成功')
     mymail = MyMail(GetMailConfigPath())
@@ -214,3 +254,4 @@ except Exception as e:
 else:
     mymail.quit()
     logger.info('发送邮件成功')
+'''

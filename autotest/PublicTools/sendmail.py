@@ -60,7 +60,7 @@ class MyMail:
         msg['Subject'] = mail_subject
 
         # 添加邮件内容
-        content = MIMEText(mail_content, _charset='gbk')
+        content = MIMEText(mail_content, "html", _charset='gbk')
         # 说明，这里_charset必须为gbk，和# -*- coding:GBK -*- 保持一直，否则邮件内容乱码
 
         msg.attach(content)
