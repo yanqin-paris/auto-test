@@ -18,7 +18,25 @@ import TestCass.TestCass_yuyue
 import TestCass.TestCass_nvshenka
 import TestCass.TestCass_faxian
 import TestCass.TestCass_zulinjihua
+import TestCass.TestCass_dingdangoumailiucheng
 from PublicTools.log import logger
+
+
+def TestCass_dingdangoumai_Cass():
+    logger.info("开始测试")
+    now = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
+    logger.info(now)
+    TestCass.TestCass_dingdangoumailiucheng.test_get_gengjuguanjianzisousuo()
+    TestCass.TestCass_dingdangoumailiucheng.test_get_huoqushangpinxiangqing()
+    TestCass.TestCass_dingdangoumailiucheng.test_get_huoqushangpinkejiezhouqi()
+    TestCass.TestCass_dingdangoumailiucheng.test_post_tianjiayidaishangpin()
+    TestCass.TestCass_dingdangoumailiucheng.test_post_chuangjianrichangzulindingdan()
+    TestCass.TestCass_dingdangoumailiucheng.test_get_dingdanxiangqing_daifahuo()
+    TestCass.TestCass_dingdangoumailiucheng.xiugaidingdanzhuangtai()
+    TestCass.TestCass_dingdangoumailiucheng.test_get_dingdanxiangqing_yifahuo()
+    TestCass.TestCass_dingdangoumailiucheng.test_post_dingdanquerenshouhuo()
+    TestCass.TestCass_dingdangoumailiucheng.test_get_dingdanxiangqing_yishouhuo()
+    logger.info("结束测试")
 
 
 def TestCass_tongyong_Cass():

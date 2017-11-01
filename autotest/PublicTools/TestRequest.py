@@ -14,9 +14,15 @@ hlist = []  # 添加一个数组，用来装测试结果
 
 results = {}
 
+header = {
+    'content-type': "application/json;charset=UTF-8",
+    'Accept': "application/vnd.msparis.v2+json"
+
+}
+
 
 def TestPostRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, fanhuitesthope):
-    hr = requests.post(hurl, data=json.dumps(hdata), headers=headers)
+    hr = requests.post(hurl, data=json.dumps(hdata), headers=header)
     hjson = json.loads(hr.text)  # 获取并处理返回的json数据
     herror = "error"
     if herror in hjson:
@@ -48,14 +54,15 @@ def TestPostRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope,
             logger.info('测试不通过')
             logger.info("返回的消息为：" + str(hjson))
     else:
-        if "'status_code': 500" in str(hjson):
+        if "'status_code': 500" in str(hjson) or "'status_code': 404" in str(hjson):
+            hstatus = str(hjson["status_code"])
             hhhdata = {"t_id": htestcassid,
                        "t_name": htestcassname,
                        "t_method": "get",
                        "t_url": hurl,
                        "t_param": "测试数据:" + str(hdata),
                        "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
-                       "t_actual": "status:" + "500" + ";msg:" + str(hjson),
+                       "t_actual": "status:" + hstatus + ";msg:" + str(hjson),
                        "t_result": "失败"}
             hlist.append(hhhdata)
             logger.info(htestcassname)
@@ -94,9 +101,9 @@ def TestPostRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope,
 
 def TestGetRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, fanhuitesthope):
     if hdata == '':
-        hr = requests.get(hurl, headers=headers)
+        hr = requests.get(hurl, headers=header)
     else:
-        hr = requests.get(hurl, params=hdata, headers=headers)
+        hr = requests.get(hurl, params=hdata, headers=header)
 
     if is_json(hr.text):
         hjson = json.loads(hr.text)  # 获取并处理返回的json数据
@@ -130,14 +137,15 @@ def TestGetRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, 
                 logger.info('测试不通过')
                 logger.info("返回的消息为：" + str(hjson))
         else:
-            if "'status_code': 500" in str(hjson):
+            if "'status_code': 500" in str(hjson) or "'status_code': 404" in str(hjson):
+                hstatus = str(hjson["status_code"])
                 hhhdata = {"t_id": htestcassid,
                            "t_name": htestcassname,
                            "t_method": "get",
                            "t_url": hurl,
                            "t_param": "测试数据:" + str(hdata),
                            "t_hope": "status:" + str(htesthope) + " 包含：" + fanhuitesthope,
-                           "t_actual": "status:" + "500" + ";msg:" + str(hjson),
+                           "t_actual": "status:" + hstatus + ";msg:" + str(hjson),
                            "t_result": "失败"}
                 hlist.append(hhhdata)
                 logger.info(htestcassname)
@@ -176,7 +184,7 @@ def TestGetRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, 
 
 
 def TestDeleteRequest(hurl, hdata, headers, htestcassid, htestcassname, htesthope, fanhuitesthope):
-    hr = requests.delete(hurl, data=json.dumps(hdata), headers=headers)
+    hr = requests.delete(hurl, data=json.dumps(hdata), headers=header)
     hjson = json.loads(hr.text)  # 获取并处理返回的json数据
     herror = "error"
     if herror in hjson:

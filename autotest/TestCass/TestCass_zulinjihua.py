@@ -27,7 +27,6 @@ TestResults = {}
 def test_post_tianjiayidaishangpin():
     for i in range(21, 23):
         table = Testdata.sheets()[11]  # 选择excle表中的sheet
-        print(table.cell(i, 1).value)
         hdata = {
             "access_token": access_token,
             "product_id": table.cell(i, 1).value,
