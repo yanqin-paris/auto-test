@@ -42,6 +42,7 @@ db.execute_delete(query, data)
 
 
 variables = {}
+prdouctids = []
 specification_key = []
 schedules = []
 s = ()
@@ -65,7 +66,11 @@ def test_get_gengjuguanjianzisousuo():
         fanhuitesthope = table.cell(i, 3).value
         r = TestGetRequest(hurl + 'product/keyword', hdata, headers,
                            htestcassid, htestcassname, htesthope, fanhuitesthope)
-        variables['prdouct_id'] = r['data']['rows'][0]['id']
+        variables['prdouct_ids'] = r['data']['rows']
+        for prdouct_id in variables['prdouct_ids']:
+            if prdouct_id['dots'] == 3:
+                prdouctids.append(prdouct_id['id'])
+        variables['prdouct_id'] = choice(prdouctids)
 
 
 def test_get_huoqushangpinxiangqing():
