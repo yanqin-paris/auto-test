@@ -150,3 +150,20 @@ def test_get_huoquwuliutianshudiedai():
         fanhuitesthope = table.cell(i, 2).value
         TestGetRequest(hurl + 'common/express-days-v2', hdata, headers,
                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_POPV2():
+    for i in range(66, 67):
+        table = Testdata.sheets()[1]  # 选择excle表中的sheet
+        hdata = {
+            "access_token": access_token
+        }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "1-8-" + str(i + 1)
+        htestcassname = "通用模块POP活动V2 " + htestcassid
+        htesthope = table.cell(i, 1).value
+        fanhuitesthope = table.cell(i, 2).value
+        TestGetRequest(hurl + 'common/advertising-v2', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)

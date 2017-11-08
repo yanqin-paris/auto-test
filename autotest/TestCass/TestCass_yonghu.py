@@ -1402,3 +1402,18 @@ def test_post_genxinhuiyuanjibenxinxi():
         fanhuitesthope = table.cell(i, 4).value
         TestPostRequest(hurl + 'user/show', hdata, headers,
                         htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_huoquzhimabianyatiyanzhouhuodongzhuangtai():
+    for i in range(511, 512):
+        table = Testdata.sheets()[2]  # 选择excle表中的sheet
+        hdata = ""
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "2-53-" + str(i + 1)
+        htestcassname = "优惠券模块获取芝麻免押体验周活动的状态" + htestcassid
+        htesthope = table.cell(i, 0).value
+        fanhuitesthope = table.cell(i, 1).value
+        TestGetRequest(hurl + 'coupon/check-activity', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
