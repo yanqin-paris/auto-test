@@ -12,41 +12,23 @@ import xlrd
 import sys
 from PublicTools.log import logger
 from PublicTools.GetTestDataPath import GetTestDataPath
+from PublicTools.GetTestDataPath import GetDbConfigPath
 from PublicTools.GetTestDataPath import Writeconfig
-
+from PublicTools.mydb import MyDB
 
 Writeconfig(sys.argv[1])
-# 打开测试数据，路径需要自己配，相对路径似乎不行
-Testdata = xlrd.open_workbook(GetTestDataPath())
-table = Testdata.sheets()[0]  # 选择sheet
-hurl = table.cell(7, 1).value  # 读取URL
+
+Testdata = xlrd.open_workbook(GetTestDataPath())  # 读取测试数据
+table = Testdata.sheets()[0]  # 选择excle表中的sheet
+user_id = table.cell(10, 1).value
+db = table.cell(13, 1).value
 
 
 def test_get_token():
-    '''登陆'''
-    husername = table.cell(3, 1).value
-    hpassword = table.cell(4, 1).value
-    hcontent_type = table.cell(6, 1).value
-    hdata = {
-        "mobile": husername,
-        "password": hpassword
-    }
-    headers = {'content-type': hcontent_type
-               }
-    r = requests.post(
-        hurl + 'user/password-login', data=json.dumps(hdata), headers=headers)
-    hjson = json.loads(r.text)  # 获取并处理返回的json数据
-    herror = "error"
-    if herror in hjson:
-        logger.error("登陆失败，退出程序！")
-        exit()
-    else:
-        hcode = str(hjson['status'])
-        logger.info('请求返回状态为：' + hcode)
-        if hcode == table.cell(9, 1).value:
-            token = hjson['data']['access_token']  # 获取token
-            logger.info('当前token为：' + token)
-            return token
-        else:
-            logger.error("登陆失败，退出程序！")
-            exit()
+    query = "SELECT access_token FROM `user` where id = %s"
+    testdb = MyDB(GetDbConfigPath(), db)
+    data = (user_id)
+    r = testdb.select_one_record(query, data)
+    access_token = r['access_token']
+    logger.info('当前token为：' + access_token)
+    return access_token

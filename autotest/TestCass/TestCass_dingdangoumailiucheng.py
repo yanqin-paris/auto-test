@@ -41,6 +41,11 @@ data = (user_id)
 db.execute_delete(query, data)
 
 
+query = 'DELETE FROM user_dots_detail where user_id=%s'
+data = (user_id)
+db.execute_delete(query, data)
+
+
 variables = {}
 prdouctids = []
 specification_key = []

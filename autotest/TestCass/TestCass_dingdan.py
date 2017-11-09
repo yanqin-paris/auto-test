@@ -27,9 +27,7 @@ hcontent_type = table.cell(6, 1).value
 user_id = table.cell(10, 1).value
 sku_id = table.cell(11, 1).value
 
-order_id = table.cell(13, 1).value
-order_split_id = table.cell(14, 1).value
-order_split_item_id = table.cell(15, 1).value
+
 db = GLOBAL_testdb
 access_token = GLOBAL_token
 config = configparser.ConfigParser()
