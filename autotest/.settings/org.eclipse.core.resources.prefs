@@ -3,6 +3,7 @@ encoding//PublicTools/GetDBData.py=utf-8
 encoding//PublicTools/GetTestDataPath.py=utf-8
 encoding//PublicTools/GetToken.py=utf-8
 encoding//PublicTools/GetToken_str.py=utf-8
+encoding//PublicTools/GetToken_str_copy.py=utf-8
 encoding//PublicTools/TestRequest.py=utf-8
 encoding//PublicTools/globalpy.py=utf-8
 encoding//PublicTools/log.py=utf-8
