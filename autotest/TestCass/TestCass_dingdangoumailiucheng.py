@@ -16,6 +16,7 @@ from PublicTools.GetTestDataPath import GetDbConfigPath
 import configparser
 from PublicTools.GetTestDataPath import GetenvironmentPath
 from random import choice
+
 Testdata = xlrd.open_workbook(GLOBAL_TestDataPath)  # 读取测试数据
 table = Testdata.sheets()[0]  # 选择excle表中的sheet
 hurl = table.cell(7, 1).value  # 从测试数据中读取url
@@ -123,10 +124,15 @@ def test_get_huoqushangpinkejiezhouqi():
         r = TestGetRequest(hurl + 'product-dots/schedule-v3', hdata, headers,
                            htestcassid, htestcassname, htesthope, fanhuitesthope)
         variables['schedules'] = r['data']['schedule']
-        for schedule in variables['schedules']:
-            s = (schedule['delivery_date'], schedule['default_return'])
-            schedules.append(s)
-        variables['schedule'] = choice(schedules)
+        if variables['schedules'] == "":
+            test_get_gengjuguanjianzisousuo()
+            test_get_huoqushangpinxiangqing()
+            test_get_huoqushangpinkejiezhouqi()
+        else:
+            for schedule in variables['schedules']:
+                s = (schedule['delivery_date'], schedule['default_return'])
+                schedules.append(s)
+            variables['schedule'] = choice(schedules)
 
 
 def test_post_tianjiayidaishangpin():
