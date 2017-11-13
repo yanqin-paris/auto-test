@@ -60,7 +60,9 @@ def test_get_gengjuguanjianzisousuo():
 
         hdata = {
             "keyword": table.cell(i, 0).value,
-            "mode": table.cell(i, 1).value
+            "mode": table.cell(i, 1).value,
+            "page": 1,
+            "page_size": 500
         }
 
         headers = {
@@ -124,7 +126,7 @@ def test_get_huoqushangpinkejiezhouqi():
         r = TestGetRequest(hurl + 'product-dots/schedule-v3', hdata, headers,
                            htestcassid, htestcassname, htesthope, fanhuitesthope)
         variables['schedules'] = r['data']['schedule']
-        if variables['schedules'] == "":
+        if str(variables['schedules']) == '[]':
             test_get_gengjuguanjianzisousuo()
             test_get_huoqushangpinxiangqing()
             test_get_huoqushangpinkejiezhouqi()
