@@ -16,7 +16,7 @@ from PublicTools.GetTestDataPath import GetDbConfigPath
 import configparser
 from PublicTools.GetTestDataPath import GetenvironmentPath
 from random import choice
-
+from PublicTools.time import shijiancuobagtime
 Testdata = xlrd.open_workbook(GLOBAL_TestDataPath)  # 读取测试数据
 table = Testdata.sheets()[0]  # 选择excle表中的sheet
 hurl = table.cell(7, 1).value  # 从测试数据中读取url
@@ -191,7 +191,7 @@ def test_post_chuangjianrichangzulindingdan():
             variables['order_id'] = ""
         else:
             variables['order_id'] = r['data']['order_id']
-            query = "select `order`.id orderid,order_split.id ordersplitid,order_split_item.id  ordersplititemid from  `order`,order_split,order_split_item  where `order`.id=order_split.m_order_id and order_split.id=order_split_item.split_order_id and `order`.id = %s"
+            query = "select `order`.id orderid,order_split.id ordersplitid,order_split.split_order_no splitorderno,order_split_item.id  ordersplititemid from  `order`,order_split,order_split_item  where `order`.id=order_split.m_order_id and order_split.id=order_split_item.split_order_id and `order`.id = %s"
             data = (variables['order_id'])
 
             if environment == 'test':
@@ -201,6 +201,7 @@ def test_post_chuangjianrichangzulindingdan():
             r = testdb.select_one_record(query, data)
             variables['ordersplitid'] = r['ordersplitid']
             variables['ordersplititemid'] = r['ordersplititemid']
+            variables['splitorderno'] = r['splitorderno']
 
 
 def test_get_dingdanxiangqing_daifahuo():
@@ -287,4 +288,59 @@ def test_get_dingdanxiangqing_yishouhuo():
         htesthope = table.cell(i, 2).value
         fanhuitesthope = table.cell(i, 3).value
         TestGetRequest(hurl + 'user/order-detail', hdata, headers,
+                       htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def xinjianwuliuxinxi():
+    query1 = "INSERT INTO `order_express`(`parent_id`, `split_order_id`, `split_order_no`, `express_no`, `send_datetime`, `company_no`, `action`, `status`, `detail`, `bag_barcode`, `express_change_by_id`, `express_change_by_name`, `created_at`, `updated_by`, `updated_at`, `deleted_at`, `express_change_at`) VALUES (NULL, %s, %s, '613468291938', '2017-11-14 11:27:37', 'sf', 1, 'picking', NULL, '1234553556777', NULL, NULL, '2017-11-14 11:27:52', NULL, '2017-11-14 12:18:50', NULL, '2017-11-14 12:18:50')"
+    query2 = "INSERT INTO `order_express`(`parent_id`, `split_order_id`, `split_order_no`, `express_no`, `send_datetime`, `company_no`, `action`, `status`, `detail`, `bag_barcode`, `express_change_by_id`, `express_change_by_name`, `created_at`, `updated_by`, `updated_at`, `deleted_at`, `express_change_at`) VALUES (NULL, %s, %s, '927316321291', '2017-11-14 11:27:37', 'sf', 2, 'customer_received', NULL, '1234553556777', NULL, NULL, '2017-11-14 11:27:52', NULL, '2017-11-14 12:18:50', NULL, '2017-11-14 12:18:50')"
+    data = (variables['ordersplitid'], variables['splitorderno'])
+
+    if environment == 'test':
+        testdb = MyDB(GetDbConfigPath(), 'TESTDB')
+    elif environment == 'auto':
+        testdb = MyDB(GetDbConfigPath(), 'AUTODB')
+    testdb.execute_insert(query1, data)
+    testdb.execute_insert(query2, data)
+
+
+def test_post_chuanjianhuanyidingdan():
+
+    for i in range(67, 68):
+        table = Testdata.sheets()[10]  # 选择excle表中的sheet
+        hdata = {
+            "access_token": access_token,
+            "user_address_id": table.cell(i, 1).value,
+            "express_company": table.cell(i, 2).value,
+            "get_bag_starttime": shijiancuobagtime(1, "16:00:00"),
+            "get_bag_endtime": shijiancuobagtime(1, "17:00:00"),
+            "split_order_id": variables['ordersplitid']
+        }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "10-10-" + str(i + 1)
+        htestcassname = "订单模块创建还衣订单 V1" + htestcassid
+        htesthope = table.cell(i, 6).value
+        fanhuitesthope = table.cell(i, 7).value
+        TestPostRequest(hurl + 'order/return', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_get_huanyixiangqin():
+    for i in range(75, 76):
+        table = Testdata.sheets()[10]  # 选择excle表中的sheet
+        hdata = {
+            "access_token": access_token,
+            "id": variables['ordersplitid']
+        }
+
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "10-11-" + str(i + 1)
+        htestcassname = "订单模块还衣详情V37" + htestcassid
+        htesthope = table.cell(i, 2).value
+        fanhuitesthope = table.cell(i, 3).value
+        TestGetRequest(hurl + 'order/return-detail', hdata, headers,
                        htestcassid, htestcassname, htesthope, fanhuitesthope)

@@ -9,8 +9,14 @@ def shijiancuo(daydelta):
     timestamp = time.mktime(timeArray)
     return str(int(timestamp))
 
-'''
-print(shijiancuo(2))
-print(shijiancuo(30))
-print(shijiancuo(34))
-'''
+
+def shijiancuobagtime(daydelta, shijian):
+    dt = time.strftime(
+        "%Y-%m-%d", time.localtime(time.time() + 86400 * daydelta))
+    dt1 = dt + " " + shijian
+    timeArray = time.strptime(dt1, "%Y-%m-%d %H:%M:%S")
+    timestamp = time.mktime(timeArray)
+    return str(int(timestamp))
+
+#print(shijiancuobagtime(1, "16:00:00"))
+#print(shijiancuobagtime(1, "17:00:00"))
