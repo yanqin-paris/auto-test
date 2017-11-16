@@ -191,7 +191,7 @@ def test_post_chuangjianrichangzulindingdan():
             variables['order_id'] = ""
         else:
             variables['order_id'] = r['data']['order_id']
-            query = "select `order`.id orderid,order_split.id ordersplitid,order_split.split_order_no splitorderno,order_split_item.id  ordersplititemid from  `order`,order_split,order_split_item  where `order`.id=order_split.m_order_id and order_split.id=order_split_item.split_order_id and `order`.id = %s"
+            query = "select `order`.id orderid,`order`.order_no orderno,order_split.id ordersplitid,order_split.split_order_no splitorderno,order_split_item.id  ordersplititemid from  `order`,order_split,order_split_item  where `order`.id=order_split.m_order_id and order_split.id=order_split_item.split_order_id and `order`.id = %s"
             data = (variables['order_id'])
 
             if environment == 'test':
@@ -202,6 +202,7 @@ def test_post_chuangjianrichangzulindingdan():
             variables['ordersplitid'] = r['ordersplitid']
             variables['ordersplititemid'] = r['ordersplititemid']
             variables['splitorderno'] = r['splitorderno']
+            variables['orderno'] = r['orderno']
 
 
 def test_get_dingdanxiangqing_daifahuo():
@@ -344,3 +345,28 @@ def test_get_huanyixiangqin():
         fanhuitesthope = table.cell(i, 3).value
         TestGetRequest(hurl + 'order/return-detail', hdata, headers,
                        htestcassid, htestcassname, htesthope, fanhuitesthope)
+
+
+def test_post_tianjiadingdanshangpinshaitupingjia():
+
+    for i in range(85, 86):
+        table = Testdata.sheets()[10]  # 选择excle表中的sheet
+        hdata = {
+            "access_token": access_token,
+            "mode": table.cell(i, 1).value,
+            "order_no": variables['orderno'],
+            "order_split_item_id": variables['ordersplititemid'],
+            "product_vote": table.cell(i, 4).value,
+            "fit_vote": table.cell(i, 5).value,
+            "product_remark": table.cell(i, 6).value,
+            "host_name": table.cell(i, 7).value
+        }
+        headers = {
+            'content-type': hcontent_type
+        }
+        htestcassid = "10-12-" + str(i + 1)
+        htestcassname = "订单模块添加订单商品晒图评价 V36" + htestcassid
+        htesthope = table.cell(i, 8).value
+        fanhuitesthope = table.cell(i, 9).value
+        TestPostRequest(hurl + 'order/comment-v2', hdata, headers,
+                        htestcassid, htestcassname, htesthope, fanhuitesthope)

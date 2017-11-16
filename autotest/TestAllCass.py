@@ -39,8 +39,8 @@ def TestCass_dingdangoumai_Cass():
     TestCass.TestCass_dingdangoumailiucheng.xinjianwuliuxinxi()
     TestCass.TestCass_dingdangoumailiucheng.test_post_chuanjianhuanyidingdan()
     TestCass.TestCass_dingdangoumailiucheng.test_get_huanyixiangqin()
+    TestCass.TestCass_dingdangoumailiucheng.test_post_tianjiadingdanshangpinshaitupingjia()
     logger.info("结束测试")
-
 
 
 def TestCass_tongyong_Cass():
